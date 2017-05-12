@@ -1,0 +1,136 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+/********************************* Navbar *******************************/
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+  padding: 0 100px;
+  .navbar-brand{
+    img {
+      width: 278px;
+    }
+  }
+  .navbar-nav {
+    li {
+      a {
+        color: #2a2a2a;
+        font-size: 15px;
+        font-weight: 700;
+        padding-top: 40px;
+      }
+    }
+    .active {
+      a {
+        color: #ed3454;
+        background-color: transparent;
+      }
+      a:hover {
+        color: #ed3454;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+/********************************* Home Section *******************************/
+
+.home-top {
+  background-image: url(../../public/img/ppl.svg), url(../../public/img/yellow-bck.png);
+  background-position: left bottom, right top;
+  background-repeat: no-repeat, repeat-y;
+  height: 100vh;
+  background-size: 57%, 30%;
+  margin-left: 75px;
+  .social-links {
+    position: absolute;
+    top: 34%;
+    left: 8%;
+    img {
+      width: 45px;
+      margin: 5px 0;
+    }
+  }
+  .barcamp-hashtag {
+    background-color: #ee0f3c;
+    height: 245px;
+    width: 445px;
+    padding: 170px 10px 10px 20px;
+    position: absolute;
+    top: 47%;
+    right: 8%;
+    box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3);
+  h3 {
+      color: #ffffff;
+    }
+  }
+  .light-bulb {
+    width: 230px;
+    position: absolute;
+    top: 24%;
+    right: 8%;
+    img {
+      width: 300px;
+    }
+  }
+  .about-event {
+    padding-top: 125px;
+    h2 {
+      font-size: 33px;
+      font-weight: lighter;
+    }
+    p {
+      font-size: 33px;
+      font-weight: 700;
+      line-height: 45px;
+    }
+  }
+  .app-links {
+    padding: 225px 0 0 70px;
+    img {
+      width: 135px;
+      margin: 0 6px;
+    }
+  }
+}
+
+
+/********************************* Media Queries *******************************/
+
+/* Large Screen */
+@media only screen and (min-width: 1824px) {
+  .navbar-default {
+    padding: 0 150px;
+  }
+  /********Home Section********/
+  .home-top {
+    .barcamp-hashtag {
+      top: 60%;
+      right: 18%;
+    }
+    .light-bulb {
+      top: 41%;
+      right: 21%;
+      img {
+        width: 370px;
+      }
+    }
+    .about-event {
+      padding-top: 200px;
+      h2 {
+        font-size: 42px;
+      }
+      p {
+        font-size: 42px;
+      }
+    }
+    .app-links {
+      padding: 420px 0 0 90px;
+      img {
+        width: 180px;
+      }
+    }
+  }
+}
