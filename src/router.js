@@ -8,7 +8,6 @@ import Livestream from "./containers/livestream";
 import Archive from "./containers/archive";
 import Content from "./containers/content";
 
-
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={Content}/>

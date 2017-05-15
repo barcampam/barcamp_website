@@ -96,6 +96,101 @@ body {
   }
 }
 
+/********************************* Timetable Section ****************************/
+
+.top-grey-border {
+  height: 75px;
+  background: #f6f6f6;
+}
+.timetable-top-bar {
+  display: flex;
+  align-items: center;
+  padding: 70px 100px;
+  .speak {
+    width: 30px;
+    background: #f6f6f6;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .workshop {
+    width: 30px;
+    background: #e1e1e1;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .day-selection {
+    display: flex;
+    align-items: baseline;
+    flex: 3;
+  }
+  .time-range {
+    display: flex;
+    flex: 5;
+  }
+  .event-type {
+    display: flex;
+  }
+  h4 {
+    font-size: 20px;
+    color: #2a2a2a;
+    font-weight: 700;
+    padding-left: 15px;
+  }
+  h5 {
+    font-size: 15px;
+    color: #8e8e8e;
+    font-weight: 700;
+    margin-top: 7px;
+    padding: 0 20px 0 10px;
+  }
+  a {
+    font-size: 20px;
+    color: #8e8e8e;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+}
+.table-wrapper {
+  padding: 0 133px 0 130px;
+  .timetable-all {
+    width: 100%;
+    .heading {
+      height: 55px;
+      background: #ee3555;
+      color: #ffffff;
+      .empty {
+        background: #ffffff;
+      }
+      th {
+        text-align: center;
+      }
+    }
+    td {
+      height: 100px;
+      padding: 0 15px;
+      border-bottom: 2px solid #dddddd;
+    }
+    .time {
+      background: #ffffff;
+      border-bottom: none;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .event-description {
+      background: #f8f8f8;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px 0;
+      p {
+        font-size: 13px;
+      }
+      .speaker-name {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
 
 /********************************* Media Queries *******************************/
 
@@ -132,5 +227,16 @@ body {
         width: 180px;
       }
     }
+  }
+  
+  /******** TimeTable ********/
+  .timetable-top-bar {
+    padding: 70px 150px;
+    .day-selection {
+      flex: 2;
+    }
+  }
+  .table-wrapper {
+    padding: 0 180px;
   }
 }

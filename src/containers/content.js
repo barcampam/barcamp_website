@@ -1,5 +1,7 @@
 import React, {Component} from "react"
 
+import Timetable from './timetable'
+
 class Content extends Component{
     render(){
         return(
@@ -43,6 +45,7 @@ class Content extends Component{
                         </div>
                     </div>
                 </section>
+                <Timetable />
             </div>
         )
     }
