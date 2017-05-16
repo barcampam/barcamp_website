@@ -29,7 +29,7 @@ class Timetable extends Component{
                         </div>
                     </div>
                     <div className="row">
-                        <div className="table-wrapper">
+                        <div className="col-lg-12 col-md-12 col-sm-12 table-wrapper">
                             <table className="timetable-all">
                                 <tbody>
                                 <tr className="heading">
@@ -191,7 +191,6 @@ class Timetable extends Component{
                     </div>
                 </div>
             </div>
-
         )
     }
 }
