@@ -68,6 +68,188 @@ body {
       width: 135px;
       margin: 0 6px; }
 
+/********************************* Timetable Section ****************************/
+.top-grey-border {
+  height: 75px;
+  background: #f6f6f6; }
+
+.timetable-top-bar {
+  display: flex;
+  align-items: center;
+  padding: 70px 100px 30px 100px; }
+  .timetable-top-bar .speak {
+    width: 30px;
+    background: #f6f6f6;
+    height: 30px;
+    border-radius: 50%; }
+  .timetable-top-bar .workshop {
+    width: 30px;
+    background: #e1e1e1;
+    height: 30px;
+    border-radius: 50%; }
+  .timetable-top-bar .day-selection {
+    display: flex;
+    align-items: baseline;
+    flex: 3; }
+  .timetable-top-bar .time-range {
+    display: flex;
+    flex: 5; }
+  .timetable-top-bar .event-type {
+    display: flex; }
+  .timetable-top-bar h4 {
+    font-size: 20px;
+    color: #2a2a2a;
+    font-weight: 700;
+    padding-left: 15px; }
+  .timetable-top-bar h5 {
+    font-size: 15px;
+    color: #8e8e8e;
+    font-weight: 700;
+    margin-top: 7px;
+    padding: 0 20px 0 10px; }
+  .timetable-top-bar a {
+    font-size: 20px;
+    color: #8e8e8e;
+    text-decoration: none;
+    padding: 0 10px; }
+
+.table-wrapper {
+  padding: 0 133px 0 130px; }
+  .table-wrapper .timetable-all {
+    width: 100%; }
+    .table-wrapper .timetable-all .heading {
+      height: 55px;
+      background: #ee3555;
+      color: #ffffff; }
+      .table-wrapper .timetable-all .heading .empty {
+        background: #ffffff; }
+      .table-wrapper .timetable-all .heading th {
+        text-align: center; }
+    .table-wrapper .timetable-all td {
+      height: 100px;
+      padding: 0 15px;
+      border-bottom: 2px solid #dddddd; }
+    .table-wrapper .timetable-all .time {
+      background: #ffffff;
+      border-bottom: none;
+      font-size: 15px;
+      font-weight: 700; }
+    .table-wrapper .timetable-all .event-description {
+      background: #f8f8f8;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 15px 0; }
+      .table-wrapper .timetable-all .event-description p {
+        font-size: 13px; }
+      .table-wrapper .timetable-all .event-description .speaker-name {
+        font-weight: 700; }
+
+/********************************* Speakers Section ****************************/
+.speakers-top-bar {
+  padding: 110px 100px 110px 100px; }
+
+.speakers-single-row {
+  padding: 0 75px 0 150px; }
+  .speakers-single-row .single-speaker {
+    margin-bottom: 70px; }
+    .speakers-single-row .single-speaker img {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      max-width: 100%; }
+    .speakers-single-row .single-speaker h5 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 30px;
+      margin-bottom: 5px; }
+    .speakers-single-row .single-speaker .company {
+      font-size: 13px;
+      color: #8e8e8e; }
+    .speakers-single-row .single-speaker .talk-name {
+      font-size: 13px; }
+    .speakers-single-row .single-speaker .hovered {
+      position: relative;
+      visibility: hidden; }
+    .speakers-single-row .single-speaker .hovered:after {
+      content: " ";
+      z-index: 10;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.7);
+      height: 200px;
+      width: 240px; }
+    .speakers-single-row .single-speaker .hovered-links {
+      position: absolute;
+      top: 75px;
+      left: 40px;
+      z-index: 11; }
+      .speakers-single-row .single-speaker .hovered-links img {
+        box-shadow: none; }
+      .speakers-single-row .single-speaker .hovered-links a {
+        padding: 0 5px; }
+  .speakers-single-row .single-speaker:hover .hovered {
+    visibility: visible; }
+
+/********************************* Sponsors Section ****************************/
+.sponsors-top-bar {
+  padding: 110px 100px 50px 100px; }
+
+.sponsors-row {
+  padding: 0 0 50px 160px; }
+  .sponsors-row h4 {
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 30px; }
+
+/********************************* Footer *************************************/
+.footer {
+  height: 300px;
+  background: #282563;
+  position: relative; }
+  .footer .footer-navigation {
+    padding: 30px 150px 30px 120px; }
+    .footer .footer-navigation img {
+      float: left;
+      width: 278px;
+      margin-right: 40px; }
+    .footer .footer-navigation ul {
+      list-style: none; }
+      .footer .footer-navigation ul li {
+        float: left;
+        padding: 26px 25px; }
+        .footer .footer-navigation ul li a {
+          font-size: 15px;
+          color: #ffffff;
+          font-weight: 700;
+          text-decoration: none; }
+  .footer .footer-bottom-bar {
+    background: #ed3454;
+    margin: 0 0 0 120px;
+    height: 167px; }
+    .footer .footer-bottom-bar .footer-social-links {
+      padding: 60px 0 0 70px; }
+    .footer .footer-bottom-bar .barcamp-address {
+      padding-top: 15px; }
+      .footer .footer-bottom-bar .barcamp-address h3 {
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: 900;
+        margin-bottom: 25px; }
+      .footer .footer-bottom-bar .barcamp-address p {
+        font-size: 15px;
+        color: #ffffff; }
+    .footer .footer-bottom-bar a {
+      padding: 0 5px; }
+  .footer .map-wrapper {
+    position: absolute;
+    top: 50px;
+    right: 80px; }
+
+#map {
+  height: 200px;
+  width: 400px; }
+
 /********************************* Media Queries *******************************/
 /* Large Screen */
 @media only screen and (min-width: 1824px) {
@@ -92,6 +274,37 @@ body {
   .home-top .app-links {
     padding: 420px 0 0 90px; }
     .home-top .app-links img {
-      width: 180px; } }
+      width: 180px; }
+
+  /******** TimeTable ********/
+  .timetable-top-bar {
+    padding: 70px 150px 30px 150px; }
+    .timetable-top-bar .day-selection {
+      flex: 2; }
+
+  .table-wrapper {
+    padding: 0 180px; }
+
+  /******** Speakers ********/
+  .speakers-top-bar {
+    padding: 110px 150px 110px 150px; }
+
+  .speakers-single-row {
+    padding: 0 0 0 180px; }
+
+  /******** Sponsors ********/
+  .sponsors-top-bar {
+    padding: 110px 150px 55px 150px; }
+
+  .sponsors-row {
+    padding: 0 200px 50px 250px; }
+
+  /******** Footer ********/
+  .footer .footer-navigation {
+    padding: 30px 150px 30px 165px; }
+  .footer .footer-bottom-bar {
+    margin: 0 0 0 164px; }
+  .footer .map-wrapper {
+    right: 130px; } }
 
 /*# sourceMappingURL=style.css.map */
