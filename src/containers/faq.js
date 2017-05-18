@@ -37,7 +37,7 @@ export default class FAQ extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label>Your question</label><br />
-                                    <textarea className="form-control" rows="8" id="message"></textarea>
+                                    <textarea className="form-control" rows="8" id="message" />
                                 </div>
                                 <button type="submit" className="submit">Submit</button>
                             </form>
