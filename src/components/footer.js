@@ -41,7 +41,6 @@ class Footer extends Component{
                     <div  id="map"></div>
                 </div>
             </div>
-
         )
     }
 }

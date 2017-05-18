@@ -202,6 +202,67 @@ body {
     font-weight: 700;
     padding-bottom: 30px; }
 
+/********************************* FAQ Section *******************************/
+.faq-section {
+  padding: 130px 50px 120px 140px; }
+  .faq-section h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 50px; }
+  .faq-section h4 {
+    font-size: 20px;
+    font-weight: 700; }
+  .faq-section p {
+    font-size: 15px;
+    margin-bottom: 30px; }
+  .faq-section .form-wrapper h4 {
+    font-size: 20px;
+    color: #ed3454;
+    padding: 110px 0 30px 0; }
+  .faq-section .form-wrapper label {
+    font-size: 15px;
+    margin-bottom: 10px; }
+  .faq-section .form-wrapper input {
+    outline: none;
+    background-color: #f6f6f6;
+    height: 40px;
+    box-shadow: none;
+    margin-bottom: 25px; }
+  .faq-section .form-wrapper textarea {
+    background: #f6f6f6;
+    box-shadow: none; }
+  .faq-section .form-wrapper .submit {
+    width: 100%;
+    height: 40px;
+    background: #272461;
+    color: #fff;
+    border: 1px solid #272461;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px; }
+
+/********************************* About Section *******************************/
+.about-section {
+  padding: 120px 150px 100px 165px; }
+  .about-section .about-cover {
+    background: url("../../public/img/about_cover.png");
+    height: 330px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .about-section h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px; }
+  .about-section .about-us {
+    padding: 0 70px; }
+    .about-section .about-us h4 {
+      font-size: 20px;
+      font-weight: 700;
+      padding: 40px 0 15px 0; }
+    .about-section .about-us p {
+      font-size: 15px; }
+
 /********************************* Footer *************************************/
 .footer {
   height: 300px;
@@ -298,6 +359,10 @@ body {
 
   .sponsors-row {
     padding: 0 200px 50px 250px; }
+
+  /******** Faq section ********/
+  .faq-section {
+    padding: 130px 150px 120px 190px; }
 
   /******** Footer ********/
   .footer .footer-navigation {
