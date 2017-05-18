@@ -60,7 +60,7 @@ class Content extends Component{
                         <h4>General</h4>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
-                                <img src={require('../../public/img/Ucom.png')} />
+                                <img className="general" src={require('../../public/img/Ucom.png')} />
                             </div>
                         </div>
                         <div className="col-lg-10 col-md-10 col-sm-10"></div>
@@ -89,7 +89,7 @@ class Content extends Component{
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
-                                <img src={require('../../public/img/picsart.png')} />
+                                <img src={require('../../public/img/ginosi.png')} />
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,17 @@ class Content extends Component{
                                 <img src={require('../../public/img/aua.png')} />
                             </div>
                         </div>
-                        <div className="col-lg-8 col-md-8 col-sm-8"></div>
+                        <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <div className="single-sponsors">
+                                <img src={require('../../public/img/hex.png')} />
+                            </div>
+                        </div>
+                        <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <div className="single-sponsors">
+                                <img src={require('../../public/img/simply.png')} />
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-4"></div>
                     </div>
                     <div className="row sponsors-row">
                         <h4>Information sponsors</h4>
@@ -114,17 +124,7 @@ class Content extends Component{
                                 <img src={require('../../public/img/Startuparmenia.png')} />
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                            <div className="single-sponsors">
-                                <img src={require('../../public/img/ipmarketing.png')} />
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                            <div className="single-sponsors">
-                                <img src={require('../../public/img/mediamax.png')} />
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-sm-6"></div>
+                        <div className="col-lg-10 col-md-10 col-sm-10"></div>
                     </div>
                 </div>
             </div>

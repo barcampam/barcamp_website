@@ -263,6 +263,9 @@ body {
     font-weight: 700;
     padding-bottom: 30px;
   }
+  .general {
+    width: 180px;
+  }
 }
 
 /********************************* FAQ Section *******************************/
@@ -320,10 +323,11 @@ body {
 .about-section {
   padding: 120px 150px 100px 165px;
   .about-cover {
-    background: url("../../public/img/about_cover.png");
-    height: 330px;
+    background: url("../../public/img/about-cover.jpg");
+    height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
   }
   h1 {
     font-size: 42px;
@@ -331,7 +335,7 @@ body {
     margin-bottom: 40px;
   }
   .about-us {
-    padding: 0 70px;
+    padding: 60px 0;
     h4 {
       font-size: 20px;
       font-weight: 700;
@@ -339,6 +343,11 @@ body {
     }
     p {
       font-size: 15px;
+    }
+    h5 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 25px 0;
     }
   }
 }
