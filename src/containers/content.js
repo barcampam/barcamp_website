@@ -2,6 +2,7 @@ import React, {Component} from "react"
 
 import Timetable from './timetable'
 import Speakers from './speakers'
+import Guests from './special-guests'
 
 class Content extends Component{
     render(){
@@ -47,6 +48,7 @@ class Content extends Component{
                     </div>
                 </section>
                 <Timetable />
+                <Guests/>
                 <Speakers/>
                 <div className="container-fluid">
                     <div className="row">
