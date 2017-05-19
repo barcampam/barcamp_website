@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 
-
-class Speakers extends Component{
+class SpeakersAll extends Component{
     render(){
         return(
             <div>
@@ -9,8 +8,7 @@ class Speakers extends Component{
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className="speakers-top-bar">
-                                <img src={require('../../public/img/speakers.png')} />
-                                <a href="/all-speakers">See all(80)</a>
+                                <h1>All Speakers</h1>
                             </div>
                         </div>
                     </div>
@@ -84,7 +82,7 @@ class Speakers extends Component{
                                         <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
                                     </div>
                                 </div>
-                                <img src={require('../../public/img/speaker-1.png')} />
+                                <img src={require('../../public/img/speaker-4.png')} />
                                 <h5>Name Lastname</h5>
                                 <p className="company">Company Name</p>
                                 <p className="talk-name">Here should be talk name.</p>
@@ -99,7 +97,7 @@ class Speakers extends Component{
                                         <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
                                     </div>
                                 </div>
-                                <img src={require('../../public/img/speaker-2.png')} />
+                                <img src={require('../../public/img/speaker-4.png')} />
                                 <h5>Name Lastname</h5>
                                 <p className="company">Company Name</p>
                                 <p className="talk-name">Here should be talk name.</p>
@@ -114,7 +112,7 @@ class Speakers extends Component{
                                         <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
                                     </div>
                                 </div>
-                                <img src={require('../../public/img/speaker-3.png')} />
+                                <img src={require('../../public/img/speaker-4.png')} />
                                 <h5>Name Lastname</h5>
                                 <p className="company">Company Name</p>
                                 <p className="talk-name">Here should be talk name.</p>
@@ -143,4 +141,4 @@ class Speakers extends Component{
 }
 
 
-export default Speakers
+export default SpeakersAll

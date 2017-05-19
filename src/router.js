@@ -7,6 +7,7 @@ import FAQ from "./containers/faq";
 import Livestream from "./containers/livestream";
 import Archive from "./containers/archive";
 import Content from "./containers/content";
+import SpeakersAll from './containers/all-speakers'
 
 export default (
     <Route path="/" component={App}>
@@ -15,5 +16,6 @@ export default (
         <Route path="livestream" component={Livestream}/>
         <Route path="faq" component={FAQ}/>
         <Route path="about" component={About}/>
+        <Route path="all-speakers" component={SpeakersAll}/>
     </Route>
 )

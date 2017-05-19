@@ -31,7 +31,7 @@ body {
   .home-top .social-links {
     position: absolute;
     top: 34%;
-    left: 8%; }
+    left: 9%; }
     .home-top .social-links img {
       width: 45px;
       margin: 5px 0; }
@@ -147,6 +147,16 @@ body {
 /********************************* Speakers Section ****************************/
 .speakers-top-bar {
   padding: 110px 100px 110px 100px; }
+  .speakers-top-bar a {
+    font-size: 20px;
+    color: #8e8e8e;
+    text-decoration: none;
+    margin: 0 0 0 20px;
+    display: inline-block; }
+  .speakers-top-bar h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 50px 0 0 50px; }
 
 .speakers-single-row {
   padding: 0 75px 0 150px; }
@@ -356,6 +366,8 @@ body {
   /******** Speakers ********/
   .speakers-top-bar {
     padding: 110px 150px 110px 150px; }
+    .speakers-top-bar h1 {
+      margin: 50px 0 0 30px; }
 
   .speakers-single-row {
     padding: 0 0 0 180px; }

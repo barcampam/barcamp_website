@@ -1,11 +1,19 @@
 import React, {Component} from "react"
-
+import {connect} from "react-redux"
+import {bindActionCreators} from "redux"
+import {fetchDateTable} from "../actions/DateTableAction"
 
 class Timetable extends Component{
+    constructor(props){
+        super(props)
+
+       this.props.timeTable()
+    }
     render(){
         return(
             <div>
                 <div className="top-grey-border"></div>
+
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -195,5 +203,12 @@ class Timetable extends Component{
     }
 }
 
+function mapToActionTime(dispatch) {
 
-export default Timetable
+    return bindActionCreators({
+        timeTable:fetchDateTable
+    },dispatch)
+
+}
+
+export default connect(null,mapToActionTime)(Timetable)
