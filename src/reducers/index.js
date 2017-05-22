@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux';
 import timeTableReducer from "./timeTableReducer"
 import SpeakerReducer from "./SpeakerReducer"
-import SpeakerAllReducer from "./SpeakerAllreducer"
+import SpeakerAllReducer from "./speakerAllreducer"
 
 const rootReducer = combineReducers({
     state: (state = {}) => state,
