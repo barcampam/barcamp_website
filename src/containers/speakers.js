@@ -1,146 +1,78 @@
 import React, {Component} from "react"
+import {connect} from "react-redux"
+import {bindActionCreators} from "redux"
+import {fetchSpeaker} from "../actions/SpeakerAction"
+
+class Speakers extends Component {
+    constructor(props) {
+        super(props)
+
+        this.props.fetchSpeaker()
+    }
+
+    renderSpeakers() {
+
+        if(!this.props.speakers.length){
+            return <div>...Lodaing</div>
+        }
+
+        return this.props.speakers.map((data,id) => {
+
+            console.log(data)
+            let photo = data.photo
+            return (
+                <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12" key={id}>
+                    <div className="single-speaker">
+                        <div className="hovered">
+                            <div className="hovered-links">
+                                <a href={data.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>
+                                <a href={data.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>
+                                <a href={data.socialnetworks.instagram}><img src={require('../../public/img/hover_instagram.png')}/></a>
+                            </div>
+                        </div>
+                        <img src={`${photo}`}/>
+                        <h5>{data.en.name}</h5>
+                        <p className="talk-name">{data.en.topic}</p>
+                    </div>
+                </div>
+            )
+        })
 
 
-class Speakers extends Component{
-    render(){
-        return(
+    }
+
+    render() {
+
+        console.log(this.props.speakers)
+        return (
             <div>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className="speakers-top-bar">
-                                <img src={require('../../public/img/speakers.png')} />
+                                <img src={require('../../public/img/speakers.png')}/>
                                 <a href="/all-speakers">See all(80)</a>
                             </div>
                         </div>
                     </div>
                     <div className="row speakers-single-row">
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div className="single-speaker">
-                                <div className="hovered">
-                                    <div className="hovered-links">
-                                        <a href=""><img src={require('../../public/img/hover_fb.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_twitter.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
-                                    </div>
-                                </div>
-                                <img src={require('../../public/img/speaker-1.png')} />
-                                <h5>Name Lastname</h5>
-                                <p className="company">Company Name</p>
-                                <p className="talk-name">Here should be talk name.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div className="single-speaker">
-                                <div className="hovered">
-                                    <div className="hovered-links">
-                                        <a href=""><img src={require('../../public/img/hover_fb.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_twitter.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
-                                    </div>
-                                </div>
-                                <img src={require('../../public/img/speaker-2.png')} />
-                                <h5>Name Lastname</h5>
-                                <p className="company">Company Name</p>
-                                <p className="talk-name">Here should be talk name.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div className="single-speaker">
-                                <div className="hovered">
-                                    <div className="hovered-links">
-                                        <a href=""><img src={require('../../public/img/hover_fb.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_twitter.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
-                                    </div>
-                                </div>
-                                <img src={require('../../public/img/speaker-3.png')} />
-                                <h5>Name Lastname</h5>
-                                <p className="company">Company Name</p>
-                                <p className="talk-name">Here should be talk name.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div className="single-speaker">
-                                <div className="hovered">
-                                    <div className="hovered-links">
-                                        <a href=""><img src={require('../../public/img/hover_fb.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_twitter.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
-                                    </div>
-                                </div>
-                                <img src={require('../../public/img/speaker-4.png')} />
-                                <h5>Name Lastname</h5>
-                                <p className="company">Company Name</p>
-                                <p className="talk-name">Here should be talk name.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div className="single-speaker">
-                                <div className="hovered">
-                                    <div className="hovered-links">
-                                        <a href=""><img src={require('../../public/img/hover_fb.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_twitter.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
-                                    </div>
-                                </div>
-                                <img src={require('../../public/img/speaker-1.png')} />
-                                <h5>Name Lastname</h5>
-                                <p className="company">Company Name</p>
-                                <p className="talk-name">Here should be talk name.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div className="single-speaker">
-                                <div className="hovered">
-                                    <div className="hovered-links">
-                                        <a href=""><img src={require('../../public/img/hover_fb.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_twitter.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
-                                    </div>
-                                </div>
-                                <img src={require('../../public/img/speaker-2.png')} />
-                                <h5>Name Lastname</h5>
-                                <p className="company">Company Name</p>
-                                <p className="talk-name">Here should be talk name.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div className="single-speaker">
-                                <div className="hovered">
-                                    <div className="hovered-links">
-                                        <a href=""><img src={require('../../public/img/hover_fb.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_twitter.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
-                                    </div>
-                                </div>
-                                <img src={require('../../public/img/speaker-3.png')} />
-                                <h5>Name Lastname</h5>
-                                <p className="company">Company Name</p>
-                                <p className="talk-name">Here should be talk name.</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div className="single-speaker">
-                                <div className="hovered">
-                                    <div className="hovered-links">
-                                        <a href=""><img src={require('../../public/img/hover_fb.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_twitter.png')} /></a>
-                                        <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
-                                    </div>
-                                </div>
-                                <img src={require('../../public/img/speaker-4.png')} />
-                                <h5>Name Lastname</h5>
-                                <p className="company">Company Name</p>
-                                <p className="talk-name">Here should be talk name.</p>
-                            </div>
-                        </div>
+                        {this.renderSpeakers()}
                     </div>
                 </div>
             </div>
         )
     }
 }
+function mapToActionTime(dispatch) {
 
+    return bindActionCreators({
+        fetchSpeaker
+    }, dispatch)
 
-export default Speakers
+}
+
+function mapToStateAction({speakers}) {
+    return {speakers}
+}
+
+export default connect(mapToStateAction, mapToActionTime)(Speakers)
