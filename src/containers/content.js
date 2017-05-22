@@ -8,7 +8,7 @@ class Content extends Component{
     render(){
         return(
             <div>
-                <section className="home-top">
+                <section className="home-top hidden-xs">
                     <div className="social-links">
                         <a href=""><img src={require('../../public/img/ic_facebook_share.png')} /></a><br />
                         <a href=""><img src={require('../../public/img/ic_twtiter_share.png')} /></a><br />
@@ -43,6 +43,28 @@ class Content extends Component{
                                 <a target="_blank" href="http://www.hexdivision.com/">
                                     <img src={require('../../public/img/appstore.png')} />
                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="home-top-mobile visible-xs">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-xs-12">
+                                <h2>May 27-28</h2>
+                                <p>The most wanted IT and<br />
+                                    Media event in Armenia<br />
+                                    coming in the soon
+                                </p>
+                                <div className="barcamp-hashtag-mobile">
+                                    <h3>#barcampevn17</h3>
+                                    <div className="social-links-mobile">
+                                        <a href=""><img src={require('../../public/img/ic_facebook_share.png')} /></a><br />
+                                        <a href=""><img src={require('../../public/img/ic_twtiter_share.png')} /></a><br />
+                                        <a href=""><img src={require('../../public/img/ic_instagram_share.png')} /></a>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
