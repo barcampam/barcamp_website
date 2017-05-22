@@ -37,7 +37,7 @@ class Footer extends Component{
                         <div className="col-lg-5 col-md-5 col-sm-5"></div>
                     </div>
                 </div>
-                <div className="map-wrapper">
+                <div className="map-wrapper hidden-xs">
                     <div  id="map"></div>
                 </div>
             </div>

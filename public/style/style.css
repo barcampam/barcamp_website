@@ -19,6 +19,32 @@ body {
   .navbar-default .navbar-nav .active a:hover {
     color: #ed3454;
     background-color: transparent; }
+  .navbar-default .navbar-toggle {
+    cursor: pointer;
+    padding: 25px 41px 16px 0;
+    border: none; }
+  .navbar-default .navbar-toggle span, .navbar-default .navbar-toggle span:before, .navbar-default .navbar-toggle span:after {
+    cursor: pointer;
+    height: 2px;
+    width: 30px;
+    background: #eb2a2e;
+    position: absolute;
+    display: block;
+    content: ''; }
+  .navbar-default .navbar-toggle span:before {
+    top: -7px; }
+  .navbar-default .navbar-toggle span:after {
+    bottom: -7px; }
+  .navbar-default .navbar-toggle span, .navbar-default .navbar-toggle span:before, .navbar-default .navbar-toggle span:after {
+    transition: all 400ms ease-in-out; }
+  .navbar-default .navbar-toggle.active span {
+    background-color: transparent; }
+  .navbar-default .navbar-toggle.active span:before, .navbar-default .navbar-toggle.active span:after {
+    top: 0; }
+  .navbar-default .navbar-toggle.active span:before {
+    transform: rotate(45deg); }
+  .navbar-default .navbar-toggle.active span:after {
+    transform: rotate(-45deg); }
 
 /********************************* Home Section *******************************/
 .home-top {
@@ -112,6 +138,11 @@ body {
     color: #8e8e8e;
     text-decoration: none;
     padding: 0 10px; }
+  .timetable-top-bar .active {
+    background: #292663;
+    color: #fff;
+    padding: 8px;
+    margin-left: 8px; }
 
 .table-wrapper {
   padding: 0 133px 0 130px; }
@@ -124,11 +155,15 @@ body {
       .table-wrapper .timetable-all .heading .empty {
         background: #ffffff; }
       .table-wrapper .timetable-all .heading th {
-        text-align: center; }
+        text-align: center;
+        border: none;
+        padding: 16px; }
     .table-wrapper .timetable-all td {
       height: 100px;
       padding: 0 15px;
-      border-bottom: 2px solid #dddddd; }
+      border-bottom: 2px solid #dddddd;
+      vertical-align: middle;
+      border-top: none; }
     .table-wrapper .timetable-all .time {
       background: #ffffff;
       border-bottom: none;
@@ -138,7 +173,8 @@ body {
       background: #f8f8f8;
       border-radius: 10px;
       padding: 15px;
-      margin: 15px 0; }
+      margin: 15px 0;
+      height: 150px; }
       .table-wrapper .timetable-all .event-description p {
         font-size: 13px; }
       .table-wrapper .timetable-all .event-description .speaker-name {
@@ -329,6 +365,105 @@ body {
   width: 400px; }
 
 /********************************* Media Queries *******************************/
+/* Mobile XS */
+@media (max-width: 767px) {
+  .navbar-default {
+    padding: 0 10px; }
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+      background-color: transparent; }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+      border: none;
+      background: #fff;
+      text-align: center; }
+    .navbar-default .navbar-brand img {
+      width: 150px; }
+    .navbar-default .navbar-nav li a {
+      padding-top: 10px; }
+
+  .home-top-mobile {
+    background-image: url(../../public/img/yellow-bck.png);
+    padding: 200px 20px 30px 20px;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .home-top-mobile h2 {
+      font-size: 27px; }
+    .home-top-mobile p {
+      font-size: 25px;
+      font-weight: 700; }
+    .home-top-mobile .barcamp-hashtag-mobile {
+      height: 180px;
+      background: #ee3555;
+      padding: 125px 0 0 18px;
+      margin-top: 50px;
+      position: relative; }
+      .home-top-mobile .barcamp-hashtag-mobile h3 {
+        font-size: 18px;
+        color: #fff; }
+      .home-top-mobile .barcamp-hashtag-mobile .social-links-mobile {
+        position: absolute;
+        top: 50px;
+        right: 15px; }
+        .home-top-mobile .barcamp-hashtag-mobile .social-links-mobile img {
+          width: 30px;
+          margin-bottom: 7px; }
+
+  .speakers-top-bar {
+    padding: 65px 40px 50px 20px; }
+    .speakers-top-bar img {
+      width: 200px; }
+    .speakers-top-bar a {
+      font-size: 10px; }
+    .speakers-top-bar h1 {
+      font-size: 28px;
+      margin: 0;
+      padding-top: 30px; }
+
+  .speakers-single-row {
+    padding: 0 20px 0 20px;
+    text-align: center; }
+    .speakers-single-row .hovered-mobile {
+      position: absolute;
+      top: 160px;
+      right: 50px; }
+    .speakers-single-row .hovered-links-mobile img {
+      width: 25px;
+      box-shadow: none;
+      margin: 0 7px; }
+
+  .sponsors-top-bar {
+    padding: 65px 40px 50px 20px; }
+    .sponsors-top-bar img {
+      width: 200px; }
+
+  .sponsors-row {
+    padding: 15px 40px 50px 40px; }
+
+  .footer .footer-navigation {
+    text-align: center;
+    padding: 15px 40px 50px 40px; }
+    .footer .footer-navigation img {
+      float: none;
+      width: 200px;
+      margin-right: 0; }
+    .footer .footer-navigation ul {
+      padding-left: 0;
+      padding-top: 20px; }
+      .footer .footer-navigation ul li {
+        float: none;
+        padding: 10px 0; }
+  .footer .footer-bottom-bar {
+    margin: 0;
+    height: auto;
+    text-align: center;
+    padding: 30px 15px; }
+    .footer .footer-bottom-bar .footer-social-links {
+      padding: 0; }
+
+  .faq-section {
+    padding: 110px 30px 120px 30px; }
+
+  .about-section {
+    padding: 110px 30px 50px 30px; } }
 /* Large Screen */
 @media only screen and (min-width: 1824px) {
   .navbar-default {

@@ -31,6 +31,13 @@ class SpeakersAll extends Component {
                                     src={require('../../public/img/hover_instagram.png')}/></a>
                             </div>
                         </div>
+                        <div className="hovered-mobile">
+                            <div className="hovered-links-mobile">
+                                <a href={data.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>
+                                <a href={data.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>
+                                <a href={data.socialnetworks.instagram}><img src={require('../../public/img/hover_instagram.png')}/></a>
+                            </div>
+                        </div>
                         <img src={`${photo}`}/>
                         <h5>{data.en.name}</h5>
                         <p className="talk-name">{data.en.topic}</p>

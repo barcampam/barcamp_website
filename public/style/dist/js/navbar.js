@@ -36,10 +36,28 @@ function handleResize() {
         }
     } else {
         if (isTop) {
-
+            $(".navbar-default").css({"background-color": "transparent"});
         } else {
-
+            $(".navbar-default").css({"background-color": "#ffffff", "height": "70px"});
         }
     }
 }
 
+/*****Navbar Collapse*****/
+$(document).ready(function (){
+    $('.nav a').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+});
+
+/***** On Click navbar toggle change to cross sign*****/
+$(document).ready(function (){
+    $( ".navbar-toggle" )
+        .on( "click", function() {
+            $(this).toggleClass( "active" );
+            $('.collapse').toggleClass('in')
+        });
+    $('.nav a').on('click', function() {
+        $(".navbar-toggle" ).removeClass("active");
+    });
+});

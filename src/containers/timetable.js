@@ -128,12 +128,11 @@ class Timetable extends Component {
 
         return (
             <div>
-                <div className="top-grey-border"></div>
-
+                <div className="top-grey-border hidden-xs"></div>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div className="timetable-top-bar">
+                            <div className="timetable-top-bar hidden-xs">
                                 <img src={require('../../public/img/timetable.png')}/>
                                 <div className="day-selection">
                                     <h4>Days</h4>
@@ -155,7 +154,7 @@ class Timetable extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-lg-12 col-md-12 col-sm-12 table-wrapper">
+                        <div className="col-lg-12 col-md-12 col-sm-12 table-wrapper hidden-xs">
                             <Table className="timetable-all">
                                 <tbody>
                                 <tr className="heading">
