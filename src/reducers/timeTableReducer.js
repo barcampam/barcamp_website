@@ -19,11 +19,15 @@ function DataFilter(data) {
     data.map(function (index, x) {
 
         let a = new Date(index.time_from.date).getHours()
-        let name = roomName.indexOf(index.room)
-        let room = arr.indexOf(a)
+        let name  = _.findIndex(roomName, {'room': index.room});
 
+        let room = arr.indexOf(a)
         if (name === -1) {
-            roomName.push(index.room)
+            roomName.push({room:index.room,cols:[index]})
+        }else{
+            let RoomFirst = _.findIndex(roomName, {'room': index.room});
+            roomName[RoomFirst].cols.push(index)
+
         }
 
         if (room === -1) {
@@ -39,6 +43,8 @@ function DataFilter(data) {
             let indexRoom = _.findIndex(items, {'name': a});
             items[indexRoom].item.push(index)
         }
+
+
 
     })
     return {items: items, names: roomName}
