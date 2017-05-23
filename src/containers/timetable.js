@@ -132,7 +132,7 @@ class Timetable extends Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div className="timetable-top-bar hidden-xs">
+                            <div className="timetable-top-bar">
                                 <img src={require('../../public/img/timetable.png')}/>
                                 <div className="day-selection">
                                     <h4>Days</h4>
@@ -141,10 +141,10 @@ class Timetable extends Component {
                                     <a className={"select-day " + this.state.daytwo} href="#"
                                        onClick={(e) => this.switchDays(e)}>28</a>
                                 </div>
-                                <div className="time-range">
+                                <div className="time-range hidden-xs">
                                     <h4>10:00 - 17:00</h4>
                                 </div>
-                                <div className="event-type">
+                                <div className="event-type hidden-xs">
                                     <div className="speak"></div>
                                     <h5>Talk</h5>
                                     <div className="workshop"></div>
@@ -164,6 +164,56 @@ class Timetable extends Component {
                                 {columns}
                                 </tbody>
                             </Table>
+                        </div>
+                    </div>
+                    <div className="col-xs-12 mobile-timetable visible-xs">
+                        <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div className="panel panel-default">
+                                <div className="panel-heading" role="tab" id="headingOne">
+                                    <h4 className="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Big Hall
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div className="panel-body">
+                                        <div className="single-event-mobile">
+                                            <h4 className="event-time-mobile">
+                                                10:00 - 10:45
+                                            </h4>
+                                            <h5 className="speaker-name-mobile">
+                                                Harut Martirosyan
+                                            </h5>
+                                            <p className="event-description-mobile">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div className="single-event-mobile">
+                                            <h4 className="event-time-mobile">
+                                                10:00 - 10:45
+                                            </h4>
+                                            <h5 className="speaker-name-mobile">
+                                                Harut Martirosyan
+                                            </h5>
+                                            <p className="event-description-mobile">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                        <div className="single-event-mobile">
+                                            <h4 className="event-time-mobile">
+                                                10:00 - 10:45
+                                            </h4>
+                                            <h5 className="speaker-name-mobile">
+                                                Harut Martirosyan
+                                            </h5>
+                                            <p className="event-description-mobile">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
