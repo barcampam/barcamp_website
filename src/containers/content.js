@@ -10,9 +10,9 @@ class Content extends Component{
             <div>
                 <section className="home-top hidden-xs">
                     <div className="social-links">
-                        <a href=""><img src={require('../../public/img/ic_facebook_share.png')} /></a><br />
-                        <a href=""><img src={require('../../public/img/ic_twtiter_share.png')} /></a><br />
-                        <a href=""><img src={require('../../public/img/ic_instagram_share.png')} /></a>
+                        <a target="_blank" href="https://www.facebook.com/barcampevn/"><img src={require('../../public/img/ic_facebook_share.png')} /></a><br />
+                        <a target="_blank" href="https://twitter.com/barcampam"><img src={require('../../public/img/ic_twtiter_share.png')} /></a><br />
+                        <a target="_blank" href="https://www.instagram.com/barcamp_yerevan/"><img src={require('../../public/img/ic_instagram_share.png')} /></a>
                     </div>
                     <div className="barcamp-hashtag">
                         <h3>#barcampevn17</h3>
@@ -37,7 +37,7 @@ class Content extends Component{
                         <div className="row">
                             <div className="col-lg-8 col-md-8 col-sm-8"></div>
                             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 app-links">
-                                <a target="_blank" href="http://www.hexdivision.com/">
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.barcampevn">
                                     <img src={require('../../public/img/googleplay.png')} />
                                 </a>
                                 <a target="_blank" href="http://www.hexdivision.com/">
@@ -59,11 +59,10 @@ class Content extends Component{
                                 <div className="barcamp-hashtag-mobile">
                                     <h3>#barcampevn17</h3>
                                     <div className="social-links-mobile">
-                                        <a href=""><img src={require('../../public/img/ic_facebook_share.png')} /></a><br />
-                                        <a href=""><img src={require('../../public/img/ic_twtiter_share.png')} /></a><br />
-                                        <a href=""><img src={require('../../public/img/ic_instagram_share.png')} /></a>
+                                        <a target="_blank" href="https://www.facebook.com/barcampevn/"><img src={require('../../public/img/ic_facebook_share.png')} /></a><br />
+                                        <a target="_blank" href="https://twitter.com/barcampam"><img src={require('../../public/img/ic_twtiter_share.png')} /></a><br />
+                                        <a target="_blank" href="https://www.instagram.com/barcamp_yerevan/"><img src={require('../../public/img/ic_instagram_share.png')} /></a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

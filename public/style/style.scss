@@ -533,6 +533,59 @@ body {
       }
     }
   }
+  .timetable-top-bar {
+    padding: 65px 40px 50px 20px;
+    display: block;
+    img {
+      width: 200px;
+    }
+    h4 {
+      padding-left: 0;
+      font-size: 16px;
+    }
+    a {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    .active {
+      margin-left: 15px;
+    }
+  }
+  .mobile-timetable {
+    .panel-default {
+      border: none;
+      box-shadow: none;
+    }
+    .panel-heading {
+      color: #fff;
+      background-color: #ee3555;
+      border-color: transparent;
+      border-radius: 0;
+      text-align: center;
+      a {
+        text-decoration: none;
+      }
+    }
+    .panel-body {
+      .single-event-mobile {
+        background: #f6f6f6;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      .event-time-mobile {
+        font-size: 14px;
+        color: #999999;
+        margin-bottom: -5px;
+      }
+      .speaker-name-mobile {
+        font-weight: 700;
+      }
+      .event-description-mobile {
+        font-size: 13px;
+      }
+    }
+  }
   .speakers-top-bar {
     padding: 65px 40px 50px 20px;
     img {
