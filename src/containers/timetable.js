@@ -11,7 +11,7 @@ function MapToData(item) {
     let time_too = new Date(item.time_to.date)
 
     let TimeFromMinutes = time_from.getMinutes() ? time_from.getMinutes() : "00"
-    let TimeTooMinutes = time_too.getMinutes() ? time_from.getMinutes() : "00"
+    let TimeTooMinutes = time_too.getMinutes() ? time_too.getMinutes() : "00"
 
     return (
         <div className="event-description" key={item.id}>
@@ -22,6 +22,76 @@ function MapToData(item) {
             </p>
         </div>
     )
+}
+
+class MapToMobileData extends Component {
+
+    renderTableItems(cols) {
+        console.log(cols)
+        const TimeCols = []
+
+        cols.map((item, id) => {
+            let time_from = new Date(item.time_from.date)
+            let time_too = new Date(item.time_to.date)
+
+            let TimeFromMinutes = time_from.getMinutes() !== 0 ? time_from.getMinutes() : "00"
+            let TimeTooMinutes = time_too.getMinutes() !== 0 ? time_too.getMinutes() : "00"
+            TimeCols.push(
+                <div className="single-event-mobile" key={id}>
+                    <h4 className="event-time-mobile">
+                        {time_from.getHours() + ":" + TimeFromMinutes } - {time_too.getHours() + ":" + TimeTooMinutes}
+                    </h4>
+                    <h5 className="speaker-name-mobile">
+                        {item.en.speaker}
+                    </h5>
+                    <p className="event-description-mobile">
+                        {item.en.topic}
+                    </p>
+                </div>
+            )
+        })
+
+        return (
+            <div>{TimeCols}</div>
+        )
+    }
+
+    render() {
+        const Tem = []
+        const self = this
+        if (this.props.props) {
+            this.props.props.map(function (data, id) {
+                Tem.push(
+                    <div className="panel panel-default" key={id}>
+
+                        <div className="panel-heading" role="tab" id={"heading" + id}>
+                            <h4 className="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                   href={"#collapse" + id} aria-expanded="true" aria-controls="collapseOne">
+                                    {data.room}
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id={"collapse" + id} className="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby={"heading" + id}>
+                            <div className="panel-body">
+                                {self.renderTableItems(data.cols)}
+                            </div>
+                        </div>
+                    </div>
+                )
+            })
+            return (
+                <div> {Tem}</div>
+            )
+
+        } else {
+            return (
+                <div>Loadin</div>
+            )
+        }
+    }
 }
 
 function td(item) {
@@ -55,24 +125,24 @@ class Timetable extends Component {
 
     switchDays(e) {
         e.preventDefault()
-        console.log(e)
         this.setState({dayState: 19, daytwo: "active", dayOne: ""})
     }
 
     switchDaysnew(e) {
         e.preventDefault()
-        console.log(e)
         this.setState({dayState: 18, dayOne: 'active', daytwo: ""})
     }
 
     render() {
         const self = this
-        const row = []
+        const row = ["Big Hall", "208E", "308E", "213W", "214W"]
+        const RowCols = []
         const columns = []
+        const MobileCols = []
         let DataTable = Object.keys(this.props.timeTableState)
         if (DataTable.length > 0) {
-            _.forEach(this.props.timeTableState.names, function (n, key) {
-                row.push(<th key={key}>{n}</th>)
+            _.forEach(row, function (n, key) {
+                RowCols.push(<th key={key}>{n}</th>)
             })
 
             _.forEach(this.props.timeTableState.items, function (item, key) {
@@ -82,6 +152,7 @@ class Timetable extends Component {
                 const W113 = []
                 const W214 = []
                 const E208 = []
+                const E308 = []
                 _.forEach(item.item, function (data, x) {
                     let dateFrom = new Date(data.time_from.date).getDate()
 
@@ -105,6 +176,9 @@ class Timetable extends Component {
                             case "208E":
                                 E208.push(MapToData(data))
                                 break
+                            case "308E":
+                                E308.push(MapToData(data))
+                                break
                             default:
                                 return true
 
@@ -116,11 +190,10 @@ class Timetable extends Component {
                     <tr key={key}>
                         <td>{item.name}:00</td>
                         <td>{h1}</td>
-                        <td>{W114}</td>
-                        <td>{W213}</td>
-                        <td>{W113}</td>
-                        <td>{W214}</td>
                         <td>{E208}</td>
+                        <td>{E308}</td>
+                        <td>{W213}</td>
+                        <td>{W214}</td>
                     </tr>)
             })
         }
@@ -159,7 +232,7 @@ class Timetable extends Component {
                                 <tbody>
                                 <tr className="heading">
                                     <th className="empty"></th>
-                                    {row}
+                                    {RowCols}
                                 </tr>
                                 {columns}
                                 </tbody>
@@ -168,52 +241,8 @@ class Timetable extends Component {
                     </div>
                     <div className="col-xs-12 mobile-timetable visible-xs">
                         <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                            <div className="panel panel-default">
-                                <div className="panel-heading" role="tab" id="headingOne">
-                                    <h4 className="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Big Hall
-                                        </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne" className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div className="panel-body">
-                                        <div className="single-event-mobile">
-                                            <h4 className="event-time-mobile">
-                                                10:00 - 10:45
-                                            </h4>
-                                            <h5 className="speaker-name-mobile">
-                                                Harut Martirosyan
-                                            </h5>
-                                            <p className="event-description-mobile">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                        </div>
-                                        <div className="single-event-mobile">
-                                            <h4 className="event-time-mobile">
-                                                10:00 - 10:45
-                                            </h4>
-                                            <h5 className="speaker-name-mobile">
-                                                Harut Martirosyan
-                                            </h5>
-                                            <p className="event-description-mobile">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                        </div>
-                                        <div className="single-event-mobile">
-                                            <h4 className="event-time-mobile">
-                                                10:00 - 10:45
-                                            </h4>
-                                            <h5 className="speaker-name-mobile">
-                                                Harut Martirosyan
-                                            </h5>
-                                            <p className="event-description-mobile">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+                            <MapToMobileData props={this.props.timeTableState.names}/>
                         </div>
                     </div>
                 </div>

@@ -18,7 +18,6 @@ class Speakers extends Component {
 
         return this.props.speakers.map((data,id) => {
 
-            console.log(data)
             let photo = data.photo
             return (
                 <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12" key={id}>
@@ -50,7 +49,6 @@ class Speakers extends Component {
 
     render() {
 
-        console.log(this.props.speakers)
         return (
             <div>
                 <div className="container-fluid">
