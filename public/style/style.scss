@@ -89,16 +89,27 @@ body {
     }
   }
   .barcamp-hashtag {
-    background-color: #ee0f3c;
+    background-color: #ed3454;
     height: 245px;
     width: 445px;
-    padding: 170px 10px 10px 20px;
     position: absolute;
     top: 47%;
     right: 8%;
     box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3);
   h3 {
       color: #ffffff;
+      padding: 85px 10px 10px 20px;
+    }
+    a {
+      display: block;
+      padding: 40px 10px 10px 20px;
+      font-size: 24px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.35s;
+    }
+    a:hover {
+      color: #fcbd20;
     }
   }
   .light-bulb {
@@ -112,6 +123,7 @@ body {
   }
   .about-event {
     padding-top: 125px;
+    padding-left: 170px;
     h2 {
       font-size: 33px;
       font-weight: lighter;
@@ -123,7 +135,7 @@ body {
     }
   }
   .app-links {
-    padding: 225px 0 0 70px;
+    padding: 225px 0 0 90px;
     img {
       width: 135px;
       margin: 0 6px;
@@ -207,6 +219,10 @@ body {
         border: none;
         padding: 16px;
       }
+    }
+    tr td:first-child {
+      font-weight: 700;
+      border: none;
     }
     td {
       height: 100px;
@@ -454,9 +470,21 @@ body {
         font-weight: 900;
         margin-bottom: 25px;
       }
+      h5 {
+        font-size: 13px;
+        color: #fff;
+      }
       p {
         font-size: 15px;
         color: #ffffff;
+      }
+      a{
+        color: #fff;
+        text-decoration: underline;
+        transition: all 0.35s;
+      }
+      a:hover {
+        color: #fcbd20;
       }
     }
     a {
@@ -514,13 +542,24 @@ body {
     }
     .barcamp-hashtag-mobile {
       height: 180px;
-      background: #ee3555;
-      padding: 125px 0 0 18px;
+      background: #ed3454;
       margin-top: 50px;
       position: relative;
       h3 {
         font-size: 18px;
         color: #fff;
+        padding: 60px 0 0 18px;
+      }
+      .registration {
+        display: block;
+        padding: 30px 0 0 18px;
+        font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.35s;
+      }
+      .registration:hover {
+        color: #fcbd20;
       }
       .social-links-mobile {
         position: absolute;
@@ -682,6 +721,7 @@ body {
     }
     .about-event {
       padding-top: 200px;
+      padding-left: 0;
       h2 {
         font-size: 42px;
       }
@@ -690,7 +730,7 @@ body {
       }
     }
     .app-links {
-      padding: 420px 0 0 90px;
+      padding: 420px 0 0 145px;
       img {
         width: 180px;
       }

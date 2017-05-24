@@ -217,12 +217,12 @@ class Timetable extends Component {
                                 <div className="time-range hidden-xs">
                                     <h4>10:00 - 17:00</h4>
                                 </div>
-                                <div className="event-type hidden-xs">
-                                    <div className="speak"></div>
-                                    <h5>Talk</h5>
-                                    <div className="workshop"></div>
-                                    <h5>Workshop</h5>
-                                </div>
+                                {/*<div className="event-type hidden-xs">*/}
+                                    {/*<div className="speak"></div>*/}
+                                    {/*<h5>Talk</h5>*/}
+                                    {/*<div className="workshop"></div>*/}
+                                    {/*<h5>Workshop</h5>*/}
+                                {/*</div>*/}
                             </div>
                         </div>
                     </div>

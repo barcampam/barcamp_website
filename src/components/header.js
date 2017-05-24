@@ -26,12 +26,12 @@ class Header extends Component {
                             <li>
                                 <a href="/"></a>
                             </li>
-                            <li className={Active("/archive")}>
-                                <a href="/archive">ARCHIVE</a>
-                            </li>
-                            <li  className={Active("/livestream")} >
-                                <a href="/livestream">LIVESTREAM</a>
-                            </li>
+                            {/*<li className={Active("/archive")}>*/}
+                                {/*<a href="/archive">ARCHIVE</a>*/}
+                            {/*</li>*/}
+                            {/*<li  className={Active("/livestream")} >*/}
+                                {/*<a href="/livestream">LIVESTREAM</a>*/}
+                            {/*</li>*/}
                             <li className={Active("/faq")}>
                                 <a href="/faq">FAQ</a>
                             </li>
@@ -39,14 +39,14 @@ class Header extends Component {
                                 <a href="/about">ABOUT</a>
                             </li>
                         </ul>
-                        <ul className="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="/">ARM</a>
-                            </li>
-                            <li>
-                                <a href="/">ENG</a>
-                            </li>
-                        </ul>
+                        {/*<ul className="nav navbar-nav navbar-right">*/}
+                            {/*<li>*/}
+                                {/*<a href="/">ARM</a>*/}
+                            {/*</li>*/}
+                            {/*<li>*/}
+                                {/*<a href="/">ENG</a>*/}
+                            {/*</li>*/}
+                        {/*</ul>*/}
                     </div>
                 </div>
             </nav>
