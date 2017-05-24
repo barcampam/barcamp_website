@@ -24,14 +24,21 @@ class Guests extends Component {
             return (
                 <div key={id} className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div className="single-speaker">
-                        <div className="hovered">
+                        <div className="hovered hidden-xs">
                             <div className="hovered-links">
                                 <a href={item.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>
                                 <a href={item.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>
-                                <a href={item.socialnetworks.instagram}><img src={require('../../public/img/hover_instagram.png')}/></a>
+                                <a href={item.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>
                             </div>
                         </div>
-                        <img src={item.photo}/>
+                        <div className="hovered-mobile visible-xs">
+                            <div className="hovered-links-mobile">
+                                <a href={item.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>
+                                <a href={item.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>
+                                <a href={item.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>
+                            </div>
+                        </div>
+                        <img className="speaker-image" src={item.photo}/>
                         <h5>{item[this.state.len].name}</h5>
                         <p className="talk-name">{item[this.state.len].topic}</p>
                     </div>
@@ -55,7 +62,8 @@ class Guests extends Component {
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div className="container">
                     <div className="row speakers-single-row">
                         {this.renderGuests()}
                     </div>

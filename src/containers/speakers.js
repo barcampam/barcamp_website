@@ -36,9 +36,9 @@ class Speakers extends Component {
                                 <a href={data.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>
                             </div>
                         </div>
-                        <img src={`${photo}`}/>
-                        <h5>{data[this.state.len].name}</h5>
-                        <p className="talk-name">{data[this.state.len].topic}</p>
+                        <img className="speaker-image" src={`${photo}`}/>
+                        <h5>{data['en'].name}</h5>
+                        <p className="talk-name">{data['en'].topic}</p>
                     </div>
                 </div>
             )
@@ -60,6 +60,8 @@ class Speakers extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="container">
                     <div className="row speakers-single-row">
                         {this.renderSpeakers()}
                     </div>

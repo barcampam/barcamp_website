@@ -38,7 +38,7 @@ class SpeakersAll extends Component {
                                 <a href={data.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>
                             </div>
                         </div>
-                        <img src={`${photo}`}/>
+                        <img className="speaker-image" src={`${photo}`}/>
                         <h5>{data.en.name}</h5>
                         <p className="talk-name">{data.en.topic}</p>
                     </div>
@@ -60,10 +60,13 @@ class SpeakersAll extends Component {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="container">
                     <div className="row speakers-single-row">
                         {this.renderAllSpeakers()}
                     </div>
                 </div>
+
             </div>
         )
     }
