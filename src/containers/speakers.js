@@ -37,8 +37,8 @@ class Speakers extends Component {
                             </div>
                         </div>
                         <img src={`${photo}`}/>
-                        <h5>{data.en.name}</h5>
-                        <p className="talk-name">{data.en.topic}</p>
+                        <h5>{data[this.state.len].name}</h5>
+                        <p className="talk-name">{data[this.state.len].topic}</p>
                     </div>
                 </div>
             )

@@ -1,6 +1,7 @@
 import  axios from "axios"
+import {LEN} from "./Constant"
 
-const API_SPEAKER_URL = "http://api.barcamp.am/speakers"
+const API_SPEAKER_URL = "http://api.barcamp.am/" + LEN + "/speakers"
 export const SPEAKER_TYPE = "SPEAKER_TYPE"
 
 
