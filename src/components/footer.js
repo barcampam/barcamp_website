@@ -14,7 +14,7 @@ class Footer extends Component{
                             <img src={require('../../public/img/logo.png')} />
                             <ul>
                                 <li><a href="/about">ABOUT</a></li>
-                                <li><a href="/archive">ARCHIVE</a></li>
+                                {/*<li><a href="/archive">ARCHIVE</a></li>*/}
                                 <li><a href="/faq">FAQ</a></li>
                             </ul>
                         </div>
@@ -24,15 +24,16 @@ class Footer extends Component{
                 <div className="container-fluid footer-bottom-bar">
                     <div className="row">
                         <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-social-links">
-                            <a href=""><img src={require('../../public/img/hover_fb.png')} /></a>
-                            <a href=""><img src={require('../../public/img/hover_twitter.png')} /></a>
-                            <a href=""><img src={require('../../public/img/hover_instagram.png')} /></a>
+                            <a target="_blank" href="https://www.facebook.com/barcampevn/"><img src={require('../../public/img/hover_fb.png')} /></a>
+                            <a target="_blank" href="https://twitter.com/barcampam"><img src={require('../../public/img/hover_twitter.png')} /></a>
+                            <a target="_blank" href="https://www.instagram.com/barcamp_yerevan/"><img src={require('../../public/img/barcamp_instagram.png')} /></a>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 barcamp-address">
                             <h3>GET IN TOUCH WITH US</h3>
                             <p>40 Marshal Baghramyan Ave, Yerevan 0019<br />
                                 barista@barcamp.com
                             </p>
+                            <h5>Developed by <a target="_blank" href="http://www.hexdivision.com/">Hex Division</a></h5>
                         </div>
                         <div className="col-lg-5 col-md-5 col-sm-5"></div>
                     </div>
