@@ -31,7 +31,7 @@ export default class About extends Component {
                                 <p>Most revealing, the schedule of events is "produced" by the participants of the conference and is formed only after the conference opens, as participants add the presentations they want to hold on a white board. We also have workshops and guest speakers, whose talks are announced beforehand.</p>
                                 <h5>Our region</h5>
                                 <p>The first ever BarCamp near to us was organised in Kiev in October 2007. It brought together about 300 people from Ukraine, Belarus, Kazakhstan, Latvia, Russia, Kyrgyzstan, Poland, and other countries from the region and featured around 45 presentations.<br /><br />
-                                    After “BarCamp Kiev”, there was "BarCamp Baltics" in Riga (February 2008) and "Barcamp Caucasus" in Tbilisi (June 2008). The wave of BarCamps continues.
+                                    After “BarCamp Kiev”, there was "BarCamp Baltics" in Riga (February 2008) and "Barcamp Caucasus" in Tbilisi (June 2008). The wave of BarCamps continues.
                                 </p>
                                 <h5>Target Group</h5>
                                 <p>The main target audience of the BarCamp is engineers/developers/programmers of all flavors, project managers, entrepreneurs, new media activists, designers, educators and all professionals who are building the next generation Web.</p>

@@ -207,6 +207,7 @@ body {
   padding: 0 133px 0 130px;
   .timetable-all {
     width: 100%;
+    table-layout: fixed;
     .heading {
       height: 55px;
       background: #ee3555;
@@ -223,6 +224,7 @@ body {
     tr td:first-child {
       font-weight: 700;
       border: none;
+      text-align: center;
     }
     td {
       height: 100px;
@@ -242,7 +244,7 @@ body {
       border-radius: 10px;
       padding: 15px;
       margin: 15px 0;
-      height: 150px;
+      height: 200px;
       p {
         font-size: 13px;
       }
@@ -270,12 +272,14 @@ body {
   }
 }
 .speakers-single-row {
-  padding: 0 75px 0 150px;
   .single-speaker {
     margin-bottom: 70px;
-    img {
+    .speaker-image {
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       max-width: 100%;
+      width: 240px;
+      transform: scale(1.1);
+      transition: all 0.35s;
     }
     h5 {
       font-size: 15px;
@@ -303,14 +307,16 @@ body {
       left: 0;
       right: 0;
       background: rgba(255, 255, 255, 0.7);
-      height: 200px;
+      height: 240px;
       width: 240px;
     }
     .hovered-links {
       position: absolute;
-      top: 75px;
-      left: 40px;
+      top: 100px;
+      left: 0;
       z-index: 11;
+      right: 15px;
+      text-align: center;
       img {
         box-shadow: none;
       }
@@ -322,6 +328,9 @@ body {
   .single-speaker:hover {
       .hovered {
         visibility: visible;
+      }
+    .speaker-image {
+      transform: scale(1);
       }
     }
 }
@@ -644,8 +653,9 @@ body {
     text-align: center;
     .hovered-mobile {
       position: absolute;
-      top: 160px;
+      top: 200px;
       right: 50px;
+      z-index: 20;
     }
     .hovered-links-mobile {
       img {
@@ -699,7 +709,137 @@ body {
     padding: 110px 30px 50px 30px;
   }
 }
+/* Tablet view */
+@media only screen and (min-device-width: 768px) and (max-device-width: 992px) {
+  .navbar-default {
+    padding: 0 35px;
+  }
+  .home-top {
+    background-size: contain;
+    margin-left: 0;
+    .light-bulb {
+      display: none;
+    }
+    .about-event {
+      padding-left: 0;
+    }
+    .app-links {
+      display: none;
+    }
+  }
+  .timetable-top-bar {
+    padding: 70px 35px 30px 15px;
+  }
+  .table-wrapper {
+    padding: 0 35px 0 40px;
+    .timetable-all {
+      table-layout: auto;
+    }
+  }
+  .speakers-top-bar {
+    padding: 70px 35px 30px 15px;
+  }
+  .sponsors-top-bar {
+    padding: 70px 35px 30px 15px;
+  }
+  .sponsors-row {
+    padding: 0 0 50px 35px;
+    img {
+      max-width: 100%;
+    }
+  }
+  .faq-section {
+    padding: 130px 20px 120px 50px;
+  }
+  .footer {
+    .footer-bottom-bar {
+      margin: 0;
+      height: auto;
+      .footer-social-links {
+        padding: 60px 0 0 20px;
+      }
+    }
+    .footer-navigation {
+      padding: 30px 20px 30px 30px;
+      ul {
+        li {
+          padding: 26px 10px;
+        }
+      }
+    }
+    .map-wrapper {
+      top: 60px;
+      right: 24px;
+    }
+  }
+  #map {
+    height: 170px;
+    width: 253px;
+  }
+  .about-section {
+    padding: 120px 55px 100px 55px;
+  }
+}
 
+/* Tablet Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  .navbar-default {
+    padding: 0 45px;
+  }
+  .home-top {
+    background-size: contain;
+    margin-left: 0;
+    .light-bulb {
+      display: none;
+    }
+    .about-event {
+      padding-left: 100px;
+    }
+    .app-links {
+      display: none;
+    }
+  }
+  .timetable-top-bar {
+    padding: 70px 35px 30px 15px;
+  }
+  .table-wrapper {
+    padding: 0 35px 0 40px;
+    .timetable-all {
+      table-layout: auto;
+    }
+  }
+  .speakers-top-bar {
+    padding: 70px 35px 30px 15px;
+  }
+  .sponsors-top-bar {
+    padding: 70px 35px 30px 15px;
+  }
+  .sponsors-row {
+    padding: 0 0 50px 35px;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .faq-section {
+    padding: 130px 10px 120px 60px;
+  }
+  .footer {
+    .footer-bottom-bar {
+      margin: 0;
+      height: auto;
+    }
+    .footer-navigation {
+      padding: 30px 150px 30px 65px;
+    }
+    .map-wrapper {
+      right: 40px;
+    }
+  }
+  .about-section {
+    padding: 120px 60px 100px 60px;
+  }
+}
 
 /* Large Screen */
 @media only screen and (min-width: 1824px) {
@@ -747,6 +887,9 @@ body {
   .table-wrapper {
     padding: 0 180px;
   }
+  .event-description {
+    height: 150px;
+  }
 
   /******** Speakers ********/
   .speakers-top-bar {
@@ -755,9 +898,7 @@ body {
       margin: 50px 0 0 30px;
     }
   }
-  .speakers-single-row {
-    padding: 0 0 0 180px;
-  }
+
 
   /******** Sponsors ********/
   .sponsors-top-bar {
