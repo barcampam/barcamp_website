@@ -26,8 +26,15 @@ function MapToData(item) {
 
 class MapToMobileData extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            day: 27
+        }
+    }
+
     renderTableItems(cols) {
-        console.log(cols)
         const TimeCols = []
 
         cols.map((item, id) => {
@@ -36,19 +43,23 @@ class MapToMobileData extends Component {
 
             let TimeFromMinutes = time_from.getMinutes() !== 0 ? time_from.getMinutes() : "00"
             let TimeTooMinutes = time_too.getMinutes() !== 0 ? time_too.getMinutes() : "00"
-            TimeCols.push(
-                <div className="single-event-mobile" key={id}>
-                    <h4 className="event-time-mobile">
-                        {time_from.getHours() + ":" + TimeFromMinutes } - {time_too.getHours() + ":" + TimeTooMinutes}
-                    </h4>
-                    <h5 className="speaker-name-mobile">
-                        {item.en.speaker}
-                    </h5>
-                    <p className="event-description-mobile">
-                        {item.en.topic}
-                    </p>
-                </div>
-            )
+            let dateFrom = new Date(item.time_from.date).getDate()
+            if (this.props.day === dateFrom) {
+                TimeCols.push(
+                    <div className="single-event-mobile" key={id}>
+                        <h4 className="event-time-mobile">
+                            {time_from.getHours() + ":" + TimeFromMinutes }
+                            - {time_too.getHours() + ":" + TimeTooMinutes}
+                        </h4>
+                        <h5 className="speaker-name-mobile">
+                            {item.en.speaker}
+                        </h5>
+                        <p className="event-description-mobile">
+                            {item.en.topic}
+                        </p>
+                    </div>
+                )
+            }
         })
 
         return (
@@ -94,25 +105,13 @@ class MapToMobileData extends Component {
     }
 }
 
-function td(item) {
-
-
-    const arr = []
-
-    return _.forEach([1, 2, 3, 4, 5, 6], function () {
-        arr.push(
-
-        )
-    })
-    return arr
-}
 
 class Timetable extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            dayState: 18,
+            dayState: 27,
             dayOne: "active",
             daytwo: " "
         }
@@ -125,12 +124,12 @@ class Timetable extends Component {
 
     switchDays(e) {
         e.preventDefault()
-        this.setState({dayState: 19, daytwo: "active", dayOne: ""})
+        this.setState({dayState: 28, daytwo: "active", dayOne: ""})
     }
 
     switchDaysnew(e) {
         e.preventDefault()
-        this.setState({dayState: 18, dayOne: 'active', daytwo: ""})
+        this.setState({dayState: 27, dayOne: 'active', daytwo: ""})
     }
 
     render() {
@@ -242,7 +241,7 @@ class Timetable extends Component {
                     <div className="col-xs-12 mobile-timetable visible-xs">
                         <div className="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                            <MapToMobileData props={this.props.timeTableState.names}/>
+                            <MapToMobileData props={this.props.timeTableState.names} day={this.state.dayState}/>
                         </div>
                     </div>
                 </div>
