@@ -15,6 +15,7 @@ class Content extends Component{
                         <a target="_blank" href="https://www.instagram.com/barcamp_yerevan/"><img src={require('../../public/img/ic_instagram_share.png')} /></a>
                     </div>
                     <div className="barcamp-hashtag">
+                        <a target="_blank" href="https://www.eventbrite.co.uk/e/barcamp-yerevan-2017-tickets-33995486415">Register</a>
                         <h3>#barcampevn17</h3>
                     </div>
                     <div className="light-bulb">
@@ -57,6 +58,7 @@ class Content extends Component{
                                     coming in the soon
                                 </p>
                                 <div className="barcamp-hashtag-mobile">
+                                    <a className="registration" target="_blank" href="https://www.eventbrite.co.uk/e/barcamp-yerevan-2017-tickets-33995486415">Register</a>
                                     <h3>#barcampevn17</h3>
                                     <div className="social-links-mobile">
                                         <a target="_blank" href="https://www.facebook.com/barcampevn/"><img src={require('../../public/img/ic_facebook_share.png')} /></a><br />
@@ -102,17 +104,17 @@ class Content extends Component{
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <img src={require('../../public/img/ginosi.png')} />
+                            </div>
+                        </div>
+                        <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <div className="single-sponsors">
                                 <img src={require('../../public/img/vivaro.png')} />
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
                                 <img src={require('../../public/img/synergy.png')} />
-                            </div>
-                        </div>
-                        <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                            <div className="single-sponsors">
-                                <img src={require('../../public/img/ginosi.png')} />
                             </div>
                         </div>
                     </div>
@@ -144,10 +146,25 @@ class Content extends Component{
                         <h4>Information sponsors</h4>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
-                                <img src={require('../../public/img/Startuparmenia.png')} />
+                                <img src={require('../../public/img/itel.png')} />
                             </div>
                         </div>
-                        <div className="col-lg-10 col-md-10 col-sm-10"></div>
+                        <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <div className="single-sponsors">
+                                <img src={require('../../public/img/hetq.png')} />
+                            </div>
+                        </div>
+                        <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <div className="single-sponsors">
+                                <img src={require('../../public/img/newsam.png')} />
+                            </div>
+                        </div>
+                        <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <div className="single-sponsors">
+                                <img src={require('../../public/img/pan.png')} />
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 col-sm-4"></div>
                     </div>
                 </div>
             </div>

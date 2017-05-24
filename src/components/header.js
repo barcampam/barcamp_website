@@ -1,26 +1,14 @@
 import React, {Component} from "react"
 
-const Active = (pathName) => {
+const Active = (pathName)=>{
     let path = location.pathname;
-    if (pathName == path) {
+    if(pathName == path){
         return "active"
     }
 }
 class Header extends Component {
     constructor(props) {
         super(props)
-
-        const len = localStorage.getItem("len")
-
-        if (!len) {
-            localStorage.setItem("len", "en")
-        }
-
-
-    }
-
-    setLenguaje(key) {
-        localStorage.setItem("len", key)
     }
 
     render() {
@@ -31,19 +19,19 @@ class Header extends Component {
                         <button type="button" className="navbar-toggle">
                             <span></span>
                         </button>
-                        <a className="navbar-brand" href="/"><img src={require('../../public/img/logo.png')}/></a>
+                        <a className="navbar-brand" href="/"><img src={require('../../public/img/logo.png')}  /></a>
                     </div>
                     <div className="collapse navbar-collapse navbar-ex1-collapse">
                         <ul className="nav navbar-nav">
                             <li>
                                 <a href="/"></a>
                             </li>
-                            <li className={Active("/archive")}>
-                                <a href="/archive">ARCHIVE</a>
-                            </li>
-                            <li className={Active("/livestream")}>
-                                <a href="/livestream">LIVESTREAM</a>
-                            </li>
+                            {/*<li className={Active("/archive")}>*/}
+                                {/*<a href="/archive">ARCHIVE</a>*/}
+                            {/*</li>*/}
+                            {/*<li  className={Active("/livestream")} >*/}
+                                {/*<a href="/livestream">LIVESTREAM</a>*/}
+                            {/*</li>*/}
                             <li className={Active("/faq")}>
                                 <a href="/faq">FAQ</a>
                             </li>
@@ -51,14 +39,14 @@ class Header extends Component {
                                 <a href="/about">ABOUT</a>
                             </li>
                         </ul>
-                        <ul className="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="/" onClick={() => this.setLenguaje("hy")}>ARM</a>
-                            </li>
-                            <li>
-                                <a href="/" onClick={() => this.setLenguaje("en")}>ENG</a>
-                            </li>
-                        </ul>
+                        {/*<ul className="nav navbar-nav navbar-right">*/}
+                            {/*<li>*/}
+                                {/*<a href="/">ARM</a>*/}
+                            {/*</li>*/}
+                            {/*<li>*/}
+                                {/*<a href="/">ENG</a>*/}
+                            {/*</li>*/}
+                        {/*</ul>*/}
                     </div>
                 </div>
             </nav>

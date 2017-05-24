@@ -62,16 +62,25 @@ body {
       width: 45px;
       margin: 5px 0; }
   .home-top .barcamp-hashtag {
-    background-color: #ee0f3c;
+    background-color: #ed3454;
     height: 245px;
     width: 445px;
-    padding: 170px 10px 10px 20px;
     position: absolute;
     top: 47%;
     right: 8%;
     box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3); }
     .home-top .barcamp-hashtag h3 {
-      color: #ffffff; }
+      color: #ffffff;
+      padding: 85px 10px 10px 20px; }
+    .home-top .barcamp-hashtag a {
+      display: block;
+      padding: 40px 10px 10px 20px;
+      font-size: 24px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.35s; }
+    .home-top .barcamp-hashtag a:hover {
+      color: #fcbd20; }
   .home-top .light-bulb {
     width: 230px;
     position: absolute;
@@ -80,7 +89,8 @@ body {
     .home-top .light-bulb img {
       width: 300px; }
   .home-top .about-event {
-    padding-top: 125px; }
+    padding-top: 125px;
+    padding-left: 170px; }
     .home-top .about-event h2 {
       font-size: 33px;
       font-weight: lighter; }
@@ -89,7 +99,7 @@ body {
       font-weight: 700;
       line-height: 45px; }
   .home-top .app-links {
-    padding: 225px 0 0 70px; }
+    padding: 225px 0 0 90px; }
     .home-top .app-links img {
       width: 135px;
       margin: 0 6px; }
@@ -158,6 +168,9 @@ body {
         text-align: center;
         border: none;
         padding: 16px; }
+    .table-wrapper .timetable-all tr td:first-child {
+      font-weight: 700;
+      border: none; }
     .table-wrapper .timetable-all td {
       height: 100px;
       padding: 0 15px;
@@ -350,9 +363,18 @@ body {
         color: #ffffff;
         font-weight: 900;
         margin-bottom: 25px; }
+      .footer .footer-bottom-bar .barcamp-address h5 {
+        font-size: 13px;
+        color: #fff; }
       .footer .footer-bottom-bar .barcamp-address p {
         font-size: 15px;
         color: #ffffff; }
+      .footer .footer-bottom-bar .barcamp-address a {
+        color: #fff;
+        text-decoration: underline;
+        transition: all 0.35s; }
+      .footer .footer-bottom-bar .barcamp-address a:hover {
+        color: #fcbd20; }
     .footer .footer-bottom-bar a {
       padding: 0 5px; }
   .footer .map-wrapper {
@@ -392,13 +414,22 @@ body {
       font-weight: 700; }
     .home-top-mobile .barcamp-hashtag-mobile {
       height: 180px;
-      background: #ee3555;
-      padding: 125px 0 0 18px;
+      background: #ed3454;
       margin-top: 50px;
       position: relative; }
       .home-top-mobile .barcamp-hashtag-mobile h3 {
         font-size: 18px;
-        color: #fff; }
+        color: #fff;
+        padding: 60px 0 0 18px; }
+      .home-top-mobile .barcamp-hashtag-mobile .registration {
+        display: block;
+        padding: 30px 0 0 18px;
+        font-size: 18px;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.35s; }
+      .home-top-mobile .barcamp-hashtag-mobile .registration:hover {
+        color: #fcbd20; }
       .home-top-mobile .barcamp-hashtag-mobile .social-links-mobile {
         position: absolute;
         top: 50px;
@@ -518,13 +549,14 @@ body {
     .home-top .light-bulb img {
       width: 370px; }
   .home-top .about-event {
-    padding-top: 200px; }
+    padding-top: 200px;
+    padding-left: 0; }
     .home-top .about-event h2 {
       font-size: 42px; }
     .home-top .about-event p {
       font-size: 42px; }
   .home-top .app-links {
-    padding: 420px 0 0 90px; }
+    padding: 420px 0 0 145px; }
     .home-top .app-links img {
       width: 180px; }
 
