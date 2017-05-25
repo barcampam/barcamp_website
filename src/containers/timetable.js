@@ -4,19 +4,19 @@ import {bindActionCreators} from "redux"
 import {fetchDateTable} from "../actions/DateTableAction"
 import {Table} from "react-bootstrap"
 import _ from "lodash"
-
+import moment from "moment"
 
 function MapToData(item) {
-    let time_from = new Date(item.time_from.date)
-    let time_too = new Date(item.time_to.date)
+    let time_from = moment(item.time_from.date)
+    let time_too = moment(item.time_to.date)
 
-    let TimeFromMinutes = time_from.getMinutes() ? time_from.getMinutes() : "00"
-    let TimeTooMinutes = time_too.getMinutes() ? time_too.getMinutes() : "00"
+    let TimeFromMinutes = time_from.minute() ? time_from.minute() : "00"
+    let TimeTooMinutes = time_too.minute() ? time_too.minute() : "00"
 
     return (
         <div className="event-description" key={item.id}>
-            <p className="time-range">{time_from.getHours() + ":" + TimeFromMinutes }
-                - {time_too.getHours() + ":" + TimeTooMinutes} </p>
+            <p className="time-range">{time_from.hours() + ":" + TimeFromMinutes }
+                - {time_too.hours() + ":" + TimeTooMinutes} </p>
             <p className="speaker-name">{item.en.speaker}</p>
             <p className="description">{item.en.topic}
             </p>
@@ -38,18 +38,19 @@ class MapToMobileData extends Component {
         const TimeCols = []
 
         cols.map((item, id) => {
-            let time_from = new Date(item.time_from.date)
-            let time_too = new Date(item.time_to.date)
+            let time_from = moment(item.time_from.date)
+            let time_too = moment(item.time_to.date)
 
-            let TimeFromMinutes = time_from.getMinutes() !== 0 ? time_from.getMinutes() : "00"
-            let TimeTooMinutes = time_too.getMinutes() !== 0 ? time_too.getMinutes() : "00"
-            let dateFrom = new Date(item.time_from.date).getDate()
+            let TimeFromMinutes = time_from.minute() !== 0 ? time_from.minute() : "00"
+            let TimeTooMinutes = time_too.minute() !== 0 ? time_too.minute() : "00"
+            let dateFrom = moment(item.time_from.date).date()
+            console.log(item.time_from.date)
             if (this.props.day === dateFrom) {
                 TimeCols.push(
                     <div className="single-event-mobile" key={id}>
                         <h4 className="event-time-mobile">
-                            {time_from.getHours() + ":" + TimeFromMinutes }
-                            - {time_too.getHours() + ":" + TimeTooMinutes}
+                            {time_from.hours() + ":" + TimeFromMinutes }
+                            - {time_too.hours() + ":" + TimeTooMinutes}
                         </h4>
                         <h5 className="speaker-name-mobile">
                             {item.en.speaker}
@@ -70,8 +71,11 @@ class MapToMobileData extends Component {
     render() {
         const Tem = []
         const self = this
+
         if (this.props.props) {
+
             this.props.props.map(function (data, id) {
+
                 Tem.push(
                     <div className="panel panel-default" key={id}>
 
@@ -153,7 +157,7 @@ class Timetable extends Component {
                 const E208 = []
                 const E308 = []
                 _.forEach(item.item, function (data, x) {
-                    let dateFrom = new Date(data.time_from.date).getDate()
+                    let dateFrom = moment(data.time_from.date).date()
 
                     if (dateFrom === self.state.dayState) {
                         switch (data.room) {

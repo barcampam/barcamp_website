@@ -1,6 +1,6 @@
 import {DATA_TABLE_TYPE} from "../actions/DateTableAction"
 import _ from "lodash"
-
+import moment from "moment"
 
 export default function (state = {}, action) {
     switch (action.type) {
@@ -18,7 +18,7 @@ function DataFilter(data) {
     const items = []
     data.map(function (index, x) {
 
-        let a = new Date(index.time_from.date).getHours()
+        let a = moment(index.time_from.date).hours()
         let name  = _.findIndex(roomName, {'room': index.room});
 
         let room = arr.indexOf(a)

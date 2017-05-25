@@ -9,7 +9,6 @@
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
     "build": "webpack -p --progress"
-
   },
   "author": "",
   "license": "ISC",
@@ -32,9 +31,12 @@
     "axios": "^0.16.1",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.13",
     "react": "^0.14.3",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^0.14.3",
+    "react-moment": "^0.2.2",
     "react-redux": "4.3.0",
     "react-router": "^2.8.1",
     "redux": "^3.0.4",
