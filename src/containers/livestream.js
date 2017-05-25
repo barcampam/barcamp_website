@@ -27,7 +27,6 @@ export default class Livestream extends Component {
                                     <li><a href="">114W</a></li>
                                 </ul>
                             </div>
-
                             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div className="video-wrapper">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/0fnO3oNR6IA" frameBorder="0" allowFullScreen></iframe>

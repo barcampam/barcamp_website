@@ -56,7 +56,7 @@ class Speakers extends Component {
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className="speakers-top-bar">
                                 <img src={require('../../public/img/speakers.png')}/>
-                                <a href="/all-speakers">See all (80)</a>
+                                <a href="/all-speakers">See all (78)</a>
                             </div>
                         </div>
                     </div>
