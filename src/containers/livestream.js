@@ -51,7 +51,7 @@ class Livestream extends Component {
     render() {
         const self = this
         return (
-            <div>
+            <div id="livestream">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -61,6 +61,7 @@ class Livestream extends Component {
                         </div>
                     </div>
                 </div>
+
                 <section className="livestream-wrapper">
                     <div className="container livestream-section">
                         <div className="row">

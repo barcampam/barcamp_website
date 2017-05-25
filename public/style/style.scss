@@ -159,6 +159,9 @@ body {
     height: 30px;
     border-radius: 50%;
   }
+  .timetable-image {
+    margin-top: 15px;
+  }
   .workshop {
     width: 30px;
     background: #e1e1e1;
@@ -363,13 +366,23 @@ body {
       direction: rtl;
       padding-right: 0;
       li {
-        a {
+        span {
           font-size: 15px;
           color: #000;
           text-decoration: none;
           font-weight: 700;
           padding: 2px 0;
           display: block;
+          cursor: pointer;
+        }
+      }
+      .active-room {
+        span {
+          color: #ffffff;
+          background: #ed3454;
+          padding: 2px 12px;
+          font-size: 18px;
+          box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3);
         }
       }
     }
