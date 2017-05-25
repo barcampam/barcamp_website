@@ -44,7 +44,6 @@ class MapToMobileData extends Component {
             let TimeFromMinutes = time_from.minute() !== 0 ? time_from.minute() : "00"
             let TimeTooMinutes = time_too.minute() !== 0 ? time_too.minute() : "00"
             let dateFrom = moment(item.time_from.date).date()
-            console.log(item.time_from.date)
             if (this.props.day === dateFrom) {
                 TimeCols.push(
                     <div className="single-event-mobile" key={id}>
