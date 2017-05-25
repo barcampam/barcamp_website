@@ -3,6 +3,7 @@ import React, {Component} from "react"
 import Timetable from './timetable'
 import Speakers from './speakers'
 import Guests from './special-guests'
+import Livestream from './livestream'
 
 class Content extends Component{
     render(){
@@ -73,6 +74,7 @@ class Content extends Component{
                 <Timetable />
                 <Guests/>
                 <Speakers/>
+                <Livestream/>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">

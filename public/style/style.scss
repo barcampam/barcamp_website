@@ -135,7 +135,7 @@ body {
     }
   }
   .app-links {
-    padding: 225px 0 0 90px;
+    padding: 37vh 0 0 90px;
     img {
       width: 135px;
       margin: 0 6px;
@@ -278,7 +278,6 @@ body {
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       max-width: 100%;
       width: 240px;
-      transform: scale(1.1);
       transition: all 0.35s;
     }
     h5 {
@@ -329,12 +328,52 @@ body {
       .hovered {
         visibility: visible;
       }
-    .speaker-image {
-      transform: scale(1);
-      }
     }
 }
-
+/********************************* Livestream Section ****************************/
+.livestream-top-bar {
+  padding: 110px 100px 50px 100px;
+}
+.livestream-wrapper {
+  background: #f6f6f6;
+  padding: 40px 0;
+  position: relative;
+  .red-box {
+    height: 240px;
+    width: 400px;
+    background-color: #ed3454;
+    position: absolute;
+    top: 50%;
+    right: 22%;
+    z-index: 10;
+    box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3);
+  }
+}
+.livestream-section {
+  .video-wrapper {
+    z-index: 20;
+    position: relative;
+  }
+  .room-select {
+    ul {
+      list-style-type: none;
+      float: right;
+      margin-top: 80px;
+      direction: rtl;
+      padding-right: 0;
+      li {
+        a {
+          font-size: 15px;
+          color: #000;
+          text-decoration: none;
+          font-weight: 700;
+          padding: 2px 0;
+          display: block;
+        }
+      }
+    }
+  }
+}
 /********************************* Sponsors Section ****************************/
 .sponsors-top-bar {
   padding: 110px 100px 50px 100px;
@@ -665,6 +704,17 @@ body {
       }
     }
   }
+  .livestream-top-bar {
+    padding: 65px 40px 50px 20px;
+    img {
+      width: 200px;
+    }
+  }
+  .video-wrapper {
+    iframe {
+      max-width: 100%;
+    }
+  }
   .sponsors-top-bar {
     padding: 65px 40px 50px 20px;
     img {
@@ -870,7 +920,7 @@ body {
       }
     }
     .app-links {
-      padding: 420px 0 0 145px;
+      padding: 45vh 0 0 145px;
       img {
         width: 180px;
       }
@@ -898,7 +948,15 @@ body {
       margin: 50px 0 0 30px;
     }
   }
-
+  /******** Livestream ********/
+  .livestream-top-bar {
+    padding: 110px 150px 110px 150px;
+  }
+  .livestream-wrapper {
+    .red-box {
+      right: 30%;
+    }
+  }
 
   /******** Sponsors ********/
   .sponsors-top-bar {
