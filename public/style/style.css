@@ -210,7 +210,8 @@ body {
     margin: 50px 0 0 50px; }
 
 .speakers-single-row .single-speaker {
-  margin-bottom: 70px; }
+  margin-bottom: 75px;
+  height: 300px; }
   .speakers-single-row .single-speaker .speaker-image {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     max-width: 100%;
