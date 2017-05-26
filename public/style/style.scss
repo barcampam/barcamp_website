@@ -95,7 +95,6 @@ body {
     position: absolute;
     top: 47%;
     right: 8%;
-    box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3);
   h3 {
       color: #ffffff;
       padding: 85px 10px 10px 20px;
@@ -225,12 +224,13 @@ body {
       font-weight: 700;
       border: none;
       text-align: center;
+      vertical-align: middle;
     }
     td {
       height: 100px;
       padding: 0 15px;
       border-bottom: 2px solid #dddddd;
-      vertical-align: middle;
+      vertical-align: top;
       border-top: none;
     }
     .time {
@@ -280,7 +280,6 @@ body {
     margin-bottom: 75px;
     height: 300px;
     .speaker-image {
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       max-width: 100%;
       width: 240px;
       transition: all 0.35s;
@@ -350,7 +349,6 @@ body {
     top: 50%;
     right: 22%;
     z-index: 10;
-    box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3);
   }
 }
 .livestream-section {
@@ -576,7 +574,7 @@ body {
       background: #fff;
       text-align: center;
     }
-    padding: 0 10px;
+    padding: 0 15px;
     .navbar-brand {
       img {
         width: 150px;
@@ -635,7 +633,7 @@ body {
     }
   }
   .timetable-top-bar {
-    padding: 65px 40px 50px 20px;
+    padding: 65px 40px 50px 15px;
     display: block;
     img {
       width: 200px;
@@ -688,7 +686,7 @@ body {
     }
   }
   .speakers-top-bar {
-    padding: 65px 40px 50px 20px;
+    padding: 65px 40px 50px 15px;
     img {
       width: 200px;
     }
@@ -718,8 +716,19 @@ body {
       }
     }
   }
+  .livestream-section {
+    .room-select {
+      ul{
+        li{
+          span {
+            padding: 6px 0;
+          }
+        }
+      }
+    }
+  }
   .livestream-top-bar {
-    padding: 65px 40px 50px 20px;
+    padding: 65px 40px 50px 15px;
     img {
       width: 200px;
     }
@@ -730,13 +739,16 @@ body {
     }
   }
   .sponsors-top-bar {
-    padding: 65px 40px 50px 20px;
+    padding: 65px 40px 50px 15px;
     img {
       width: 200px;
     }
   }
   .sponsors-row {
     padding: 15px 40px 50px 40px;
+    .single-sponsors {
+      text-align: center;
+    }
   }
   .footer {
     .footer-navigation {
@@ -771,6 +783,9 @@ body {
   }
   .about-section {
     padding: 110px 30px 50px 30px;
+    .about-cover {
+      display: none;
+    }
   }
 }
 /* Tablet view */
