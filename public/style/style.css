@@ -67,8 +67,7 @@ body {
     width: 445px;
     position: absolute;
     top: 47%;
-    right: 8%;
-    box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3); }
+    right: 8%; }
     .home-top .barcamp-hashtag h3 {
       color: #ffffff;
       padding: 85px 10px 10px 20px; }
@@ -172,12 +171,13 @@ body {
     .table-wrapper .timetable-all tr td:first-child {
       font-weight: 700;
       border: none;
-      text-align: center; }
+      text-align: center;
+      vertical-align: middle; }
     .table-wrapper .timetable-all td {
       height: 100px;
       padding: 0 15px;
       border-bottom: 2px solid #dddddd;
-      vertical-align: middle;
+      vertical-align: top;
       border-top: none; }
     .table-wrapper .timetable-all .time {
       background: #ffffff;
@@ -218,7 +218,6 @@ body {
     margin-bottom: 75px;
     height: 300px; }
     .speakers-single-row .single-speaker .speaker-image {
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       max-width: 100%;
       width: 240px;
       transition: all 0.35s; }
@@ -274,8 +273,7 @@ body {
     position: absolute;
     top: 50%;
     right: 22%;
-    z-index: 10;
-    box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3); }
+    z-index: 10; }
 
 .livestream-section .video-wrapper {
   z-index: 20;
@@ -441,7 +439,7 @@ body {
 /* Mobile XS */
 @media (max-width: 767px) {
   .navbar-default {
-    padding: 0 10px; }
+    padding: 0 15px; }
     .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
       background-color: transparent; }
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
@@ -490,7 +488,7 @@ body {
           margin-bottom: 7px; }
 
   .timetable-top-bar {
-    padding: 65px 40px 50px 20px;
+    padding: 65px 40px 50px 15px;
     display: block; }
     .timetable-top-bar img {
       width: 200px; }
@@ -529,7 +527,7 @@ body {
     font-size: 13px; }
 
   .speakers-top-bar {
-    padding: 65px 40px 50px 20px; }
+    padding: 65px 40px 50px 15px; }
     .speakers-top-bar img {
       width: 200px; }
     .speakers-top-bar a {
@@ -552,8 +550,11 @@ body {
       box-shadow: none;
       margin: 0 7px; }
 
+  .livestream-section .room-select ul li span {
+    padding: 6px 0; }
+
   .livestream-top-bar {
-    padding: 65px 40px 50px 20px; }
+    padding: 65px 40px 50px 15px; }
     .livestream-top-bar img {
       width: 200px; }
 
@@ -561,12 +562,14 @@ body {
     max-width: 100%; }
 
   .sponsors-top-bar {
-    padding: 65px 40px 50px 20px; }
+    padding: 65px 40px 50px 15px; }
     .sponsors-top-bar img {
       width: 200px; }
 
   .sponsors-row {
     padding: 15px 40px 50px 40px; }
+    .sponsors-row .single-sponsors {
+      text-align: center; }
 
   .footer .footer-navigation {
     text-align: center;
@@ -593,7 +596,9 @@ body {
     padding: 110px 30px 120px 30px; }
 
   .about-section {
-    padding: 110px 30px 50px 30px; } }
+    padding: 110px 30px 50px 30px; }
+    .about-section .about-cover {
+      display: none; } }
 /* Tablet view */
 @media only screen and (min-device-width: 768px) and (max-device-width: 992px) {
   .navbar-default {

@@ -87,7 +87,9 @@ class Content extends Component{
                         <h4>General</h4>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
-                                <img className="general" src={require('../../public/img/Ucom.png')} />
+                                <a target="_blank" href="https://www.ucom.am">
+                                    <img className="general" src={require('../../public/img/Ucom.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-10 col-md-10 col-sm-10"></div>
@@ -96,27 +98,37 @@ class Content extends Component{
                         <h4>Sponsors</h4>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="https://www.workfront.com/">
                                 <img src={require('../../public/img/workfront.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="https://sflpro.com/">
                                 <img src={require('../../public/img/sfl.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="https://www.ginosi.com/">
                                 <img src={require('../../public/img/ginosi.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="https://www.betconstruct.com/#/">
                                 <img src={require('../../public/img/vivaro.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="https://www.synisys.com/">
                                 <img src={require('../../public/img/synergy.png')} />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -124,22 +136,30 @@ class Content extends Component{
                         <h4>Partners</h4>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="http://www.mediainitiatives.am/">
                                 <img src={require('../../public/img/mediacenter.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="http://aua.am/">
                                 <img src={require('../../public/img/aua.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="http://hexdivision.com">
                                 <img src={require('../../public/img/hex.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="https://www.simplytechnologies.net/">
                                 <img src={require('../../public/img/simply.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-4"></div>
@@ -148,22 +168,30 @@ class Content extends Component{
                         <h4>Information sponsors</h4>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="http://www.itel.am/am">
                                 <img src={require('../../public/img/itel.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="http://hetq.am/">
                                 <img src={require('../../public/img/hetq.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="https://news.am/arm/">
                                 <img src={require('../../public/img/newsam.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-2 col-md-2 col-sm-2 col-xs-12">
                             <div className="single-sponsors">
+                                <a target="_blank" href="http://pan.am/photo/">
                                 <img src={require('../../public/img/pan.png')} />
+                                </a>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-4"></div>
