@@ -118,6 +118,8 @@ body {
     background: #f6f6f6;
     height: 30px;
     border-radius: 50%; }
+  .timetable-top-bar .timetable-image {
+    margin-top: 15px; }
   .timetable-top-bar .workshop {
     width: 30px;
     background: #e1e1e1;
@@ -282,13 +284,20 @@ body {
   margin-top: 80px;
   direction: rtl;
   padding-right: 0; }
-  .livestream-section .room-select ul li a {
+  .livestream-section .room-select ul li span {
     font-size: 15px;
     color: #000;
     text-decoration: none;
     font-weight: 700;
     padding: 2px 0;
-    display: block; }
+    display: block;
+    cursor: pointer; }
+  .livestream-section .room-select ul .active-room span {
+    color: #ffffff;
+    background: #ed3454;
+    padding: 2px 12px;
+    font-size: 18px;
+    box-shadow: 0 4px 3px rgba(238, 15, 60, 0.3); }
 
 /********************************* Sponsors Section ****************************/
 .sponsors-top-bar {

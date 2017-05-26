@@ -26,18 +26,21 @@ class Header extends Component {
                             <li>
                                 <a href="/"></a>
                             </li>
-                            {/*<li className={Active("/archive")}>*/}
-                                {/*<a href="/archive">ARCHIVE</a>*/}
-                            {/*</li>*/}
-                            {/*<li  className={Active("/livestream")} >*/}
-                                {/*<a href="/livestream">LIVESTREAM</a>*/}
-                            {/*</li>*/}
-                            <li className={Active("/faq")}>
-                                <a href="/faq">FAQ</a>
+                            <li  className={Active("/archive")}>
+                                <a className="page-scroll" href="#timetable">TIMETABLE</a>
                             </li>
-                            <li className={Active("/about")}>
-                                <a href="/about">ABOUT</a>
+                            <li  className={Active("/livestream")} >
+                                <a className="page-scroll" href="#speakers">SPEAKERS</a>
                             </li>
+                            <li  className={Active("/livestream")} >
+                                <a className="page-scroll" href="#livestream">LIVESTREAM</a>
+                            </li>
+                            {/*<li className={Active("/faq")}>*/}
+                                {/*<a href="/faq">FAQ</a>*/}
+                            {/*</li>*/}
+                            {/*<li className={Active("/about")}>*/}
+                                {/*<a href="/about">ABOUT</a>*/}
+                            {/*</li>*/}
                         </ul>
                         {/*<ul className="nav navbar-nav navbar-right">*/}
                             {/*<li>*/}

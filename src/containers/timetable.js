@@ -202,13 +202,13 @@ class Timetable extends Component {
 
 
         return (
-            <div>
+            <div id="timetable">
                 <div className="top-grey-border hidden-xs"></div>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className="timetable-top-bar">
-                                <img src={require('../../public/img/timetable.png')}/>
+                                <img className="timetable-image" src={require('../../public/img/timetable.png')}/>
                                 <div className="day-selection">
                                     <h4>Days</h4>
                                     <a className={"select-day " + this.state.dayOne} href="#"
