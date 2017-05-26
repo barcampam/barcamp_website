@@ -50,7 +50,7 @@ body {
 .home-top {
   background-image: url(../../public/img/ppl.svg), url(../../public/img/yellow-bck.png);
   background-position: left bottom, right top;
-  background-repeat: no-repeat, repeat-y;
+  background-repeat: no-repeat, no-repeat;
   height: 100vh;
   background-size: 57%, 30%;
   margin-left: 75px; }
@@ -197,7 +197,7 @@ body {
 
 /********************************* Speakers Section ****************************/
 .speakers-top-bar {
-  padding: 110px 100px 110px 100px; }
+  padding: 20px 100px 50px 100px; }
   .speakers-top-bar a {
     font-size: 20px;
     color: #8e8e8e;
@@ -212,51 +212,52 @@ body {
 .loader {
   padding: 50px 0; }
 
-.speakers-single-row .single-speaker {
-  margin-bottom: 75px;
-  height: 300px; }
-  .speakers-single-row .single-speaker .speaker-image {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    max-width: 100%;
-    width: 240px;
-    transition: all 0.35s; }
-  .speakers-single-row .single-speaker h5 {
-    font-size: 15px;
-    font-weight: 700;
-    margin-top: 30px;
-    margin-bottom: 5px; }
-  .speakers-single-row .single-speaker .company {
-    font-size: 13px;
-    color: #8e8e8e; }
-  .speakers-single-row .single-speaker .talk-name {
-    font-size: 13px; }
-  .speakers-single-row .single-speaker .hovered {
-    position: relative;
-    visibility: hidden; }
-  .speakers-single-row .single-speaker .hovered:after {
-    content: " ";
-    z-index: 10;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.7);
-    height: 240px;
-    width: 240px; }
-  .speakers-single-row .single-speaker .hovered-links {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    z-index: 11;
-    right: 15px;
-    text-align: center; }
-    .speakers-single-row .single-speaker .hovered-links img {
-      box-shadow: none; }
-    .speakers-single-row .single-speaker .hovered-links a {
-      padding: 0 5px; }
-.speakers-single-row .single-speaker:hover .hovered {
-  visibility: visible; }
+.speakers-single-row {
+  padding: 0 10px; }
+  .speakers-single-row .single-speaker {
+    margin-bottom: 75px;
+    height: 300px; }
+    .speakers-single-row .single-speaker .speaker-image {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      max-width: 100%;
+      width: 240px;
+      transition: all 0.35s; }
+    .speakers-single-row .single-speaker h5 {
+      font-size: 15px;
+      margin-top: 20px;
+      margin-bottom: 5px; }
+    .speakers-single-row .single-speaker .company {
+      font-size: 13px;
+      color: #8e8e8e; }
+    .speakers-single-row .single-speaker .talk-name {
+      font-size: 13px; }
+    .speakers-single-row .single-speaker .hovered {
+      position: relative;
+      visibility: hidden; }
+    .speakers-single-row .single-speaker .hovered:after {
+      content: " ";
+      z-index: 10;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.7);
+      height: 240px;
+      width: 240px; }
+    .speakers-single-row .single-speaker .hovered-links {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      z-index: 11;
+      right: 15px;
+      text-align: center; }
+      .speakers-single-row .single-speaker .hovered-links img {
+        box-shadow: none; }
+      .speakers-single-row .single-speaker .hovered-links a {
+        padding: 0 5px; }
+  .speakers-single-row .single-speaker:hover .hovered {
+    visibility: visible; }
 
 /********************************* Livestream Section ****************************/
 .livestream-top-bar {
@@ -453,7 +454,7 @@ body {
       padding-top: 10px; }
 
   .home-top-mobile {
-    background-image: url(../../public/img/yellow-bck.png);
+    background-image: url(../../public/img/yellow-bck-mobile.png);
     padding: 200px 20px 30px 20px;
     background-repeat: no-repeat;
     background-size: cover; }
@@ -765,5 +766,9 @@ body {
     margin: 0 0 0 164px; }
   .footer .map-wrapper {
     right: 130px; } }
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .home-top .app-links {
+    padding: 53vh 0 0 145px; } }
 
 /*# sourceMappingURL=style.css.map */

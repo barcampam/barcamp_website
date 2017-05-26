@@ -75,7 +75,7 @@ body {
 .home-top {
   background-image: url(../../public/img/ppl.svg), url(../../public/img/yellow-bck.png);
   background-position: left bottom, right top;
-  background-repeat: no-repeat, repeat-y;
+  background-repeat: no-repeat, no-repeat;
   height: 100vh;
   background-size: 57%, 30%;
   margin-left: 75px;
@@ -257,7 +257,7 @@ body {
 
 /********************************* Speakers Section ****************************/
 .speakers-top-bar {
-  padding: 110px 100px 110px 100px;
+  padding: 20px 100px 50px 100px;
   a {
     font-size: 20px;
     color: #8e8e8e;
@@ -275,19 +275,19 @@ body {
   padding: 50px 0;
 }
 .speakers-single-row {
+  padding: 0 10px;
   .single-speaker {
     margin-bottom: 75px;
     height: 300px;
     .speaker-image {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
       max-width: 100%;
       width: 240px;
       transition: all 0.35s;
     }
     h5 {
       font-size: 15px;
-      font-weight: 700;
-      margin-top: 30px;
+      margin-top: 20px;
       margin-bottom: 5px;
     }
     .company {
@@ -591,7 +591,7 @@ body {
     }
   }
   .home-top-mobile {
-    background-image: url(../../public/img/yellow-bck.png);
+    background-image: url(../../public/img/yellow-bck-mobile.png);
     padding: 200px 20px 30px 20px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -996,4 +996,18 @@ body {
     }
   }
 
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) {
+
+  .home-top {
+    .app-links {
+      padding: 53vh 0 0 145px;
+    }
+  }
 }
