@@ -13,8 +13,15 @@ class SpeakersAll extends Component {
 
     renderAllSpeakers() {
         if (!this.props.speakersAll.length) {
-            return <div>...Lodaing</div>
+            return <div className="loader">
+                <div className="row">
+                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <h3>Lodaing...</h3>
+                    </div>
+                </div>
+            </div>
         }
+
 
         return this.props.speakersAll.map((data, id) => {
             let photo = data.photo
@@ -49,7 +56,7 @@ class SpeakersAll extends Component {
 
     render() {
 
-        console.log(this.props.speakersAll)
+
         return (
             <div>
                 <div className="container-fluid">
