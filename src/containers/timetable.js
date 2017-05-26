@@ -105,7 +105,7 @@ class MapToMobileData extends Component {
                 <div className="loader">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                            <h3>Lodaing...</h3>
+                            <h3>Loading...</h3>
                         </div>
                     </div>
                 </div>
