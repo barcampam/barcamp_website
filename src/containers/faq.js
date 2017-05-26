@@ -3,8 +3,9 @@ import {fetchFormPost} from "../actions/faqFormAction"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 
+let val = 1
 
- class FAQ extends Component {
+class FAQ extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -12,9 +13,28 @@ import {bindActionCreators} from "redux"
             text: "",
             error: {
                 email: "",
-                text: ""
-            }
+                text: "",
+            },
+            setTime: 0
+
         }
+
+        this.setTiemOut = this.setTiemOut.bind(this)
+    }
+
+    setTiemOut() {
+
+        const self = this
+
+        const time = setTimeout(function () {
+            self.setState({text: "", setTime: ""})
+            self.refs.input.value = ""
+            self.refs.text.value = ""
+            clearInterval(time)
+
+        }, 1000)
+
+
     }
 
     onSubmitForm(e) {
@@ -32,12 +52,15 @@ import {bindActionCreators} from "redux"
             return false
         }
 
-        this.props.fetchFormPost(email,text)
-
+        this.props.fetchFormPost(email, text)
+        this.setState({setTime: 1})
 
     }
 
     render() {
+        if (this.state.setTime) {
+            this.setTiemOut()
+        }
         return (
             <div>
                 <div className="container-fluid faq-section">
@@ -87,14 +110,14 @@ import {bindActionCreators} from "redux"
                             <form onSubmit={(e) => this.onSubmitForm(e)}>
                                 <div className="form-group">
                                     <label>Email</label>
-                                    <input type="email" value={this.state.email} onChange={(e) => {
+                                    <input type="email" ref="input" value={this.state.email} onChange={(e) => {
                                         this.setState({value: e.target.value})
                                     }} className="form-control" id="email"/>
                                     <span>{this.state.error.email && this.state.error.email}</span>
                                 </div>
                                 <div className="form-group">
                                     <label>Your question</label><br />
-                                    <textarea className="form-control" rows="8" value={this.state.text}
+                                    <textarea className="form-control" rows="8" ref="text" value={this.state.text}
                                               onChange={(e) => {
                                                   this.setState({text: e.target.value})
                                               }} id="message"/>
@@ -103,6 +126,7 @@ import {bindActionCreators} from "redux"
                                 </div>
                                 <button type="submit" className="submit">Submit
                                 </button>
+                                {this.props.faqMail.length && this.state.setTime && <div className="col-md-12">{this.props.faqMail}</div>}
                             </form>
                         </div>
                         <div className="col-lg-1 col-md-1 col-sm-1"></div>
@@ -113,6 +137,11 @@ import {bindActionCreators} from "redux"
     }
 }
 
+function MapTOState({faqMail}) {
+    return {faqMail}
+
+}
+
 function mapToActionTime(dispatch) {
 
     return bindActionCreators({
@@ -121,4 +150,4 @@ function mapToActionTime(dispatch) {
 
 }
 
-export default connect(null, mapToActionTime)(FAQ)
+export default connect(MapTOState, mapToActionTime)(FAQ)

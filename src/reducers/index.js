@@ -4,6 +4,7 @@ import SpeakerReducer from "./SpeakerReducer"
 import SpeakerAllReducer from "./speakerAllreducer"
 import GusetsReducer from "./GuestsReducer"
 import LiveStreamReducer from "./liveStreamReducer"
+import faqReducer from "./faqReducer"
 
 const rootReducer = combineReducers({
     state: (state = {}) => state,
@@ -11,7 +12,8 @@ const rootReducer = combineReducers({
     speakers: SpeakerReducer,
     speakersAll: SpeakerAllReducer,
     guests: GusetsReducer,
-    liveStream: LiveStreamReducer
+    liveStream: LiveStreamReducer,
+    faqMail:faqReducer
 });
 
 export default rootReducer;
