@@ -1,7 +1,7 @@
 import  axios from "axios"
 
 const API_FAQ_FORM_URL = "http://api.barcamp.am/feedback"
-export const DATA_TABLE_TYPE = "API_FAQ_FORM_URL"
+export const FAQ_FORM = "FAQ_FORM"
 
 
 export function fetchFormPost(email, text) {
@@ -10,10 +10,10 @@ export function fetchFormPost(email, text) {
     let fd = new FormData();
     fd.append('email', email);
     fd.append('body', text);
-    axios.post(API_FAQ_FORM_URL, fd, config)
-        .then(response => console.log(response))
-        .catch(errors => console.log(errors))
+    const request =  axios.post(API_FAQ_FORM_URL, fd, config)
+
     return {
-        type: DATA_TABLE_TYPE,
+        type: FAQ_FORM,
+        payload:request
     }
 }
