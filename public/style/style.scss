@@ -778,6 +778,9 @@ body {
   .navbar-default {
     padding: 0 35px;
   }
+  iframe {
+    max-width: 100%;
+  }
   .home-top {
     background-size: contain;
     margin-left: 0;
@@ -802,6 +805,11 @@ body {
   }
   .speakers-top-bar {
     padding: 70px 35px 30px 15px;
+  }
+  .speakers-single-row {
+    .single-speaker {
+      height: 200px;
+    }
   }
   .sponsors-top-bar {
     padding: 70px 35px 30px 15px;
