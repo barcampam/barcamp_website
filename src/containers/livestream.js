@@ -17,7 +17,6 @@ class Livestream extends Component {
 
     renderRumes() {
         const self = this
-        console.log(this.props.liveStream)
         if (this.props.liveStream.length) {
             const itemUl = this.props.liveStream.map((item, key) => {
                 if (key === this.state.key) {

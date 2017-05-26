@@ -159,9 +159,6 @@ body {
     height: 30px;
     border-radius: 50%;
   }
-  .timetable-image {
-    margin-top: 15px;
-  }
   .workshop {
     width: 30px;
     background: #e1e1e1;
@@ -273,6 +270,9 @@ body {
     font-weight: 700;
     margin: 50px 0 0 50px;
   }
+}
+.loader {
+  padding: 50px 0;
 }
 .speakers-single-row {
   .single-speaker {

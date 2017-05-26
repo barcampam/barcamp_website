@@ -42,7 +42,7 @@ class Content extends Component{
                                 <a target="_blank" href="https://play.google.com/store/apps/details?id=com.barcampevn">
                                     <img src={require('../../public/img/googleplay.png')} />
                                 </a>
-                                <a target="_blank" href="http://www.hexdivision.com/">
+                                <a target="_blank" href="https://itunes.apple.com/us/app/barcampevn/id1239188924?mt=8">
                                     <img src={require('../../public/img/appstore.png')} />
                                 </a>
                             </div>

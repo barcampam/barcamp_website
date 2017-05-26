@@ -6,6 +6,17 @@ const Active = (pathName)=>{
         return "active"
     }
 }
+function navBarHref(href) {
+    const location = window.location.pathname
+
+
+    if(location === "/"){
+        return href
+    }
+
+    return "/" + href
+
+}
 class Header extends Component {
     constructor(props) {
         super(props)
@@ -27,13 +38,13 @@ class Header extends Component {
                                 <a href="/"></a>
                             </li>
                             <li  className={Active("/archive")}>
-                                <a className="page-scroll" href="#timetable">TIMETABLE</a>
+                                <a className="page-scroll" href={navBarHref("#timetable")}>TIMETABLE</a>
                             </li>
                             <li  className={Active("/livestream")} >
-                                <a className="page-scroll" href="#speakers">SPEAKERS</a>
+                                <a className="page-scroll" href={navBarHref("#speakers")}>SPEAKERS</a>
                             </li>
                             <li  className={Active("/livestream")} >
-                                <a className="page-scroll" href="#livestream">LIVESTREAM</a>
+                                <a className="page-scroll" href={navBarHref("#livestream")}>LIVESTREAM</a>
                             </li>
                             {/*<li className={Active("/faq")}>*/}
                                 {/*<a href="/faq">FAQ</a>*/}

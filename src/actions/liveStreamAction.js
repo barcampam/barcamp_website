@@ -2,27 +2,27 @@ export const LIVE_STREAM = "LIVE_STREAM"
 
 const LiveStream = [
     {
-        url: "https://www.youtube.com/playlist?list=PLkaN8-chLmTRvWRxcXvRs1PjbMEI3LTPa",
+        url: "https://www.youtube.com/embed/AZXyfu2Mjjw",
         room: "Big Hall"
     },
     {
-        url: "https://www.youtube.com/playlist?list=PLkaN8-chLmTQ_urHPTBmKIh1cc-9XkRUK",
+        url: "https://www.youtube.com/embed/NfmXwqCKW-0",
+        room: "308E room"
+    },
+    {
+        url: "https://www.youtube.com/embed/WDD_J1Ec95E",
         room: "208E room"
     },
     {
-        url: "https://www.youtube.com/playlist?list=PLkaN8-chLmTShNHmw0O-dDeOaH7iq9voj",
+        url: "https://www.youtube.com/embed/8XOzs6v5mek",
         room: "213W room"
     },
     {
-        url: "https://www.youtube.com/playlist?list=PLkaN8-chLmTRKDqiHlpWqW1D_bG1_IqEV",
+        url: "https://www.youtube.com/embed/jvoJLDZbR2U",
         room: "214W room"
     },
     {
-        url: "https://www.youtube.com/playlist?list=PLkaN8-chLmTSqizWXmTzk-bxmIbnhX1Dg",
-        room: "113W room"
-    },
-    {
-        url: "https://www.youtube.com/playlist?list=PLkaN8-chLmTQKOIF3YZMY6rMzjMXroZ96",
+        url: "https://www.youtube.com/embed/-k9aPK5UiY8",
         room: "114W room"
     }
 ]

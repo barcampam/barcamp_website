@@ -20,7 +20,7 @@ class Guests extends Component {
         }
 
         return data.map((item, id) => {
-            console.log(item)
+
             return (
                 <div key={id} className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div className="single-speaker">
@@ -50,7 +50,7 @@ class Guests extends Component {
 
     render() {
 
-        console.log(this.props)
+
 
         return (
             <div>

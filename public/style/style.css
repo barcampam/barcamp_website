@@ -118,8 +118,6 @@ body {
     background: #f6f6f6;
     height: 30px;
     border-radius: 50%; }
-  .timetable-top-bar .timetable-image {
-    margin-top: 15px; }
   .timetable-top-bar .workshop {
     width: 30px;
     background: #e1e1e1;
@@ -210,6 +208,9 @@ body {
     font-size: 42px;
     font-weight: 700;
     margin: 50px 0 0 50px; }
+
+.loader {
+  padding: 50px 0; }
 
 .speakers-single-row .single-speaker {
   margin-bottom: 75px;
