@@ -98,7 +98,7 @@ body {
       font-weight: 700;
       line-height: 45px; }
   .home-top .app-links {
-    padding: 37vh 0 0 90px; }
+    padding: 43vh 0 0 90px; }
     .home-top .app-links img {
       width: 135px;
       margin: 0 6px; }
@@ -486,6 +486,11 @@ body {
         .home-top-mobile .barcamp-hashtag-mobile .social-links-mobile img {
           width: 30px;
           margin-bottom: 7px; }
+    .home-top-mobile .mobile-app-links {
+      text-align: center; }
+      .home-top-mobile .mobile-app-links img {
+        width: 100px;
+        margin: 20px 10px; }
 
   .timetable-top-bar {
     padding: 65px 40px 50px 15px;
@@ -730,7 +735,7 @@ body {
     .home-top .about-event p {
       font-size: 42px; }
   .home-top .app-links {
-    padding: 45vh 0 0 145px; }
+    padding: 50vh 0 0 145px; }
     .home-top .app-links img {
       width: 180px; }
 
@@ -780,6 +785,6 @@ body {
 /* ----------- Retina Screens ----------- */
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
   .home-top .app-links {
-    padding: 40vh 0 0 70px; } }
+    padding: 54vh 0 0 70px; } }
 
 /*# sourceMappingURL=style.css.map */
