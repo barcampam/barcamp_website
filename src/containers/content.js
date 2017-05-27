@@ -29,7 +29,6 @@ class Content extends Component{
                                 <h2>May 27-28</h2>
                                 <p>The most wanted IT and<br />
                                     Media event in Armenia<br />
-                                    coming in the soon
                                 </p>
                             </div>
                             <div className="col-lg-4 col-md-4 col-sm-4"></div>
@@ -56,7 +55,6 @@ class Content extends Component{
                                 <h2>May 27-28</h2>
                                 <p>The most wanted IT and<br />
                                     Media event in Armenia<br />
-                                    coming in the soon
                                 </p>
                                 <div className="barcamp-hashtag-mobile">
                                     <a className="registration" target="_blank" href="https://www.eventbrite.co.uk/e/barcamp-yerevan-2017-tickets-33995486415">Register</a>
