@@ -134,7 +134,7 @@ body {
     }
   }
   .app-links {
-    padding: 37vh 0 0 90px;
+    padding: 43vh 0 0 90px;
     img {
       width: 135px;
       margin: 0 6px;
@@ -631,6 +631,13 @@ body {
         }
       }
     }
+    .mobile-app-links {
+      text-align: center;
+      img {
+        width: 100px;
+        margin: 20px 10px;
+      }
+    }
   }
   .timetable-top-bar {
     padding: 65px 40px 50px 15px;
@@ -957,7 +964,7 @@ body {
       }
     }
     .app-links {
-      padding: 45vh 0 0 145px;
+      padding: 50vh 0 0 145px;
       img {
         width: 180px;
       }
@@ -1030,7 +1037,7 @@ and (min-resolution: 192dpi) {
 
   .home-top {
     .app-links {
-      padding: 40vh 0 0 70px;
+      padding: 54vh 0 0 70px;
     }
   }
 }

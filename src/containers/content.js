@@ -65,6 +65,14 @@ class Content extends Component{
                                         <a target="_blank" href="https://www.instagram.com/barcamp_yerevan/"><img src={require('../../public/img/ic_instagram_share.png')} /></a>
                                     </div>
                                 </div>
+                                <div className="mobile-app-links">
+                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.barcampevn">
+                                        <img src={require('../../public/img/googleplay.png')} />
+                                    </a>
+                                    <a target="_blank" href="https://itunes.apple.com/us/app/barcampevn/id1239188924?mt=8">
+                                        <img src={require('../../public/img/appstore.png')} />
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
