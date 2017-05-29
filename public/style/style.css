@@ -8,16 +8,16 @@ body {
   padding: 0 100px; }
   .navbar-default .navbar-brand img {
     width: 278px; }
-  .navbar-default .navbar-nav li a {
+  .navbar-default .navbar-nav li .page-scroll {
     color: #2a2a2a;
     font-size: 15px;
     font-weight: 700;
     padding-top: 40px; }
-  .navbar-default .navbar-nav .active a {
+  .navbar-default .navbar-nav li .page-scroll:hover {
     color: #ed3454;
     background-color: transparent; }
-  .navbar-default .navbar-nav .active a:hover {
-    color: #ed3454;
+  .navbar-default .navbar-nav li .active {
+    color: #ed3454 !important;
     background-color: transparent; }
   .navbar-default .navbar-toggle {
     cursor: pointer;
@@ -311,6 +311,9 @@ body {
     padding-bottom: 30px; }
   .sponsors-row .general {
     width: 180px; }
+  .sponsors-row .hexdivision {
+    width: 150px;
+    margin-top: 30px; }
 
 /********************************* FAQ Section *******************************/
 .faq-section {
