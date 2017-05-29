@@ -64,10 +64,40 @@ $(document).ready(function (){
 
 $(function() {
     $('a.page-scroll').bind('click ', function(event) {
-        var $anchor = $(this);
+        let $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+});
+
+$(function () {
+    let currentHash = ""
+    $(document).scroll(function () {
+        $('section').each(function () {
+            let top = window.pageYOffset;
+            let distance = top - $(this).offset().top;
+            let hash = $(this).attr('id');
+            if (distance < 30 && distance > -30 && currentHash != hash &&  hash !== undefined) {
+                window.location.hash=hash
+
+                currentHash = hash;
+                $('a').removeClass('active');
+                let alltags = $("a.page-scroll")
+                alltags.map(function (id,a) {
+                    let index = a.href.indexOf(hash)
+                    if(index > 1){
+                        $(a).addClass("active")
+                    }
+
+                })
+            }
+        });
+    });
+});
+
+$('.page-scroll').on('click', function() {
+    $('a').removeClass('active');
+    $(this).addClass('active')
 });

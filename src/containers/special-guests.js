@@ -24,18 +24,18 @@ class Guests extends Component {
             return (
                 <div key={id} className="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                     <div className="single-speaker">
-                        <div className="hovered hidden-xs">
+                        <div className={hovered(item.socialnetworks) + " hidden-xs"}>
                             <div className="hovered-links">
-                                <a href={item.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>
-                                <a href={item.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>
-                                <a href={item.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>
+                                {item.socialnetworks.facbook && <a href={item.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>}
+                                {item.socialnetworks.twitter && <a href={item.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>}
+                                {item.socialnetworks.instagram && <a href={item.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>}
                             </div>
                         </div>
                         <div className="hovered-mobile visible-xs">
                             <div className="hovered-links-mobile">
-                                <a href={item.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>
-                                <a href={item.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>
-                                <a href={item.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>
+                                {item.socialnetworks.facbook && <a href={item.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>}
+                                {item.socialnetworks.twitter && <a href={item.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>}
+                                {item.socialnetworks.instagram && <a href={item.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>}
                             </div>
                         </div>
                         <img className="speaker-image" src={item.photo}/>
@@ -53,7 +53,7 @@ class Guests extends Component {
 
 
         return (
-            <div>
+            <section id="special_guests">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -68,7 +68,7 @@ class Guests extends Component {
                         {this.renderGuests()}
                     </div>
                 </div>
-            </div>
+            </section>
         )
     }
 }
@@ -84,6 +84,13 @@ function mapToActionTime(dispatch) {
 
 function mapToStateAction({guests}) {
     return {guests}
+}
+
+function hovered({facbook,twitter,instagram}) {
+    if(!facbook && !twitter && !instagram){
+        return
+    }
+    return "hovered"
 }
 
 export default connect(mapToStateAction, mapToActionTime)(Guests)

@@ -4,6 +4,7 @@ import {fetchSpeakerAll} from "../actions/SpeakerAllAction"
 import {bindActionCreators} from "redux"
 
 
+
 class SpeakersAll extends Component {
     constructor(props) {
         super(props)
@@ -28,21 +29,21 @@ class SpeakersAll extends Component {
             return (
                 <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12" key={id}>
                     <div className="single-speaker">
-                        <div className="hovered hidden-xs">
+                        <div className={hovered(data.socialnetworks) + " hidden-xs"}>
                             <div className="hovered-links">
-                                <a href={data.socialnetworks.facbook}><img
-                                    src={require('../../public/img/hover_fb.png')}/></a>
-                                <a href={data.socialnetworks.twitter}><img
-                                    src={require('../../public/img/hover_twitter.png')}/></a>
-                                <a href={data.socialnetworks.instagram}><img
-                                    src={require('../../public/img/barcamp_instagram.png')}/></a>
+                                {data.socialnetworks.facbook && <a href={data.socialnetworks.facbook}><img
+                                    src={require('../../public/img/hover_fb.png')}/></a>}
+                                {data.socialnetworks.twitter && <a href={data.socialnetworks.twitter}><img
+                                    src={require('../../public/img/hover_twitter.png')}/></a>}
+                                {data.socialnetworks.instagram && <a href={data.socialnetworks.instagram}><img
+                                    src={require('../../public/img/barcamp_instagram.png')}/></a>}
                             </div>
                         </div>
                         <div className="hovered-mobile visible-xs">
                             <div className="hovered-links-mobile">
-                                <a href={data.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>
-                                <a href={data.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>
-                                <a href={data.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>
+                                {data.socialnetworks.facbook && <a href={data.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>}
+                                {data.socialnetworks.twitter && <a href={data.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>}
+                                {data.socialnetworks.twitter && <a href={data.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>}
                             </div>
                         </div>
                         <img className="speaker-image" src={`${photo}`}/>
@@ -77,6 +78,13 @@ class SpeakersAll extends Component {
             </div>
         )
     }
+}
+
+function hovered({facbook,twitter,instagram}) {
+    if(!facbook && !twitter && !instagram){
+        return
+    }
+    return "hovered"
 }
 
 function mapToActionTime(dispatch) {

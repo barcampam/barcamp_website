@@ -15,7 +15,7 @@ module.exports = {
                 presets: ['react', 'es2015', 'stage-1']
             }
         },
-            {   test: /\.(png|jpg)$/,
+            {   test: /\.(png|jpg|svg)$/,
                 loader: 'file-loader?limit=10000'
             },
             {

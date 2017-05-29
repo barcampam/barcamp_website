@@ -208,7 +208,7 @@ class Timetable extends Component {
 
 
         return (
-            <div id="timetable">
+            <section id="timetable">
                 <div className="top-grey-border hidden-xs"></div>
                 <div className="container-fluid">
                     <div className="row">
@@ -254,7 +254,7 @@ class Timetable extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         )
     }
 }

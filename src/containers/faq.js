@@ -126,7 +126,7 @@ class FAQ extends Component {
                                 </div>
                                 <button type="submit" className="submit">Submit
                                 </button>
-                                {this.props.faqMail.length && this.state.setTime && <div className="col-md-12">{this.props.faqMail}</div>}
+                                {this.props.faqMail.length  && <div className="col-md-12">{this.props.faqMail}</div>}
                             </form>
                         </div>
                         <div className="col-lg-1 col-md-1 col-sm-1"></div>
