@@ -31,7 +31,7 @@ class Footer extends Component{
                         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 barcamp-address">
                             <h3>GET IN TOUCH WITH US</h3>
                             <p>40 Marshal Baghramyan Ave, Yerevan 0019<br />
-                                barista@barcamp.com
+                                barista@barcamp.am
                             </p>
                             <h5>Developed by <a target="_blank" href="http://www.hexdivision.com/">Hex Division</a></h5>
                         </div>
