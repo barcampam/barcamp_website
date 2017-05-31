@@ -16,7 +16,6 @@ class Content extends Component{
                         <a target="_blank" href="https://www.instagram.com/barcamp_yerevan/"><img src={require('../../public/img/ic_instagram_share.png')} /></a>
                     </div>
                     <div className="barcamp-hashtag">
-                        <a target="_blank" href="https://www.eventbrite.co.uk/e/barcamp-yerevan-2017-tickets-33995486415">Register</a>
                         <h3>#barcampevn17</h3>
                     </div>
                     <div className="light-bulb">
@@ -57,7 +56,6 @@ class Content extends Component{
                                     Media event in Armenia<br />
                                 </p>
                                 <div className="barcamp-hashtag-mobile">
-                                    <a className="registration" target="_blank" href="https://www.eventbrite.co.uk/e/barcamp-yerevan-2017-tickets-33995486415">Register</a>
                                     <h3>#barcampevn17</h3>
                                     <div className="social-links-mobile">
                                         <a target="_blank" href="https://www.facebook.com/barcampevn/"><img src={require('../../public/img/ic_facebook_share.png')} /></a><br />
