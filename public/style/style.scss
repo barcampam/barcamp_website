@@ -329,6 +329,7 @@ body {
       text-align: center;
       img {
         box-shadow: none;
+        width: 45px;
       }
       a {
         padding: 0 5px;
@@ -535,6 +536,9 @@ body {
     height: 167px;
     .footer-social-links {
       padding: 60px 0 0 70px;
+      img {
+        width: 45px;
+      }
     }
     .barcamp-address {
       padding-top: 15px;

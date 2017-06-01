@@ -32,18 +32,18 @@ class SpeakersAll extends Component {
                         <div className={hovered(data.socialnetworks) + " hidden-xs"}>
                             <div className="hovered-links">
                                 {data.socialnetworks.facbook && <a href={data.socialnetworks.facbook}><img
-                                    src={require('../../public/img/hover_fb.png')}/></a>}
+                                    src={require('../../public/img/fb_purple.svg')}/></a>}
                                 {data.socialnetworks.twitter && <a href={data.socialnetworks.twitter}><img
-                                    src={require('../../public/img/hover_twitter.png')}/></a>}
+                                    src={require('../../public/img/twitter_purple.svg')}/></a>}
                                 {data.socialnetworks.instagram && <a href={data.socialnetworks.instagram}><img
-                                    src={require('../../public/img/barcamp_instagram.png')}/></a>}
+                                    src={require('../../public/img/insta_purple.svg')}/></a>}
                             </div>
                         </div>
                         <div className="hovered-mobile visible-xs">
                             <div className="hovered-links-mobile">
-                                {data.socialnetworks.facbook && <a href={data.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>}
-                                {data.socialnetworks.twitter && <a href={data.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>}
-                                {data.socialnetworks.twitter && <a href={data.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>}
+                                {data.socialnetworks.facbook && <a href={data.socialnetworks.facbook}><img src={require('../../public/img/fb_purple.svg')}/></a>}
+                                {data.socialnetworks.twitter && <a href={data.socialnetworks.twitter}><img src={require('../../public/img/twitter_purple.svg')}/></a>}
+                                {data.socialnetworks.twitter && <a href={data.socialnetworks.instagram}><img src={require('../../public/img/insta_purple.svg')}/></a>}
                             </div>
                         </div>
                         <img className="speaker-image" src={`${photo}`}/>

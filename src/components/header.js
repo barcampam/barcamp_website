@@ -44,7 +44,7 @@ class Header extends Component {
                                 <a className="page-scroll" href={navBarHref("#speakers")}>SPEAKERS</a>
                             </li>
                             <li  className={Active("/livestream")} >
-                                <a className="page-scroll" href={navBarHref("#livestream")}>LIVESTREAM</a>
+                                <a className="page-scroll" href={navBarHref("#livestream")}>VIDEOS</a>
                             </li>
                             {/*<li className={Active("/faq")}>*/}
                                 {/*<a href="/faq">FAQ</a>*/}

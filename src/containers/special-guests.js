@@ -26,16 +26,16 @@ class Guests extends Component {
                     <div className="single-speaker">
                         <div className={hovered(item.socialnetworks) + " hidden-xs"}>
                             <div className="hovered-links">
-                                {item.socialnetworks.facbook && <a href={item.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>}
-                                {item.socialnetworks.twitter && <a href={item.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>}
-                                {item.socialnetworks.instagram && <a href={item.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>}
+                                {item.socialnetworks.facbook && <a href={item.socialnetworks.facbook}><img src={require('../../public/img/fb_purple.svg')}/></a>}
+                                {item.socialnetworks.twitter && <a href={item.socialnetworks.twitter}><img src={require('../../public/img/twitter_purple.svg')}/></a>}
+                                {item.socialnetworks.instagram && <a href={item.socialnetworks.instagram}><img src={require('../../public/img/insta_purple.svg')}/></a>}
                             </div>
                         </div>
                         <div className="hovered-mobile visible-xs">
                             <div className="hovered-links-mobile">
-                                {item.socialnetworks.facbook && <a href={item.socialnetworks.facbook}><img src={require('../../public/img/hover_fb.png')}/></a>}
-                                {item.socialnetworks.twitter && <a href={item.socialnetworks.twitter}><img src={require('../../public/img/hover_twitter.png')}/></a>}
-                                {item.socialnetworks.instagram && <a href={item.socialnetworks.instagram}><img src={require('../../public/img/barcamp_instagram.png')}/></a>}
+                                {item.socialnetworks.facbook && <a href={item.socialnetworks.facbook}><img src={require('../../public/img/fb_purple.svg')}/></a>}
+                                {item.socialnetworks.twitter && <a href={item.socialnetworks.twitter}><img src={require('../../public/img/twitter_purple.svg')}/></a>}
+                                {item.socialnetworks.instagram && <a href={item.socialnetworks.instagram}><img src={require('../../public/img/insta_purple.svg')}/></a>}
                             </div>
                         </div>
                         <img className="speaker-image" src={item.photo}/>
