@@ -24,9 +24,9 @@ class Footer extends Component{
                 <div className="container-fluid footer-bottom-bar">
                     <div className="row">
                         <div className="col-lg-3 col-md-3 col-sm-3 col-xs-12 footer-social-links">
-                            <a target="_blank" href="https://www.facebook.com/barcampevn/"><img src={require('../../public/img/hover_fb.png')} /></a>
-                            <a target="_blank" href="https://twitter.com/barcampam"><img src={require('../../public/img/hover_twitter.png')} /></a>
-                            <a target="_blank" href="https://www.instagram.com/barcamp_yerevan/"><img src={require('../../public/img/barcamp_instagram.png')} /></a>
+                            <a target="_blank" href="https://www.facebook.com/barcampevn/"><img src={require('../../public/img/fb_purple.svg')} /></a>
+                            <a target="_blank" href="https://twitter.com/barcampam"><img src={require('../../public/img/twitter_purple.svg')} /></a>
+                            <a target="_blank" href="https://www.instagram.com/barcamp_yerevan/"><img src={require('../../public/img/insta_purple.svg')} /></a>
                         </div>
                         <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12 barcamp-address">
                             <h3>GET IN TOUCH WITH US</h3>

@@ -252,7 +252,8 @@ body {
       right: 15px;
       text-align: center; }
       .speakers-single-row .single-speaker .hovered-links img {
-        box-shadow: none; }
+        box-shadow: none;
+        width: 45px; }
       .speakers-single-row .single-speaker .hovered-links a {
         padding: 0 5px; }
   .speakers-single-row .single-speaker:hover .hovered {
@@ -410,6 +411,8 @@ body {
     height: 167px; }
     .footer .footer-bottom-bar .footer-social-links {
       padding: 60px 0 0 70px; }
+      .footer .footer-bottom-bar .footer-social-links img {
+        width: 45px; }
     .footer .footer-bottom-bar .barcamp-address {
       padding-top: 15px; }
       .footer .footer-bottom-bar .barcamp-address h3 {
