@@ -405,6 +405,8 @@ body {
           color: #ffffff;
           font-weight: 700;
           text-decoration: none; }
+        .footer .footer-navigation ul li a:hover {
+          color: #ed3454; }
   .footer .footer-bottom-bar {
     background: #ed3454;
     margin: 0 0 0 120px;

@@ -521,11 +521,13 @@ body {
         float: left;
         padding: 26px 25px;
         a {
-
           font-size: 15px;
           color: #ffffff;
           font-weight: 700;
           text-decoration: none;
+        }
+        a:hover {
+          color: #ed3454;
         }
       }
     }
