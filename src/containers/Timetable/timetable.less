@@ -1,0 +1,129 @@
+.timetable-wrapper {
+  background-color: #fff;
+  padding-top: 100px;
+
+  .timetable-table {
+    width: 1140px;
+    font-family: 'Montserrat', sans-serif;
+
+    .timetable-header {
+      color: #ffffff;
+      height: 64px;
+      background-image: url("../../image/room-navigation.png");
+      text-align: center;
+    }
+
+    .timetable-body {
+      tr {
+        border-bottom: 2px solid #dddddd;
+      }
+    }
+
+    .timetable-event {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      background-color: #f6f6f6;
+      color: #000000;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0 10px;
+      margin: 10px 5px;
+      border-radius: 6px;
+      height: 72px;
+
+      h4, p {
+        margin-bottom: 0;
+      }
+
+      .timetable-event-duration, .timetable-event-desc {
+        color: #8e8e8e;
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+
+    th {
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .ant-table-row td:first-child {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #000000;
+    }
+  }
+
+  .timetable-header {
+    .page-header-text {
+      font-size: 48px;
+      font-weight: 700;
+      color: #2a2a2a;
+    }
+
+    .timetable-type {
+      display: flex;
+      align-items: center;
+    }
+
+    .timetable-speak, .timetable-workshop {
+      color: #8e8e8e;
+      font-weight: 700;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        display: block;
+        border-radius: 50%;
+      }
+    }
+
+    .timetable-speak span {
+      background-color: #f6f6f6;
+    }
+
+    .timetable-workshop span {
+      background-color: #e1e1e1;
+      margin-left: 15px;
+    }
+
+    p, h2 {
+      margin-bottom: 0;
+    }
+
+    .timetable-filter {
+      display: flex;
+      flex-direction: row;
+      font-size: 20px;
+      font-weight: 700;
+      color: #2a2a2a;
+      margin-left: 15px;
+
+      .timetable-days {
+        padding: 0 25px 0 15px;
+        border-right: 1px solid #dddddd;
+
+        a {
+          padding: 15px;
+          color: #8e8e8e;
+
+          &.active {
+            background-color: #4cd9ef !important;
+            color: #ffffff;
+          }
+        }
+      }
+
+      .timetable-times {
+        padding-left: 35px;
+      }
+    }
+  }
+}

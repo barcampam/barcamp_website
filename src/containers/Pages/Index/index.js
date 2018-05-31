@@ -3,6 +3,7 @@ import { Layout } from 'antd';
 import img from '../../../image/6-layers.png';
 // import andriod from '../../../image/bitmap.png';
 import './index.less';
+import Timetable from '../../Timetable';
 import {connect} from "react-redux";
 
 class Index extends Component {
@@ -23,6 +24,9 @@ class Index extends Component {
                     <img className="bar-main-img" src={img} alt="BarCamp EVN'18 Cover" />
                 </Layout>
                 <div className="bar-head-separator" />
+                <Layout className="bar-timetable">
+                    <Timetable />
+                </Layout>
             </div>
         );
     }
