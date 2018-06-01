@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import {Router,browserHistory} from "react-router"
-import Promise from "redux-promise"
+import { LocaleProvider } from 'antd';
+import { IntlProvider } from 'react-intl';
+import registerServiceWorker from './registerServiceWorker';
+import DashApp from './dashApp';
+import AppLocale from './languageProvider';
+import config, {
+  getCurrentLanguage
+} from './containers/Header/config';
 
-import Routes from "./router"
-import reducers from './reducers/index';
-
-const createStoreWithMiddleware = applyMiddleware(Promise)(createStore);
-
+const currentAppLocale =
+  AppLocale[getCurrentLanguage(config.defaultLanguage || 'english').locale];
 ReactDOM.render(
-    <Provider store={createStoreWithMiddleware(reducers)}>
-        <Router history={browserHistory} routes={Routes}/>
-    </Provider>
-    , document.querySelector('.all-content-wrapper'));
+  <LocaleProvider locale={currentAppLocale.antd}>
+    <IntlProvider
+      locale={currentAppLocale.locale}
+      messages={currentAppLocale.messages}
+    >
+      <DashApp />
+    </IntlProvider>
+  </LocaleProvider>,
+  document.getElementById('root')
+);
+
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./dashApp.js', () => {
+    const NextApp = require('./dashApp').default;
+    ReactDOM.render(<NextApp />, document.getElementById('root'));
+  });
+}
+registerServiceWorker();
+export { AppLocale };

@@ -1,21 +1,19 @@
-import React from "react"
-import {Route, IndexRoute} from "react-router"
+import React from 'react';
+import { Route } from 'react-router-dom';
+import { ConnectedRouter } from 'react-router-redux';
+import App from './containers/App';
 
-import App from "./components/app";
-import About from "./containers/about";
-import FAQ from "./containers/faq";
-import Livestream from "./containers/livestream";
-import Archive from "./containers/archive";
-import Content from "./containers/content";
-import SpeakersAll from './containers/all-speakers'
+const PublicRoutes = ({ history, isLoggedIn }) => {
+  return (
+    <ConnectedRouter history={history}>
+      <div>
+        <Route
+          path={'/'}
+          component={App}
+        />
+      </div>
+    </ConnectedRouter>
+  );
+};
 
-export default (
-    <Route path="/" component={App}>
-        <IndexRoute component={Content}/>
-        <Route path="archive" component={Archive}/>
-        <Route path="livestream" component={Livestream}/>
-        <Route path="faq" component={FAQ}/>
-        <Route path="about" component={About}/>
-        <Route path="all-speakers" component={SpeakersAll}/>
-    </Route>
-)
+export default PublicRoutes;

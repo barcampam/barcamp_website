@@ -1,0 +1,9 @@
+{
+  "name": "BarCamp EVN'18",
+  "short_name": "BarCamp",
+  "theme_color": "#5a1ca9",
+  "background_color": "#5a1ca9",
+  "display": "browser",
+  "Scope": "/",
+  "start_url": "/"
+}
