@@ -1,6 +1,39 @@
 import React from 'react';
 
-export default () => <div>
+export default () => <div className="timetable-table-wrapper">
+    <table className="timetable-times">
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10:00</td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+            </tr>
+            <tr>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>13:00</td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+            </tr>
+            <tr>
+                <td>15:00</td>
+            </tr>
+            <tr>
+                <td>16:00</td>
+            </tr>
+            <tr>
+                <td>17:00</td>
+            </tr>
+        </tbody>
+    </table>
     <table className="timetable-table">
         <thead className="timetable-header">
             <tr>
@@ -43,6 +76,9 @@ export default () => <div>
                         <p className="timetable-event-duration">11:00 - 12:00</p>
                     </div>
                 </td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td></td>
@@ -61,6 +97,7 @@ export default () => <div>
                         <p className="timetable-event-duration">11:00 - 12:00</p>
                     </div>
                 </td>
+                <td></td>
             </tr>
             <tr>
                 <td></td>
@@ -71,6 +108,9 @@ export default () => <div>
                         <p className="timetable-event-duration">11:00 - 12:00</p>
                     </div>
                 </td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <td></td>
@@ -89,6 +129,7 @@ export default () => <div>
                         <p className="timetable-event-duration">11:00 - 12:00</p>
                     </div>
                 </td>
+                <td></td>
             </tr>
             <tr>
                 <td></td>
@@ -101,6 +142,7 @@ export default () => <div>
                         <p className="timetable-event-duration">11:00 - 12:00</p>
                     </div>
                 </td>
+                <td></td>
             </tr>
             <tr>
                 <td></td>
@@ -113,6 +155,7 @@ export default () => <div>
                         <p className="timetable-event-duration">11:00 - 12:00</p>
                     </div>
                 </td>
+                <td></td>
             </tr>
         </tbody>
     </table>

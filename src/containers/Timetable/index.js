@@ -10,10 +10,10 @@ class Timetable extends Component {
         return (
             <div className="timetable-wrapper">
                 <Row className='timetable-header' type="flex" justify="space-around" align="middle">
-                    <Col span={6}>
+                    <Col xs={24} sm={24} xl={10}>
                         <h2 className="page-header-text"><IntlMessages id="timetable.header" /></h2>
                     </Col>
-                    <Col span={5} className="timetable-filter">
+                    <Col xs={24} sm={12} xl={8} className="timetable-filter">
                         <p><IntlMessages id="timetable.days" /></p>
                         <div className="timetable-days">
                             <a className="active">27</a>
@@ -21,7 +21,7 @@ class Timetable extends Component {
                         </div>
                         <p className="timetable-times">10:00 - 17:00</p>
                     </Col>
-                    <Col span={5} className="timetable-type">
+                    <Col xs={24} sm={11} xl={4} className="timetable-type">
                         <div className="timetable-speak">
                             <span className="timetable-first-circle" />
                             <p>Speak</p>

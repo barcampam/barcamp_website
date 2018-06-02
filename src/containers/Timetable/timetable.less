@@ -2,8 +2,48 @@
   background-color: #fff;
   padding-top: 100px;
 
+  @media screen and (max-width: 576px) {
+    padding-top: 36px;
+  }
+
+  .timetable-table-wrapper {
+    @media screen and (max-width: 1170px) {
+        overflow-x: scroll;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 18px;
+    }
+
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+
+    .timetable-times {
+      color: #ffffff;
+      border-collapse: separate;
+
+      th {
+        height: 64px;
+      }
+
+      td {
+        color: #000000;
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 10px;
+        margin: 10px 5px;
+        height: 72px;
+        border-bottom: 1px solid transparent;
+        box-sizing: content-box;
+      }
+    }
+  }
+
   .timetable-table {
-    width: 1140px;
     font-family: 'Montserrat', sans-serif;
 
     .timetable-header {
@@ -11,11 +51,19 @@
       height: 64px;
       background-image: url("../../image/room-navigation.png");
       text-align: center;
+
+      th {
+        height: 64px;
+      }
     }
 
     .timetable-body {
       tr {
         border-bottom: 2px solid #dddddd;
+
+        td {
+          min-width: 220px;
+        }
       }
     }
 
@@ -58,15 +106,41 @@
   }
 
   .timetable-header {
+    @media screen and (min-width: 576px) and (max-width: 1199px) {
+      margin-bottom: 36px;
+    }
+
+    @media screen and (max-width: 576px) {
+      margin-bottom: 36px;
+    }
+
     .page-header-text {
       font-size: 48px;
       font-weight: 700;
       color: #2a2a2a;
+
+      @media screen and (max-width: 576px) {
+        text-align: center;
+        font-size: 32px;
+      }
+
+      @media screen and (min-width: 576px) and (max-width: 1199px) {
+        text-align: center;
+        margin-bottom: 36px;
+      }
     }
 
     .timetable-type {
       display: flex;
       align-items: center;
+
+      @media screen and (max-width: 576px) {
+        justify-content: center;
+      }
+
+      @media screen and (min-width: 576px) and (max-width: 1199px) {
+        justify-content: center;
+      }
     }
 
     .timetable-speak, .timetable-workshop {
@@ -105,6 +179,16 @@
       font-weight: 700;
       color: #2a2a2a;
       margin-left: 15px;
+      align-items: center;
+
+      @media screen and (max-width: 576px) {
+        justify-content: center;
+        margin: 36px 0;
+      }
+
+      @media screen and (min-width: 576px) and (max-width: 1199px) {
+        justify-content: center;
+      }
 
       .timetable-days {
         padding: 0 25px 0 15px;
@@ -113,6 +197,7 @@
         a {
           padding: 15px;
           color: #8e8e8e;
+          display: inline-block;
 
           &.active {
             background-color: #4cd9ef !important;
