@@ -26,5 +26,9 @@
   "faq.formatsAnswer": "Խելքին մոտ ֆորմատով բերեք․ օրինակ՝ pdf, ppt, վեբ որևէ պլատֆորմում և այլն։ Օգտագործեք Unicode և էնպիսի տառատեսակ, որ Կարմիր գրքում ներառված չէ հազվադեպ օգտագործման պատճառով։ ;)",
 
   "timetable.header": "Ժամանակացույցը",
-  "timetable.days": "Օրեր"
+  "timetable.days": "Օրեր",
+
+  "special_speakers.header": "Special Speakers",
+  "speakers.header": "Speakers",
+  "sponsors.header": "Sponsors"
 }

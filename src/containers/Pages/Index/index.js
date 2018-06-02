@@ -4,6 +4,9 @@ import img from '../../../image/6-layers.png';
 // import andriod from '../../../image/bitmap.png';
 import './index.less';
 import Timetable from '../../Timetable';
+import SpecialSpeakers from '../../SpecialSpeakers';
+import Speakers from '../../Speakers';
+import Sponsors from '../../Sponsors';
 import {connect} from "react-redux";
 
 class Index extends Component {
@@ -24,8 +27,18 @@ class Index extends Component {
                     <img className="bar-main-img" src={img} alt="BarCamp EVN'18 Cover" />
                 </Layout>
                 <div className="bar-head-separator" />
-                <Layout className="bar-timetable">
+                <Layout className="bar-timetable bar-index-layout">
                     <Timetable />
+                </Layout>
+                <Layout className="bar-special-speakers bar-index-layout">
+                    <SpecialSpeakers />
+                </Layout>
+                <Layout className="bar-speakers bar-index-layout">
+                    <Speakers />
+                </Layout>
+                <Layout className="bar-speakers bar-dev-numbers" />
+                <Layout className="bar-sponsors bar-index-layout">
+                    <Sponsors />
                 </Layout>
             </div>
         );
