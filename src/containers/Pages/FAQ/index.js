@@ -6,6 +6,36 @@ import IntlMessages from '../../../components/utility/intlMessages';
 const { TextArea } = Input;
 
 export default class Index extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.emailChange = this.emailChange.bind(this);
+        this.textChange = this.textChange.bind(this);
+        this.submitFaq = this.submitFaq.bind(this);
+
+        this.state = {
+            emailValue: "",
+            textValue: ""
+        }
+    }
+
+    emailChange(event) {
+        this.setState({
+            emailValue: event.target.value
+        })
+    }
+
+    textChange(event) {
+        this.setState({
+            textValue: event.target.value
+        })
+    }
+
+    submitFaq() {
+        console.log(this.state.emailValue + this.state.textValue);
+    }
+
     render() {
         return (
             <div className='faq-wrapper'>
@@ -68,16 +98,18 @@ export default class Index extends Component {
 
                             <div className="email-wrapper">
                                 <h4 className="faq-form-header"><IntlMessages id="faq.email" /></h4>
-                                <Input className="faq-input"/>
+                                <Input onChange={this.emailChange} className="faq-input"/>
                             </div>
 
                             <div className="text-area-wrapper">
                                 <h4 className="faq-form-header"><IntlMessages id="faq.question" /></h4>
-                                <TextArea className="text-area-input" />
+                                <TextArea onChange={this.textChange} className="text-area-input" />
                             </div>
 
                             <div className="faq-button-wrapper">
-                        `       <Button type="primary" className="faq-submit-button"><IntlMessages id="faq.submitButton" /></Button>
+                        `       <Button onClick={this.submitFaq} type="primary" className="faq-submit-button">
+                                    <IntlMessages id="faq.submitButton" />
+                                </Button>
                             </div>
                         </div>
 

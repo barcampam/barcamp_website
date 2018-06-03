@@ -6,6 +6,7 @@
   -o-background-size: cover;
   background-size: cover;
   user-select: none;
+  font-family: Montserrat;
 
   .footer-nav-wrapper {
     text-align: left;
@@ -47,6 +48,7 @@
     flex-direction: row;
     align-items: end;
     height: 92px;
+    justify-content: left;
   }
 
   .get-in-touch-wrapper {
@@ -90,7 +92,7 @@
   .logo-wrapper {
     height: 115px;
     display: flex;
-    align-items: center
+    align-items: center;
   }
 }
 
@@ -99,7 +101,7 @@
   .logo-wrapper,
   .social-network-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: center !important;
   }
 
   .get-in-touch-wrapper > p {
@@ -136,12 +138,13 @@
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 767px) {
-  .get-in-touch-wrapper {
-    display: none !important;
-  }
-
   .social-network-wrapper {
     margin-top: -24px;
   }
-}
 
+  .get-in-touch-wrapper {
+    p {
+      text-align: center !important;
+    }
+  }
+}

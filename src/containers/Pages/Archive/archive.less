@@ -1,0 +1,227 @@
+.ant-layout-content {
+    background-color: #ffffff;
+    font-family: Montserrat;
+}
+
+.archieve-logo-header-wrapper {
+    img {
+        max-height: 100%;
+        max-width: 100%;
+        min-width: 0;  
+    }
+}
+
+.archive-wrapper {
+    .page-header-text {
+        font-size: 48px;
+        font-weight: 700;
+        padding-left: 60px
+    }
+
+    .archive-timeline-wrapper {
+        margin-left: 100px;
+        margin-top: 16px;
+
+        .timeline-item {
+            width: 100px;
+            a {
+                font-family: Montserrat;
+                color: #dddddd; 
+
+                &:active {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: #5a1ca9;
+                }
+
+                &:focus {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: #5a1ca9;
+                }
+            }   
+        }
+    }
+
+    .ant-timeline-item-head-blue {
+        border-color: #dddddd;
+        background-color: #dddddd;
+    }
+
+    .ant-timeline-item-content {
+        color: #2a2a2a;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .ant-timeline-item-tail,
+    .ant-timeline-item-head {
+        margin-top: 6px;
+    }
+}
+
+.archieve-logo-header-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h1 {
+        color: #2a2a2a;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 700;
+        margin-left: 32px;  
+    }
+}
+
+.archive-text-wrapper {
+    margin-top: 70px;
+
+    .archive-text {
+        color: #2a2a2a;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.timeline-wrapper {
+    margin-top: 70px;
+}
+
+@media only screen and (max-width: 992px) {
+    .timeline-wrapper {
+        margin-left: -90px;
+    }
+
+    .archieve-logo-header-wrapper {
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    .archieve-logo-header-wrapper {
+        img {
+            height: 100%;
+            width: 20%;  
+        }
+    }
+
+    .videos-header-wrapper {
+        margin-left: -30px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .archive-text-wrapper {
+        margin-top: 50px;
+    }
+
+    .archieve-logo-header-wrapper {
+        h1 {
+            font-size: 24px;
+            margin-left: 16px;
+        }
+    }
+
+    .page-header-text {
+        padding: 30px;
+    }
+
+    .archive-wrapper {
+        padding: 0 !important;
+    }
+
+    .timeline-row {
+        padding: 30px !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .archieve-logo-header-wrapper {
+        img {
+            display: none;
+        }
+
+        h1 {
+            margin-left: 0;
+        }
+    }
+
+    .archive-text-wrapper {
+        margin-top: 33px;
+    }
+
+    .archive-wrapper .archive-timeline-wrapper {
+        margin-top: 32px;
+    }
+
+    .page-header-text {
+        padding-bottom: 0px;
+    }
+}
+
+.videos-content-wrapper {
+    background-image: url('../../../image/videos-background.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px;
+    margin-top: 30px;
+}
+
+.videos-header-wrapper {
+    background-image: url('../../../image/archive-videos.jpg');
+    background-repeat: no-repeat;
+    margin-top: 50px;
+
+    h1 {
+        color: #2a2a2a;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 700;
+        padding: 50px 0 50px 50px;
+    }
+}
+
+.videos-wrapper {
+    background-image: url(../../../image/archive-background-2.png);
+}
+
+.event-photos {
+    margin-bottom: 60px;
+    margin-top: -120px;
+}
+
+.timeline-row {
+    padding: 30px 30px 30px 60px;   
+}
+
+.videos-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .rooms-wrapper {
+        float: right;
+        margin-right: 30px;
+
+        h3 {
+            color: #2a2a2a;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 18px;
+        }
+    } 
+}
+
+.videos-bottom-background {
+    background-image: url('../../../image/archive-bottom-of-videos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 420px;
+}
