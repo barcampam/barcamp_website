@@ -35,7 +35,7 @@ export default class extends Component {
         return (
             <Footer>
                 <Row style={{display: 'flex', margin: '0 3%'}}>
-                    <Col xl={14} lg={16} md={12} sm={12} xs={24}>
+                    <Col xl={14} lg={16} md={12} sm={24} xs={24}>
                         <Row className="footer-row first-row">
                             <Col xl={12} lg={12} md={24} sm={24} xs={24}>
                                 <div className="logo-wrapper">

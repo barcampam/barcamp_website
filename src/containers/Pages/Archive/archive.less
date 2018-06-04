@@ -15,7 +15,7 @@
     .page-header-text {
         font-size: 48px;
         font-weight: 700;
-        padding-left: 60px
+        padding: 30px 30px 30px 60px;
     }
 
     .archive-timeline-wrapper {
@@ -32,6 +32,14 @@
                     font-size: 28px;
                     font-weight: 700;
                     color: #5a1ca9;
+
+                    .ant-timeline-item-head-blue {
+                        border-radius: 0;
+                        height: 18px;
+                        width: 18px;
+                        background-color: #5a1ca9;
+                        border-color: #5a1ca9;
+                    }
                 }
 
                 &:focus {
@@ -95,6 +103,20 @@
         margin-left: -90px;
     }
 
+    .archive-wrapper {
+        padding: 0 !important;
+
+        .timeline-row {
+            padding: 30px !important;
+        }
+
+        .videos-header-wrapper {
+            h1 {
+                padding-left: 30px;
+            }
+        }
+    }
+
     .archieve-logo-header-wrapper {
         h1 {
             font-size: 30px;
@@ -109,7 +131,16 @@
     }
 
     .videos-header-wrapper {
-        margin-left: -30px !important;
+        margin-left: 0px !important;
+    }
+
+    .videos-content-wrapper {
+        background-position-y: none;
+        background-position-x: right;
+    }
+
+    .page-header-text {
+        padding: 30px !important;
     }
 }
 
@@ -118,6 +149,10 @@
         margin-top: 50px;
     }
 
+    .page-header-text {
+        font-size: 32px !important;
+    } 
+
     .archieve-logo-header-wrapper {
         h1 {
             font-size: 24px;
@@ -125,16 +160,17 @@
         }
     }
 
-    .page-header-text {
-        padding: 30px;
-    }
-
     .archive-wrapper {
         padding: 0 !important;
+
+        .page-header-text {
+            padding: 30px !important;
+            margin-bottom: 0 !important;
+        }
     }
 
     .timeline-row {
-        padding: 30px !important;
+        padding: 0 !important;
     }
 }
 
@@ -150,7 +186,7 @@
     }
 
     .archive-text-wrapper {
-        margin-top: 33px;
+        margin-top: 20px;
     }
 
     .archive-wrapper .archive-timeline-wrapper {
@@ -160,17 +196,6 @@
     .page-header-text {
         padding-bottom: 0px;
     }
-}
-
-.videos-content-wrapper {
-    background-image: url('../../../image/videos-background.jpg');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 400px;
-    margin-top: 30px;
 }
 
 .videos-header-wrapper {
@@ -204,6 +229,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('../../../image/videos-background.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position-y: center;
+    height: 400px;
+    margin-top: 30px;
 
     .rooms-wrapper {
         float: right;
@@ -224,4 +258,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 420px;
+}
+
+@media only screen and (max-width: 468px) {
+    .timeline-wrapper {
+        margin-top: 75px;
+    }
 }
