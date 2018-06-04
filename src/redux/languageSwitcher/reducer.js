@@ -1,5 +1,5 @@
 import { Map } from 'immutable';
-import config, {
+import {
   getCurrentLanguage
 } from '../../containers/Header/config';
 
@@ -7,7 +7,7 @@ import actions from './actions';
 
 const initState = new Map({
   isActivated: false,
-  language: getCurrentLanguage(config.defaultLanguage || 'english')
+  language: getCurrentLanguage(localStorage.getItem('language') || 'armenian')
 });
 
 export default function(state = initState, action) {
@@ -15,6 +15,7 @@ export default function(state = initState, action) {
     case actions.ACTIVATE_LANG_MODAL:
       return state.set('isActivated', !state.get('isActivated'));
     case actions.CHANGE_LANGUAGE:
+      localStorage.setItem('language', action.language.languageId)
       return state.set('language', action.language);
     default:
       return state;

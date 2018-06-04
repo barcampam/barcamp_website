@@ -4,9 +4,52 @@ import IntlMessages from '../../components/utility/intlMessages';
 import './timetable.less';
 import { Row, Col } from "antd";
 import Table from './table.js';
+import moment from 'moment';
+import actions from '../../redux/schedule/actions';
+
+const { getSchedule } = actions;
 
 class Timetable extends Component {
+    timeline = {
+        bigHall: {},
+        '214W': {},
+        '208E': {},
+        '308E': {},
+        '213W': {},
+        '113W': {},
+        '114W': {},
+    }
+
+    componentWillMount() {
+        this.props.getSchedule();
+    }
+
+    static buildTimeline(schedule) {
+        const timeline = {};
+
+        for(let i = 0; i < schedule.items.length; i++) {
+            const event = schedule.items[i];
+
+            timeline[moment(event.time_from.date).format('DD')] =
+                timeline[moment(event.time_from.date).format('DD')] ?
+                    timeline[moment(event.time_from.date).format('DD')] :
+                    {};
+            timeline[moment(event.time_from.date).format('DD')][moment(event.time_from.date).format('HH')] =
+                timeline[moment(event.time_from.date).format('DD')][moment(event.time_from.date).format('HH')] ?
+                    timeline[moment(event.time_from.date).format('DD')][moment(event.time_from.date).format('HH')] :
+                    {};
+            timeline[moment(event.time_from.date).format('DD')][moment(event.time_from.date).format('HH')][event.room] = event;
+        }
+
+        return timeline;
+    }
+
     render() {
+        this.timeline = Timetable.buildTimeline(this.props.schedule);
+
+
+        console.log(this.timeline);
+
         return (
             <div className="timetable-wrapper">
                 <Row className='timetable-header' type="flex" justify="space-around" align="middle">
@@ -40,4 +83,9 @@ class Timetable extends Component {
     }
 }
 
-export default connect()(Timetable);
+export default connect(
+    state => ({
+        schedule: state.Schedule.toJS(),
+    }),
+    { getSchedule }
+)(Timetable);
