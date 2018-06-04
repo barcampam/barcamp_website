@@ -1,13 +1,16 @@
 import React from 'react';
 
-export default () => <div className="timetable-table-wrapper">
-    <table className="timetable-times">
-        <thead>
+export default (props) => {
+    console.log(props);
+
+    return (<div className="timetable-table-wrapper">
+        <table className="timetable-times">
+            <thead>
             <tr>
                 <th></th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             <tr>
                 <td>10:00</td>
             </tr>
@@ -32,10 +35,13 @@ export default () => <div className="timetable-table-wrapper">
             <tr>
                 <td>17:00</td>
             </tr>
-        </tbody>
-    </table>
-    <table className="timetable-table">
-        <thead className="timetable-header">
+            <tr>
+                <td>16:00</td>
+            </tr>
+            </tbody>
+        </table>
+        <table className="timetable-table">
+            <thead className="timetable-header">
             <tr>
                 <th>Big Hall</th>
                 <th>117E room</th>
@@ -43,8 +49,8 @@ export default () => <div className="timetable-table-wrapper">
                 <th>113W room</th>
                 <th>224B room</th>
             </tr>
-        </thead>
-        <tbody className="timetable-body">
+            </thead>
+            <tbody className="timetable-body">
             <tr>
                 <td colSpan={5}>
                     <div className="timetable-event">
@@ -157,6 +163,7 @@ export default () => <div className="timetable-table-wrapper">
                 </td>
                 <td></td>
             </tr>
-        </tbody>
-    </table>
-</div>;
+            </tbody>
+        </table>
+    </div>)
+};

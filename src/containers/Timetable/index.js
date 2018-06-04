@@ -10,15 +10,10 @@ import actions from '../../redux/schedule/actions';
 const { getSchedule } = actions;
 
 class Timetable extends Component {
-    timeline = {
-        bigHall: {},
-        '214W': {},
-        '208E': {},
-        '308E': {},
-        '213W': {},
-        '113W': {},
-        '114W': {},
-    }
+
+    state = {
+        active: 16
+    };
 
     componentWillMount() {
         this.props.getSchedule();
@@ -47,9 +42,6 @@ class Timetable extends Component {
     render() {
         this.timeline = Timetable.buildTimeline(this.props.schedule);
 
-
-        console.log(this.timeline);
-
         return (
             <div className="timetable-wrapper">
                 <Row className='timetable-header' type="flex" justify="space-around" align="middle">
@@ -59,8 +51,12 @@ class Timetable extends Component {
                     <Col xs={24} sm={12} xl={8} className="timetable-filter">
                         <p><IntlMessages id="timetable.days" /></p>
                         <div className="timetable-days">
-                            <a className="active">27</a>
-                            <a>28</a>
+                            <a onClick={() => (
+                                this.setState({active: 16})
+                            )} className={this.state.active === 16 ? 'active' : ''}>16</a>
+                            <a onClick={() => (
+                                this.setState({active: 17})
+                            )} className={this.state.active === 17 ? 'active' : ''}>17</a>
                         </div>
                         <p className="timetable-times">10:00 - 17:00</p>
                     </Col>
@@ -76,7 +72,7 @@ class Timetable extends Component {
                     </Col>
                 </Row>
                 <Row className='timetable-header' type="flex" justify="space-around" align="middle">
-                    <Table />
+                    <Table data={this.timeline} loading={this.props.schedule.loading} />
                 </Row>
             </div>
         );
