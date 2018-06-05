@@ -3,6 +3,7 @@ import IntlMessages from '../../../components/utility/intlMessages';
 import { Row, Col, Timeline } from 'antd';
 import "./archive.less";
 import archiveLogo from '../../../image/archive-logo.png';
+import LiveStream from '../../Livestream/index.js';
 
 export default class Archive extends Component {
     // constructor(props) {
@@ -84,43 +85,14 @@ export default class Archive extends Component {
                 </Row>
 
                 <Row>
-                    <Col xl={10} lg={10} md={10} sm={10} xs={24}>
+                    <Col xl={10} lg={10} md={10} sm={24} xs={24}>
                         <div className="videos-header-wrapper">
                             <h1><IntlMessages id="archive.videos" /></h1>
                         </div>
                     </Col>
                 </Row>
 
-                <Row>
-                    <div className="videos-content-wrapper">
-                        <Col xl={7} lg={7} md={7} sm={7} xs={7}>
-                            <div className="rooms-wrapper">
-                                <h3>Big Hall</h3>
-                                <h3>117E room</h3>
-                                <h3>113W room</h3>
-                                <h3>224B room</h3>
-                                <h3>224B room</h3>
-                            </div>
-                        </Col>
-
-                        <Col xl={10} lg={10} md={10} sm={10} xs={10}>
-                            
-                                <iframe width="548" height="320"
-                                        title="Live"
-                                        src="https://www.youtube.com/embed/tgbNymZ7vqY" />
-                            
-                        </Col>
-
-                        <Col xl={7} lg={7} md={7} sm={7} xs={7}>
-                        
-                            
-                    
-                        </Col>
-                    </div>
-                    <div className="videos-bottom-background">
-
-                    </div>
-                </Row>
+                <LiveStream />
 
                 <Row>
                     <h1 className="page-header-text event-photos"><IntlMessages id="archive.eventPhotos" /></h1>
