@@ -32,7 +32,6 @@
     background-repeat: no-repeat;
     background-position: right;
     background-position-y: top !important;
-    margin-right: -30px;
 }
 
 .about-header {
@@ -58,10 +57,24 @@
     .about-text-wrapper {
         background-image: none;
     }
+
+    .about-wrapper {
+        .page-header-text {
+            padding: 0 !important;
+        }
+    }
 }
 
 @media only screen and (max-width: 767px) {
     .about-wrapper {
        padding-left: 30px !important;
+    }
+
+    .about-text-wrapper {
+        margin-bottom: 0;
+    }
+
+    .page-header-text {
+        font-size: 32px !important;
     }
 }

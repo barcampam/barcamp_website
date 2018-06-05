@@ -42,7 +42,7 @@ export default class Index extends Component {
                 <h1 className="page-header-text"><IntlMessages id="navigation.faq" /></h1>
                 
                 <Row>
-                    <Col xl={16} lg={14} md={12} sm={12} xs={24}>
+                    <Col xl={16} lg={14} md={12} sm={24} xs={24}>
                         <div className="faq-questions-wrapper">
                             <h3 className="faq-header-texts"><IntlMessages id="faq.recievedLetter" /></h3>
                             <p className="faq-question-answers"><IntlMessages id="faq.recievedLetterAnswer" /></p>
@@ -89,7 +89,7 @@ export default class Index extends Component {
                        </div>
                     </Col>
 
-                    <Col xl={8} lg={10} md={12} sm={12} xs={24}>
+                    <Col xl={8} lg={10} md={12} sm={24} xs={24}>
                         <div className="question-wrapper">
                             <div className="faq-header-wrapper">
                                 <h3 className="ask-a-question"><IntlMessages id="faq.askQuestion" /></h3>
