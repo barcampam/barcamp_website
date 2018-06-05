@@ -8,10 +8,32 @@ import SpecialSpeakers from '../../SpecialSpeakers';
 import Speakers from '../../Speakers';
 import Sponsors from '../../Sponsors';
 import {connect} from "react-redux";
+<<<<<<< Updated upstream
 import IntlMessages from '../../../components/utility/intlMessages';
 
+=======
+import actions from '../../../redux/speakers/actions';
+
+const { getSpeakers } = actions;
+>>>>>>> Stashed changes
 
 class Index extends Component {
+    componentWillMount() {
+        this.props.getSpeakers();
+    }
+
+    getSpecialSpeakers() {
+        return this.props.speakers.items.filter((item) => (
+            item.is_special
+        ));
+    }
+
+    getAllSpeakers() {
+        return this.props.speakers.items.filter((item) => (
+            !item.is_special
+        ))
+    }
+
     render() {
         return (
             <div>
@@ -53,10 +75,10 @@ class Index extends Component {
                     <Timetable />
                 </Layout>
                 <Layout className="bar-special-speakers bar-index-layout">
-                    <SpecialSpeakers />
+                    <SpecialSpeakers speakers={this.getSpecialSpeakers()} />
                 </Layout>
                 <Layout className="bar-speakers bar-index-layout">
-                    <Speakers />
+                    <Speakers speakers={this.getAllSpeakers()} />
                 </Layout>
                 <Layout className="bar-speakers bar-dev-numbers" />
                 <Layout className="bar-sponsors bar-index-layout">
@@ -69,7 +91,8 @@ class Index extends Component {
 
 export default connect(
     state => ({
-        app: state.App.toJS()
+        app: state.App.toJS(),
+        speakers: state.Speakers.toJS()
     }),
-    {}
+    { getSpeakers }
 )(Index);

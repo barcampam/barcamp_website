@@ -89,6 +89,13 @@
         font-size: 13px;
         font-weight: 400;
       }
+
+      .timetable-event-name, .timetable-event-desc, .timetable-event-duration {
+        width: 180px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
     }
 
     th {
@@ -180,6 +187,7 @@
       color: #2a2a2a;
       margin-left: 15px;
       align-items: center;
+      justify-content: end;
 
       @media screen and (max-width: 576px) {
         justify-content: center;
