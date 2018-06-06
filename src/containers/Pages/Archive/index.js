@@ -3,7 +3,7 @@ import IntlMessages from '../../../components/utility/intlMessages';
 import { Row, Col, Timeline } from 'antd';
 import "./archive.less";
 import archiveLogo from '../../../image/archive-logo.png';
-// import LiveStream from '../../Livestream/index.js';
+import LiveStream from '../../Livestream/index.js';
 // import Gallery from 'react-photo-gallery';
 
 // const PHOTO_SET = [
@@ -35,18 +35,10 @@ import archiveLogo from '../../../image/archive-logo.png';
 //   ];
 
 export default class Archive extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.addActiveClass= this.addActiveClass.bind(this);
-    //     this.state = {
-    //         active: false,
-    //     };
-    // }
-
-    // toggleClass() {
-    //     const currentState = this.state.active;
-    //     this.setState({ active: !currentState });
-    // };
+    state = {
+        active: 2017,
+        years: [2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010]
+    };
 
     render() {
         return (
@@ -57,39 +49,16 @@ export default class Archive extends Component {
                     <div className="archive-timeline-wrapper">
                         <Col xl={4} lg={4} md={4} sm={2} xs={1}>
                             <div className="timeline-wrapper">
-                                {/* <Timeline>
-                                    <Timeline.Item className="timeline-item">
-                                        <a>2017</a>
-                                    </Timeline.Item>
-
-                                    <Timeline.Item className="timeline-item">
-                                        <a>2016</a>
-                                    </Timeline.Item>
-
-                                    <Timeline.Item className="timeline-item">
-                                        <a>2015</a>
-                                    </Timeline.Item>
-
-                                    <Timeline.Item className="timeline-item">
-                                        <a>2014</a>
-                                    </Timeline.Item>
-
-                                    <Timeline.Item className="timeline-item">
-                                        <a>2013</a>
-                                    </Timeline.Item>
-
-                                    <Timeline.Item className="timeline-item">
-                                        <a>2012</a>
-                                    </Timeline.Item>
-
-                                    <Timeline.Item className="timeline-item">
-                                        <a>2011</a>
-                                    </Timeline.Item>
-
-                                    <Timeline.Item className="timeline-item">
-                                        <a>2010</a>
-                                    </Timeline.Item>
-                                </Timeline> */}
+                                <Timeline>
+                                    {this.state.years.map((item, index) => {
+                                        return <Timeline.Item
+                                            key={index}
+                                            className="timeline-item"
+                                            onClick={() => this.setState({active: item})}>
+                                            <a className={this.state.active === item ? 'active' : null}>{item}</a>
+                                        </Timeline.Item>
+                                    })}
+                                </Timeline>
                             </div>
                         </Col>
                        
@@ -121,7 +90,7 @@ export default class Archive extends Component {
                     </Col>
                 </Row>
 
-                {/* <LiveStream /> */}
+                <LiveStream />
 
                 <Row>
                 <Col xl={24} lg={24} md={24} sm={24} xs={24}>

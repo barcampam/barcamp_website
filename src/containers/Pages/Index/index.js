@@ -8,14 +8,10 @@ import SpecialSpeakers from '../../SpecialSpeakers';
 import Speakers from '../../Speakers';
 import Sponsors from '../../Sponsors';
 import {connect} from "react-redux";
-<<<<<<< Updated upstream
 import IntlMessages from '../../../components/utility/intlMessages';
-
-=======
 import actions from '../../../redux/speakers/actions';
 
 const { getSpeakers } = actions;
->>>>>>> Stashed changes
 
 class Index extends Component {
     componentWillMount() {
