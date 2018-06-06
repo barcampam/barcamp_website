@@ -41,23 +41,38 @@ export default class Livestream extends Component {
     room(state) {
         switch(state) {
             case this.state.active === 1:
-                return  <iframe width="548" height="320"
+                return  <iframe width="548" 
+                                height="320"
+                                frameBorder="0" 
+                                allowFullScreen
                                 title= {this.room1.title}
                                 src={this.room1.url} />
             case this.state.active === 2:
-                return  <iframe width="548" height="320"
+                return  <iframe width="548" 
+                                height="320"
+                                frameBorder="0" 
+                                allowFullScreen
                                 title= {this.room2.title}
                                 src={this.room2.url} />
             case this.state.active === 3:
-                return  <iframe width="548" height="320"
+                return  <iframe width="548" 
+                                height="320"
+                                frameBorder="0" 
+                                allowFullScreen
                                 title= {this.room3.title}
                                 src={this.room3.url} />
             case this.state.active === 4:
-                return  <iframe width="548" height="320"
+                return  <iframe width="548" 
+                                height="320"
+                                frameBorder="0" 
+                                allowFullScreen
                                 title= {this.room4.title}
                                 src={this.room4.url} />
             case this.state.active === 5:
-                return  <iframe width="548" height="320"
+                return  <iframe width="548" 
+                                height="320"
+                                frameBorder="0" 
+                                allowFullScreen
                                 title= {this.room5.title}
                                 src={this.room5.url} />
             default:

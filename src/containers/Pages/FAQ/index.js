@@ -41,7 +41,6 @@ class FAQ extends Component {
         console.log(this.state.emailValue + this.state.textValue);
 
         this.props.faqSubmit(this.state.emailValue, this.state.textValue);
-    
     }
 
     render() {
