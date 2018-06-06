@@ -36,27 +36,31 @@ export default class Livestream extends Component {
     
     render() {  
         return (
-            <Row>
-                <div className="videos-content-wrapper">
-                    <Col xl={7} lg={7} md={7} sm={7} xs={7}>
-                        <div className="rooms-wrapper">
-                            {this.state.stream.map((item, index) => (
-                                <a className={this.state.active === index ? 'active' : null} key={index} onClick={() => this.setState({active: index})}>
-                                    <h3>{item.room}</h3>
-                                </a>
-                            ))}
-                        </div>
-                    </Col>
-                    <Col xl={10} lg={10} md={10} sm={10} xs={10}>
-                        <iframe width="548" 
-                            height="320"
-                            frameBorder="0" 
-                            allowFullScreen
-                            title={this.state.stream[this.state.active].room}
-                            src={this.state.stream[this.state.active].url} />
-                    </Col>
-                    <Col xl={7} lg={7} md={7} sm={7} xs={7} />
-                </div>
+            <Row className="videos-content-wrapper">
+                <Col xl={7} lg={7} md={6} sm={6} xs={24}>
+                    <div className="rooms-wrapper">
+                        {this.state.stream.map((item, index) => (
+                            <a className={this.state.active === index ? 'active' : null} key={index} onClick={() => this.setState({active: index})}>
+                                <h3>{item.room}</h3>
+                            </a>
+                        ))}
+                    </div>
+                </Col>
+
+                <Col xl={10} lg={10} md={18} sm={18} xs={24} className="iframe-wrapper">
+                    <iframe width="548" 
+                        height="308"
+                        frameBorder="0" 
+                        allowFullScreen
+                        title={this.state.stream[this.state.active].room}
+                        src={this.state.stream[this.state.active].url} 
+                        className="youtube-iframe"/>
+                </Col>
+
+                <Col xl={7} lg={7} md={0} sm={0} xs={0} >
+
+                </Col>
+
                 <div className="videos-bottom-background">
 
                 </div>
