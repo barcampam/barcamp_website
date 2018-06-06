@@ -61,5 +61,7 @@
 
   "special_speakers.header": "Special Speakers",
   "speakers.header": "Speakers",
-  "sponsors.header": "Sponsors"
+  "sponsors.header": "Sponsors",
+
+  "landing.register": "Register"
 }

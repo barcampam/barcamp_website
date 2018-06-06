@@ -1,11 +1,15 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import "./faq.less";
 import { Row, Col, Input, Button } from 'antd';
 import IntlMessages from '../../../components/utility/intlMessages';
+import actions from '../../../redux/faq/actions';
+import { connect } from "react-redux";
 
 const { TextArea } = Input;
 
-export default class Index extends Component {
+const { faqSubmit } = actions;
+
+class FAQ extends Component {
 
     constructor(props) {
         super(props);
@@ -32,8 +36,12 @@ export default class Index extends Component {
         })
     }
 
+
     submitFaq() {
         console.log(this.state.emailValue + this.state.textValue);
+
+        this.props.faqSubmit(this.state.emailValue, this.state.textValue);
+    
     }
 
     render() {
@@ -122,3 +130,10 @@ export default class Index extends Component {
         );
     }
 }
+
+export default connect(
+    state => ({
+        faq: state.Faq.toJS(),
+    }),
+    { faqSubmit }
+)(FAQ);
