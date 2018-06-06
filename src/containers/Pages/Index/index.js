@@ -9,7 +9,6 @@ import Speakers from '../../Speakers';
 import Sponsors from '../../Sponsors';
 import {connect} from "react-redux";
 import IntlMessages from '../../../components/utility/intlMessages';
-
 import actions from '../../../redux/speakers/actions';
 
 const { getSpeakers } = actions;

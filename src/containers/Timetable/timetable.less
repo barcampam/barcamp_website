@@ -2,6 +2,54 @@
   background-color: #fff;
   padding-top: 100px;
 
+  .timetable-mobile-panel {
+    .ant-collapse-header {
+      background-image: url("../../image/room-navigation.png");
+      font-size: 18px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .ant-collapse-content-box {
+      padding-right: 0;
+      padding-left: 0;
+      
+      .timetable-event {
+        font-family: 'Montserrat', sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #f6f6f6;
+        color: #000000;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 0 10px;
+        margin: 10px 5px;
+        border-radius: 6px;
+        height: 72px;
+
+        h4, p {
+          margin-bottom: 0;
+        }
+
+        .timetable-event-duration, .timetable-event-desc {
+          color: #8e8e8e;
+          font-size: 13px;
+          font-weight: 400;
+        }
+
+        .timetable-event-name, .timetable-event-desc, .timetable-event-duration {
+          width: 180px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: 576px) {
     padding-top: 36px;
   }
@@ -54,15 +102,38 @@
 
       th {
         height: 64px;
+
+        &.empty-header {
+          position: relative;
+
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fff;
+          }
+        }
       }
     }
 
     .timetable-body {
       tr {
-        border-bottom: 2px solid #dddddd;
 
         td {
           min-width: 220px;
+          border-bottom: 2px solid #dddddd;
+
+          &.time {
+            color: #000000;
+            font-weight: 700;
+            font-size: 16px;
+            border-bottom: none;
+            min-width: 72px;
+          }
         }
       }
     }

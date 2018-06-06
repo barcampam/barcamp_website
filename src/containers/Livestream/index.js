@@ -5,82 +5,34 @@ import { Row, Col } from 'antd';
 export default class Livestream extends Component {
 
     state = {
-        active: 1,
-    }
-
-    room1 = {
-        key: 1,
-        url: "https://www.youtube.com/embed/tgbNymZ7vqY",
-        title: "Big Hall"
-    }
-
-    room2 = {
-        key: 2,
-        url: "https://www.youtube.com/watch?v=mgeDbB5pbO4",
-        title: "117E Room"
-    }
-
-    room3 = {
-        key: 3,
-        url: "https://www.youtube.com/watch?v=KrCMWS_fB4o",
-        title: "113W Room"
-    }
-
-    room4 = {
-        key: 4,
-        url: "https://www.youtube.com/watch?v=lqBL3E_wo6M",
-        title: "224B Room"
-    }
-
-    room5 = {
-        key: 5,
-        url: "https://www.youtube.com/embed/tgbNymZ7vqY",
-        title: "224B Room"
-    }
-
-    room(state) {
-        switch(state) {
-            case this.state.active === 1:
-                return  <iframe width="548" 
-                                height="320"
-                                frameBorder="0" 
-                                allowFullScreen
-                                title= {this.room1.title}
-                                src={this.room1.url} />
-            case this.state.active === 2:
-                return  <iframe width="548" 
-                                height="320"
-                                frameBorder="0" 
-                                allowFullScreen
-                                title= {this.room2.title}
-                                src={this.room2.url} />
-            case this.state.active === 3:
-                return  <iframe width="548" 
-                                height="320"
-                                frameBorder="0" 
-                                allowFullScreen
-                                title= {this.room3.title}
-                                src={this.room3.url} />
-            case this.state.active === 4:
-                return  <iframe width="548" 
-                                height="320"
-                                frameBorder="0" 
-                                allowFullScreen
-                                title= {this.room4.title}
-                                src={this.room4.url} />
-            case this.state.active === 5:
-                return  <iframe width="548" 
-                                height="320"
-                                frameBorder="0" 
-                                allowFullScreen
-                                title= {this.room5.title}
-                                src={this.room5.url} />
-            default:
-                return  <iframe width="548" height="320"
-                            title= {this.room1.title}
-                            src={this.room1.url} />
-        }
-    }
+        stream: [
+            {
+                url: "https://www.youtube.com/embed/kO5LhED9QBo?list=PLkaN8-chLmTRvWRxcXvRs1PjbMEI3LTPa",
+                room: "Big Hall"
+            },
+            {
+                url: "https://www.youtube.com/embed/V05iKvHSdEc?list=PLkaN8-chLmTSqizWXmTzk-bxmIbnhX1Dg",
+                room: "308E room"
+            },
+            {
+                url: "https://www.youtube.com/embed/DIdXYBVUjAs?list=PLkaN8-chLmTQ_urHPTBmKIh1cc-9XkRUK",
+                room: "208E room"
+            },
+            {
+                url: "https://www.youtube.com/embed/t2S-lfoeM3w?list=PLkaN8-chLmTShNHmw0O-dDeOaH7iq9voj",
+                room: "213W room"
+            },
+            {
+                url: "https://www.youtube.com/embed/jvoJLDZbR2U?list=PLkaN8-chLmTRKDqiHlpWqW1D_bG1_IqEV",
+                room: "214W room"
+            },
+            {
+                url: "https://www.youtube.com/embed/GnmWEfUMa8o?list=PLkaN8-chLmTQKOIF3YZMY6rMzjMXroZ96",
+                room: "114W room"
+            }
+        ],
+        active: 0
+    };
     
     render() {  
         return (
@@ -88,47 +40,22 @@ export default class Livestream extends Component {
                 <div className="videos-content-wrapper">
                     <Col xl={7} lg={7} md={7} sm={7} xs={7}>
                         <div className="rooms-wrapper">
-                            <a onClick={this.setState({
-                                active: 1
-                            })}>
-                                <h3>Big Hall</h3>
-                            </a>
-
-                            <a onClick={this.setState({
-                                active: 2
-                            })}>
-                                <h3>117E room</h3>
-                            </a>
-
-                            <a onClick={this.setState({
-                                active: 3
-                            })}>
-                                <h3>113W room</h3>
-                            </a>
-
-                            <a onClick={this.setState({
-                                active: 4
-                            })}>
-                                <h3>224B room</h3>
-                            </a>
-                            
-                            <a onClick={this.setState({
-                                active: 5
-                            })}>
-                                <h3>224B room</h3>
-                            </a>
+                            {this.state.stream.map((item, index) => (
+                                <a className={this.state.active === index ? 'active' : null} key={index} onClick={() => this.setState({active: index})}>
+                                    <h3>{item.room}</h3>
+                                </a>
+                            ))}
                         </div>
                     </Col>
-
                     <Col xl={10} lg={10} md={10} sm={10} xs={10}>
-                            
+                        <iframe width="548" 
+                            height="320"
+                            frameBorder="0" 
+                            allowFullScreen
+                            title={this.state.stream[this.state.active].room}
+                            src={this.state.stream[this.state.active].url} />
                     </Col>
-
-                    <Col xl={7} lg={7} md={7} sm={7} xs={7}>
-                    
-                        
-                
-                    </Col>
+                    <Col xl={7} lg={7} md={7} sm={7} xs={7} />
                 </div>
                 <div className="videos-bottom-background">
 
