@@ -38,9 +38,9 @@ class FAQ extends Component {
 
 
     submitFaq() {
-        console.log(this.state.emailValue + this.state.textValue);
-
-        this.props.faqSubmit(this.state.emailValue, this.state.textValue);
+        if (this.state.emailValue.length > 0 && this.state.textValue.length > 0) {
+            this.props.faqSubmit(this.state.emailValue, this.state.textValue);
+        }
     }
 
     render() {
@@ -100,12 +100,12 @@ class FAQ extends Component {
                         <div className="question-wrapper">
                             <div className="faq-header-wrapper">
                                 <h3 className="ask-a-question"><IntlMessages id="faq.askQuestion" /></h3>
-                                <h5 className="faq-lorem"><IntlMessages id="faq.lorem" /></h5>
+                                {/*<h5 className="faq-lorem"><IntlMessages id="faq.lorem" /></h5>*/}
                             </div>
 
                             <div className="email-wrapper">
                                 <h4 className="faq-form-header"><IntlMessages id="faq.email" /></h4>
-                                <Input onChange={this.emailChange} className="faq-input"/>
+                                <Input onChange={this.emailChange} type="email" className="faq-input"/>
                             </div>
 
                             <div className="text-area-wrapper">
@@ -120,9 +120,7 @@ class FAQ extends Component {
                             </div>
                         </div>
 
-                        <div className="faq-background">
-                                
-                        </div>
+                        <div className="faq-background" />
                     </Col> 
                 </Row>
             </div>

@@ -36,8 +36,27 @@ import LiveStream from '../../Livestream/index.js';
 
 export default class Archive extends Component {
     state = {
-        active: 2017,
-        years: [2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010]
+        active: 2016,
+        years: [2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010],
+        content: {
+            2010: <div>No Content</div>,
+            2011: <div>No Content</div>,
+            2012: <div>No Content</div>,
+            2013: <div>No Content</div>,
+            2014: <div>No Content</div>,
+            2015: <div>No Content</div>,
+            2016: <div>
+                <p className="archive-text"><IntlMessages id="archive.text1" /></p>
+                <br />
+                <p className="archive-text"><IntlMessages id="archive.text2" /></p>
+                <br />
+                <p className="archive-text"><IntlMessages id="archive.text3" /></p>
+                <br />
+                <p className="archive-text"><IntlMessages id="archive.text4" /></p>
+                <br />
+            </div>,
+            2017: <div>No Content</div>
+        }
     };
 
     render() {
@@ -53,9 +72,9 @@ export default class Archive extends Component {
                                     {this.state.years.map((item, index) => {
                                         return <Timeline.Item
                                             key={index}
-                                            className="timeline-item"
+                                            className={`timeline-item ${this.state.active === item ? 'active' : null}`}
                                             onClick={() => this.setState({active: item})}>
-                                            <a className={this.state.active === item ? 'active' : null}>{item}</a>
+                                            <a>{item}</a>
                                         </Timeline.Item>
                                     })}
                                 </Timeline>
@@ -69,14 +88,7 @@ export default class Archive extends Component {
                                 <h1>BarCamp Yerevan</h1>
                             </div>
                             <div className="archive-text-wrapper">
-                                <p className="archive-text"><IntlMessages id="archive.text1" /></p>
-                                <br />
-                                <p className="archive-text"><IntlMessages id="archive.text2" /></p>
-                                <br />
-                                <p className="archive-text"><IntlMessages id="archive.text3" /></p>
-                                <br />
-                                <p className="archive-text"><IntlMessages id="archive.text4" /></p>
-                                <br />
+                                {this.state.content[this.state.active]}
                             </div>
                         </Col>
                     </div>

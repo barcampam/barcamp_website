@@ -1,27 +1,9 @@
-// import { Map } from 'immutable';
-// import actions from './actions';
-
-// const initState = new Map({
-  
-// });
-
-// export default function faqReducer(
-//   action
-// ) {
-//   switch (action.type) {
-//     case actions.FAQ_SUCCESS:
-//       return initState;
-//     default:
-//       return initState;
-//   }
-// }
-
-
 import { Map } from 'immutable';
 import actions from './actions';
 
 const initState = new Map({
-    loading: false
+    loading: false,
+    success: false
 });
 
 export default function faqReducer(
@@ -30,13 +12,19 @@ export default function faqReducer(
     switch (action.type) {
         case actions.FAQ_REQUEST:
             return new Map({
-                loading: true
+                loading: true,
+                success: false
             });
         case actions.FAQ_SUCCESS:
             return new Map({
-                loading: false
+                loading: false,
+                success: true
             });
         case actions.FAQ_ERROR:
+            return new Map({
+                loading: false,
+                success: true
+            });
         default:
             return initState;
     }
