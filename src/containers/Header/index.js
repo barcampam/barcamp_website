@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import config from "./config";
 import actions from '../../redux/languageSwitcher/actions';
-import { Row, Col, Layout, } from "antd";
+import { Row, Col, Layout, Icon } from "antd";
 import { connect } from "react-redux";
 import { NavLink } from 'react-router-dom'
 import logo from '../../image/logo.png';
 import "./header.less";
 import IntlMessages from '../../components/utility/intlMessages';
+import facebookLogo from '../../image/facebook-white.png';
 
 const { changeLanguage } = actions;
 const { Header } = Layout;
@@ -15,6 +16,12 @@ const { Header } = Layout;
 class Head extends Component {
     state = {
         isOpen: false
+    }
+
+    handleNavClick() {
+        this.setState({
+            isOpen: false
+        })
     }
 
     renderMenus() {
@@ -83,7 +90,7 @@ class Head extends Component {
             return (
                 <div className={`${this.state.isOpen ? 'open-drawer' : null} mobile-menu`}>
                     
-                    <nav>
+                    <nav className="mobile-navigation">
                         <ul className="menu-wrapper">
                             <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages
                                 id="navigation.archive"/></NavLink>
@@ -116,6 +123,20 @@ class Head extends Component {
                             );
                         })}
                     </div>
+
+                    <div className="mobile-social-media-block">
+                            <a href="https://www.facebook.com/barcampevn/" target="_blank" rel="noopener noreferrer">
+                                <img src={facebookLogo} alt="Facebook"/>
+                            </a>
+
+                            <a href="https://twitter.com/barcampam" target="_blank" rel="noopener noreferrer">
+                                <Icon type="twitter" className="landing-social-icons"/>
+                            </a>
+
+                            <a href="https://www.instagram.com/barcamp_yerevan/" target="_blank" rel="noopener noreferrer">
+                                <Icon type="instagram" className="landing-social-icons"/>
+                            </a>
+                    </div>
                 </div>
             );
         }
@@ -131,7 +152,7 @@ class Head extends Component {
 
     render() {
         return (
-            <Header className={`bar-header ${this.props.location.pathname === '/' ? 'is-index' : null}`}>
+            <Header className={`bar-header ${this.props.location.pathname === '/' ? 'is-index' : null} ${this.state.isOpen ? 'mobile-header-is-open' : null}`}>
                 <Row type="flex" justify="space-between" align="middle" className="header-row">
                     <Col className="logo-wrapper" span={3}>
                         <NavLink to="/" className='logo-link'>

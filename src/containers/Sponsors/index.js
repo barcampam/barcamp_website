@@ -35,44 +35,44 @@ class Sponsors extends Component {
                 </Row>
                 <Sponsor.Title>Sponsors</Sponsor.Title>
                 <Row className='sponsors-body' type="flex" align="middle">
-                    <Col xs={24} xl={4}>
-                      <Sponsor.Sponsor logo={workfrontLogo} name="workfront"/>
-                    </Col>
-                    <Col xs={24} xl={4}>
-                      <Sponsor.Sponsor logo={sflLogo} name="SFL"/>
-                    </Col>
-                    <Col xs={24} xl={4}>
+                    <Col xs={24} sm={12} xl={4}>
                       <Sponsor.Sponsor logo={betconstructLogo} name="BetConstruct"/>
                     </Col>
-                    <Col xs={24} xl={4}>
-                      <Sponsor.Sponsor logo={synergyLogo} name="Synergy"/>
-                    </Col>
-                    <Col xs={24} xl={4}>
+                    <Col xs={24} sm={12} xl={4}>
                       <Sponsor.Sponsor logo={picsartLogo} name="PicsArt"/>
                     </Col>
-                    <Col xs={24} xl={4}>
+                    <Col xs={24} sm={12} xl={4}>
+                      <Sponsor.Sponsor logo={sflLogo} name="SFL"/>
+                    </Col>
+                    <Col xs={24} sm={12} xl={4}>
                       <Sponsor.Sponsor logo={simplyLogo} name="Simply Technologies"/>
+                    </Col>
+                    <Col xs={24} sm={12} xl={4}>
+                      <Sponsor.Sponsor logo={synergyLogo} name="Synergy"/>
+                    </Col>
+                    <Col xs={24} sm={12} xl={4}>
+                      <Sponsor.Sponsor logo={workfrontLogo} name="workfront"/>
                     </Col>
                 </Row>
                 <Sponsor.Title>Partners</Sponsor.Title>
                 <Row className='sponsors-body' type="flex" align="middle">
-                  <Col xs={24} xl={4}>
-                    <Sponsor.Sponsor logo={mediaLogo} name="Media Initiatives Center"/>
-                  </Col>
-                  <Col xs={24} xl={4}>
+                  <Col xs={24} sm={12} xl={4}>
                     <Sponsor.Sponsor logo={auaLogo} name="American University of Armenia"/>
+                  </Col>
+                  <Col xs={24} sm={12} xl={4}>
+                    <Sponsor.Sponsor logo={mediaLogo} name="Media Initiatives Center"/>
                   </Col>
                 </Row>
                 <Sponsor.Title>Information Sponsors</Sponsor.Title>
                 <Row className='sponsors-body' type="flex" align="middle">
-                  <Col xs={24} xl={4}>
-                    <Sponsor.Sponsor logo={startuparmeniaLogo} name="StartUp Armenia"/>
-                  </Col>
-                  <Col xs={24} xl={4}>
+                  <Col xs={24} sm={12} xl={4}>
                     <Sponsor.Sponsor logo={ipmarketingLogo} name="ip marketing"/>
                   </Col>
-                  <Col xs={24} xl={4}>
+                  <Col xs={24} sm={12} xl={4}>
                     <Sponsor.Sponsor logo={mediamaxLogo} name="media max"/>
+                  </Col>
+                  <Col xs={24} sm={12} xl={4}>
+                    <Sponsor.Sponsor logo={startuparmeniaLogo} name="StartUp Armenia"/>
                   </Col>
                 </Row>
             </div>

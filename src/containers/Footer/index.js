@@ -40,7 +40,7 @@ export default class extends Component {
                             <Col xl={12} lg={12} md={24} sm={24} xs={24}>
                                 <div className="logo-wrapper">
                                     <NavLink to="/" style={{display: "flex"}}>
-                                        <img src={logo} alt="BarCamp Logo" height="60px"/>
+                                        <img src={logo} alt="BarCamp Logo" height="60px" className="footer-logo"/>
                                     </NavLink>
                                 </div>
                             </Col>
@@ -68,7 +68,7 @@ export default class extends Component {
                         </Row>
 
 
-                        <Row className="footer-row">
+                        <Row className="footer-row second-row">
                             <Col xl={12} lg={12} md={24} sm={24} xs={24}>
                                 <div className="social-network-wrapper">
                                     <a href="https://www.facebook.com/barcampevn/" target="_blank" rel="noopener noreferrer">

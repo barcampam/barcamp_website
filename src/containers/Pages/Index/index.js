@@ -10,6 +10,7 @@ import Sponsors from '../../Sponsors';
 import {connect} from "react-redux";
 import IntlMessages from '../../../components/utility/intlMessages';
 import actions from '../../../redux/speakers/actions';
+import facebookLogo from '../../../image/facebook-white.png';
 
 const { getSpeakers } = actions;
 
@@ -43,7 +44,7 @@ class Index extends Component {
 
                         <div className="social-network-block">
                             <a href="https://www.facebook.com/barcampevn/" target="_blank" rel="noopener noreferrer">
-                                <Icon type="facebook" className="landing-social-icons"/>
+                                <img src={facebookLogo} alt="Facebook"/>
                             </a>
 
                             <a href="https://twitter.com/barcampam" target="_blank" rel="noopener noreferrer">

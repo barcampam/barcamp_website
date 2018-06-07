@@ -30,17 +30,23 @@
         height: 560px;
         padding: 25px 0;    
 
-        .ant-col-xs-24 {
+        .ant-col-xs-24:first-child {
             display: flex;
-            justify-content: center;
+            justify-content: left;
+            padding: 0 50px;
 
             .rooms-wrapper {
                 justify-content: center;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                align-items: end;
             }
         }
+
+        .youtube-iframe {
+            width: 100%;
+            margin: 0 30px;
+        } 
     }
 }
 
@@ -54,3 +60,19 @@
         }
     }
 }
+
+// @media only screen and (min-width: 800px) {
+//     .videos-content-wrapper {
+//         display: flex;
+//         align-items: center;
+
+//         .rooms-wrapper {
+//             margin-right: 30px;
+//         }
+
+//         .iframe-wrapper {
+//             display: flex;
+//             justify-content: center;
+//         }
+//     }
+// }

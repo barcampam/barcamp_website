@@ -131,6 +131,7 @@
 }
 
 @media only screen and (max-width: 767px) {
+
   .map-wrapper {
     display: none;
   }
@@ -196,5 +197,37 @@
       }
      
     } 
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .logo-wrapper {
+    justify-content: left !important;
+  }
+
+  .first-row {
+    .footer-nav-wrapper {
+      justify-content: left !important;
+      text-align: left !important;
+    }
+  }
+
+  .footer-logo {
+    width: 140px;
+      height: 100%;
+  }
+
+  .second-row {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+
+    .get-in-touch {
+      font-size: 18px !important;
+    }
+
+    p {
+      width: 100%;
+      font-size: 14px !important;
+    }
   }
 }

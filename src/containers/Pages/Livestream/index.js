@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./livestream.less";
 import IntlMessages from '../../../components/utility/intlMessages';
-// import LivestreamBox from '../../Livestream/';
+import LivestreamBox from '../../Livestream/';
 import { Row, Col } from 'antd';
 
 export default class Livestream extends Component {
@@ -10,7 +10,7 @@ export default class Livestream extends Component {
             <div className="livestream-wrapper">
                 <h1 className="page-header-text"><IntlMessages id="navigation.livestream" /></h1>
 
-                {/* <LivestreamBox /> */}
+                <LivestreamBox />
 
                 <Row>
                     <Col xl={10} lg={10} md={24} sm={24} xs={24}>
@@ -27,7 +27,6 @@ export default class Livestream extends Component {
                         </div>
                     </Col>
                 </Row>
-
             </div>
 
             
