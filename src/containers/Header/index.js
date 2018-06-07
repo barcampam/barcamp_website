@@ -82,6 +82,19 @@ class Head extends Component {
         if(this.props.app.view !== 'DesktopView') {
             return (
                 <div className={`${this.state.isOpen ? 'open-drawer' : null} mobile-menu`}>
+                    
+                    <nav>
+                        <ul className="menu-wrapper">
+                            <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages
+                                id="navigation.archive"/></NavLink>
+                            <NavLink activeClassName="active" to="/livestream" key="2"><IntlMessages
+                                id="navigation.livestream"/></NavLink>
+                            <NavLink activeClassName="active" to="/faq" key="3"><IntlMessages
+                                id="navigation.faq"/></NavLink>
+                            <NavLink activeClassName="active" to="/about" key="4"><IntlMessages id="navigation.about"/></NavLink>
+                        </ul>
+                    </nav>
+
                     <div className="mobile-language">
                         {config.options.map(option => {
                             const {languageId, text} = option;
@@ -103,17 +116,6 @@ class Head extends Component {
                             );
                         })}
                     </div>
-                    <nav>
-                        <ul className="menu-wrapper">
-                            <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages
-                                id="navigation.archive"/></NavLink>
-                            <NavLink activeClassName="active" to="/livestream" key="2"><IntlMessages
-                                id="navigation.livestream"/></NavLink>
-                            <NavLink activeClassName="active" to="/faq" key="3"><IntlMessages
-                                id="navigation.faq"/></NavLink>
-                            <NavLink activeClassName="active" to="/about" key="4"><IntlMessages id="navigation.about"/></NavLink>
-                        </ul>
-                    </nav>
                 </div>
             );
         }
