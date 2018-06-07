@@ -18,7 +18,10 @@ class Head extends Component {
         isOpen: false
     }
 
-    handleNavClick() {
+    handleNavClick(e) {
+        e.preventDefault();
+        document.body.classList.remove('bar-modal-open')
+
         this.setState({
             isOpen: false
         })
@@ -92,13 +95,22 @@ class Head extends Component {
                     
                     <nav className="mobile-navigation">
                         <ul className="menu-wrapper">
-                            <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages
-                                id="navigation.archive"/></NavLink>
+                            <a onClick={this.handleNavClick.bind(this)}>
+                                <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages
+                                    id="navigation.archive"/></NavLink>
+                            </a>
+                            <a onClick={this.handleNavClick.bind(this)}>
                             <NavLink activeClassName="active" to="/livestream" key="2"><IntlMessages
                                 id="navigation.livestream"/></NavLink>
+                            </a>
+                            <a onClick={this.handleNavClick.bind(this)}>
                             <NavLink activeClassName="active" to="/faq" key="3"><IntlMessages
                                 id="navigation.faq"/></NavLink>
-                            <NavLink activeClassName="active" to="/about" key="4"><IntlMessages id="navigation.about"/></NavLink>
+                            </a>
+                            <a onClick={this.handleNavClick.bind(this)}>
+                            <NavLink activeClassName="active" to="/about" key="4"><IntlMessages
+                                id="navigation.about"/></NavLink>
+                            </a>
                         </ul>
                     </nav>
 
@@ -145,6 +157,10 @@ class Head extends Component {
     }
 
     handleClick() {
+        this.state.isOpen ?
+            document.body.classList.remove('bar-modal-open') :
+            (() => {document.body.classList.add('bar-modal-open'); window.scrollTo(0, 0);})();
+
         this.setState({
             isOpen: !this.state.isOpen
         })
@@ -152,7 +168,7 @@ class Head extends Component {
 
     render() {
         return (
-            <Header className={`bar-header ${this.props.location.pathname === '/' ? 'is-index' : null} ${this.state.isOpen ? 'mobile-header-is-open' : null}`}>
+            <Header className={`bar-header ${this.props.location.pathname === '/' ? 'is-index' : null} ${this.state.isOpen ? 'mobile-header-is-open' : null} ${this.props.app.view !== 'DesktopView' ? 'mobile-header' : null}`}>
                 <Row type="flex" justify="space-between" align="middle" className="header-row">
                     <Col className="logo-wrapper" span={3}>
                         <NavLink to="/" className='logo-link'>
