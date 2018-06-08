@@ -17,7 +17,7 @@ class SpecialSpeakers extends Component {
                     </Col>
                     <Col xl={14} />
                 </Row>
-                <Row className='special-speakers-body' type="flex" justify="space-around" align="middle">
+                <Row className='special-speakers-body' type="flex" justify="space-between" align="middle">
                     {this.props.speakers.map((item, index) => (
                         <Col xs={24} sm={12} xl={6} key={index}>
                             <Speaker avatar={item.photo} position={item[lang].bio} name={item[lang].name} title={item[lang].topic} />
