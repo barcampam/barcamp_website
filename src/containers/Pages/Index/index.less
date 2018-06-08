@@ -191,7 +191,7 @@
   }
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1200px) {
   .register-button {
     display: none;
   }
@@ -201,7 +201,7 @@
   background: #ffffff;
 
   .videos-content-wrapper {
-    background-image: none; 
+    background-image: none;
   }
 
   .index-livestream-header-wrapper {
@@ -329,3 +329,51 @@
     } 
   }
 }
+
+.index-livestream-wrapper {
+  .videos-content-wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+
+    .rooms-wrapper {
+      float: right;
+      margin-right: 30px;
+      text-align: right;
+
+        .active h3 {
+            color: #5e269b;
+            font-weight: 700;
+            font-size: 24px;
+        }
+    }
+  }
+}
+
+@media only screen and (max-width: 634px) {
+  .bar-sponsors {
+    .sponsors-wrapper {
+      background-position-y: 0;
+      margin-left: -100px;
+      padding-left: 100px;
+    }
+  }
+
+  .sponsors-header {
+    margin-bottom: 100px !important;
+  }
+
+  .rooms-wrapper {
+    margin-bottom: 16px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .bar-dev-numbers {
+    display: none !important;
+  }
+}
+

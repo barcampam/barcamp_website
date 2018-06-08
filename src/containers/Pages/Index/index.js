@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Layout, Button, Icon, Row, Col } from 'antd';
 import img from '../../../image/6-layers.png';
-import andriod from '../../../image/bitmap.png';
+// import andriod from '../../../image/bitmap.png';
 import './index.less';
 import Timetable from '../../Timetable';
 import SpecialSpeakers from '../../SpecialSpeakers';
@@ -64,9 +64,9 @@ class Index extends Component {
                     
                     <div className="bar-bootom-images">
                         <p className="bar-hashtag">#barcampevn18</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.barcampevn" target="_blank" rel="noopener noreferrer">
-                            <img src={andriod} alt="BarCamp EVN'18 Andriod Application"/>
-                        </a>
+                        {/*<a href="https://play.google.com/store/apps/details?id=com.barcampevn" target="_blank" rel="noopener noreferrer">*/}
+                            {/*<img src={andriod} alt="BarCamp EVN'18 Andriod Application"/>*/}
+                        {/*</a>*/}
                     </div>
                     <img className="bar-main-img" src={img} alt="BarCamp EVN'18 Cover" />
                     <img className="bar-main-img-mobile" src={mobileImg} alt="BarCamp EVN'18 Cover" />
