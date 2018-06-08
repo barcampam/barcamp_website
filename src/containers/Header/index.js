@@ -34,7 +34,7 @@ class Head extends Component {
                     <nav>
                         <ul className="menu-wrapper">
                             <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages id="navigation.archive" /></NavLink>
-                            <a href="#livestream" key="2"><IntlMessages id="navigation.livestream" /></a>
+                            <a href="/#livestream" key="2"><IntlMessages id="navigation.livestream" /></a>
                             <NavLink activeClassName="active" to="/faq" key="3"><IntlMessages id="navigation.faq" /></NavLink>
                             <NavLink activeClassName="active" to="/about" key="4"><IntlMessages id="navigation.about" /></NavLink>
                         </ul>
