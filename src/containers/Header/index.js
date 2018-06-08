@@ -100,8 +100,8 @@ class Head extends Component {
                                     id="navigation.archive"/></NavLink>
                             </a>
                             <a onClick={this.handleNavClick.bind(this)}>
-                            <NavLink activeClassName="active" to="/livestream" key="2"><IntlMessages
-                                id="navigation.livestream"/></NavLink>
+                            <a activeClassName="active" to="/#livestream" key="2"><IntlMessages
+                                id="navigation.livestream"/></a>
                             </a>
                             <a onClick={this.handleNavClick.bind(this)}>
                             <NavLink activeClassName="active" to="/faq" key="3"><IntlMessages
