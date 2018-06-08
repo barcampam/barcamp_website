@@ -83,7 +83,7 @@ class Index extends Component {
                     <Speakers speakers={this.getAllSpeakers()} />
                 </Layout>
 
-                <div className="index-livestream-wrapper">
+                <div id="livestream" className="index-livestream-wrapper">
                     <Row>
                         <Col xl={10} lg={10} md={24} sm={24} xs={24}>
                             <div className="index-livestream-header-wrapper">
