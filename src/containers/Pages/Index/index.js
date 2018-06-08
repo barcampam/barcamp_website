@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Layout, Button, Icon } from 'antd';
+import { Layout, Button, Icon, Row, Col } from 'antd';
 import img from '../../../image/6-layers.png';
 // import andriod from '../../../image/bitmap.png';
 import './index.less';
@@ -11,6 +11,9 @@ import {connect} from "react-redux";
 import IntlMessages from '../../../components/utility/intlMessages';
 import actions from '../../../redux/speakers/actions';
 import facebookLogo from '../../../image/facebook-white.png';
+import Livestream from '../../Livestream/index';
+import mobileImg from '../../../image/mobile-landing.jpg';
+import mobileImgSecondary from '../../../image/mobile-landing-secondary.jpg';
 
 const { getSpeakers } = actions;
 
@@ -37,7 +40,7 @@ class Index extends Component {
                 <Layout className={`bar-index ${this.props.app.view !== 'DesktopView' ? 'mobile' : null}`}>
                     <div className="bar-text-wrapper">
                         <h3 className="bar-date">Jun 16-17</h3>
-                        <h1 className="bar-text">The most wanted <b>tech and<br /> media event</b> in Armenia</h1>
+                        <h1 className="bar-text">The most wanted <b>tech and<br className="landing-text-breaks"/> media event</b> in Armenia</h1>
                         <a href="https://www.eventbrite.co.uk/e/barcamp-yerevan-2018-tickets-46342571880" target="_blank" rel="noopener noreferrer">
                             <Button className="register-button"><IntlMessages id="landing.register" /></Button>
                         </a>
@@ -66,6 +69,8 @@ class Index extends Component {
                         {/*</a>*/}
                     </div>
                     <img className="bar-main-img" src={img} alt="BarCamp EVN'18 Cover" />
+                    <img className="bar-main-img-mobile" src={mobileImg} alt="BarCamp EVN'18 Cover" />
+                    <img className="bar-secondary-img-mobile" src={mobileImgSecondary} alt="BarCamp EVN'18 Cover" />
                 </Layout>
                 <div className="bar-head-separator" />
                 <Layout className="bar-timetable bar-index-layout">
@@ -77,6 +82,19 @@ class Index extends Component {
                 <Layout className="bar-speakers bar-index-layout">
                     <Speakers speakers={this.getAllSpeakers()} />
                 </Layout>
+
+                <div className="index-livestream-wrapper">
+                    <Row>
+                        <Col xl={10} lg={10} md={24} sm={24} xs={24}>
+                            <div className="index-livestream-header-wrapper">
+                                <h1>Livestream</h1>
+                            </div>
+                        </Col>
+                    </Row>
+
+                    <Livestream />
+                </div>
+
                 <Layout className="bar-speakers bar-dev-numbers" />
                 <Layout className="bar-sponsors bar-index-layout">
                     <Sponsors />

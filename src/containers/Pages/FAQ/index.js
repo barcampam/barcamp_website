@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./faq.less";
-import { Row, Col, Input, Button } from 'antd';
+import { Row, Col, Input, Button, message } from 'antd';
 import IntlMessages from '../../../components/utility/intlMessages';
 import actions from '../../../redux/faq/actions';
 import { connect } from "react-redux";
@@ -38,8 +38,10 @@ class FAQ extends Component {
 
 
     submitFaq() {
-        if (this.state.emailValue.length > 0 && this.state.textValue.length > 0) {
+        if (this.state.emailValue.length > 0 && this.state.textValue.length > 0 && this.state.emailValue.includes("@")) {
             this.props.faqSubmit(this.state.emailValue, this.state.textValue);
+        } else {
+            message.error("Check what you filled in.", 5);
         }
     }
 

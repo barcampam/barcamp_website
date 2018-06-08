@@ -1,5 +1,6 @@
 import { all, takeEvery, put, fork, call } from 'redux-saga/effects';
 import actions from './actions';
+import { message } from 'antd';
 
 const fetchFaq = (form) => (
   fetch('//api.barcamp.am/feedback', {
@@ -27,8 +28,10 @@ export function* faqRequest() {
 
         if(res.response === "ok") {
             yield put({type: actions.FAQ_SUCCESS});
+            message.success("Your question was submited successfully", 5);
         } else {
             yield put({ type: actions.FAQ_ERROR });
+            message.error("Something went wrong", 5);
         }
   } catch(err) {
       console.log(err);

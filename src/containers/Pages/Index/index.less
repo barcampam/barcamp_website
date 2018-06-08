@@ -6,6 +6,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 
   &.mobile {
     @media only screen and (max-width: 1221px) {
@@ -18,6 +19,7 @@
         bottom: 0;
         width: 100%;
         height: 100%;
+        display: block;
       }
     }
 
@@ -99,6 +101,14 @@
     width: 100%;
     height: auto;
   }
+
+  .bar-main-img-mobile {
+    display: none;
+  }
+
+  .bar-secondary-img-mobile {
+    display: none;
+  }
 }
 
 .bar-head-separator {
@@ -175,14 +185,147 @@
   }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 1000px) {
   .social-network-block {
     display: none;
   }
 }
 
-@media only screen and (max-width: 872px) {
+@media only screen and (max-width: 1300px) {
   .register-button {
     display: none;
+  }
+}
+
+.index-livestream-wrapper {
+  background: #ffffff;
+
+  .videos-content-wrapper {
+    background-image: none; 
+  }
+
+  .index-livestream-header-wrapper {
+    background-image: url('../../../image/archive-videos.jpg');
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    height: 172px;
+    display: flex;
+    align-items: center;
+
+    h1 {
+        color: #2a2a2a;
+        font-family: Montserrat;
+        font-size: 48px;
+        font-weight: 700;
+        padding: 50px 0 50px 60px;
+    }
+  }
+}
+
+.bar-main-mobile-img {
+  display: none !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  .bar-index {
+    height: 100% !important;
+
+    .bar-hashtag {
+      display: none;
+    }
+  }
+
+  .bar-main-img {
+    display: none !important;
+  }
+
+  .bar-text-wrapper {
+    text-align: left !important;
+    margin: 120px 30px 30px 30px;   
+
+    h3, h1 {
+      font-size: 26px !important;
+    }
+
+    .landing-text-breaks {
+      display: none;
+    }
+  }
+
+  .bar-main-img-mobile {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block !important;
+  }
+
+  .bar-secondary-img-mobile {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bar-index-layout {
+      padding: 0 30px;
+  }
+
+  .timetable-wrapper {
+    .page-header-text {
+      font-size: 32px !important;
+      text-align: left !important;
+      padding-left: 0 !important;
+    }
+  }
+
+  .special-speakers-wrapper {
+    .page-header-text {
+      font-size: 32px !important;
+      text-align: left !important;
+      padding-left: 0 !important;
+    }
+  }
+
+  .speakers-heading-wrapper {
+    .page-header-text {
+      font-size: 32px !important;
+      text-align: left !important;
+      padding-left: 0 !important;
+    } 
+  }
+
+  .index-livestream-header-wrapper {
+    h1 {
+      font-size: 32px !important;
+      padding-left: 30px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .timetable-wrapper {
+    .page-header-text {
+      font-size: 22px !important;
+    }
+  }
+
+  .special-speakers-wrapper {
+    .page-header-text {
+      font-size: 22px !important;
+    }
+  }
+
+  .speakers-heading-wrapper {
+    .page-header-text {
+      font-size: 22px !important ;
+    } 
   }
 }
