@@ -27,6 +27,14 @@ class Head extends Component {
         })
     }
 
+    handleNavLiveClick() {
+        document.body.classList.remove('bar-modal-open')
+
+        this.setState({
+            isOpen: false
+        })
+    }
+
     renderMenus() {
         if(this.props.app.view === 'DesktopView') {
             return (
@@ -99,8 +107,8 @@ class Head extends Component {
                                 <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages
                                     id="navigation.archive"/></NavLink>
                             </a>
-                            <a onClick={this.handleNavClick.bind(this)}>
-                            <a activeClassName="active" to="/#livestream" key="2"><IntlMessages
+                            <a>
+                            <a onClick={this.handleNavLiveClick.bind(this)} href="/#livestream" key="2"><IntlMessages
                                 id="navigation.livestream"/></a>
                             </a>
                             <a onClick={this.handleNavClick.bind(this)}>
