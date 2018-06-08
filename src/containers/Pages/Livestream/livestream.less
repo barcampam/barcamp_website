@@ -7,6 +7,42 @@
         color: #2a2a2a;
         padding: 30px 30px 30px 60px;
     }
+
+    .videos-content-wrapper {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: center;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        height: 450px;
+
+        @media only screen and (max-width: 634px) {
+            margin-top: 0 !important;
+            padding: 0 !important;
+
+            .room1-header-wrapper {
+                margin-top: 0 !important;
+            }
+
+            .rooms-wrapper {
+                margin-bottom: 16px;
+            }
+        }
+    
+        .rooms-wrapper {
+          float: right;
+          margin-right: 30px;
+          text-align: right;
+    
+            .active h3 {
+                color: #5e269b;
+                font-weight: 700;
+                font-size: 24px;
+            }
+        }
+      }
+      
     .room1-header-wrapper {
         background-image: url('../../../image/archive-videos.jpg');
         background-repeat: no-repeat;
