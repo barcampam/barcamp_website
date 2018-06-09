@@ -266,39 +266,41 @@
     padding: 30px 30px 30px 60px;   
 }
 
-.videos-content-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../../../image/videos-background.jpg');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position-y: center;
-    height: 400px;
-    margin-top: 30px;
+.archive-wrapper {
+    .videos-content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../../image/videos-background.jpg');
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position-y: center;
+        height: 400px;
+        margin-top: 30px;
 
-    .rooms-wrapper {
-        float: right;
-        margin-right: 30px;
+        .rooms-wrapper {
+            float: right;
+            margin-right: 30px;
 
-        h3 {
-            color: #2a2a2a;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
-            margin-bottom: 18px;
-        }
-        
-        .active h3 {
-            color: #5e269b;
-            font-weight: 700;
-            font-size: 24px;
-        }
-        
-    } 
+            h3 {
+                color: #2a2a2a;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 18px;
+            }
+            
+            .active h3 {
+                color: #5e269b;
+                font-weight: 700;
+                font-size: 24px;
+            }
+            
+        } 
+    }
 }
 
 .videos-bottom-background {
@@ -314,8 +316,10 @@
     }
 }
 
-.archive-wrapper {
-    .videos-content-wrapper {
-        background: none !important;
+@media only screen and (max-width: 576px) {
+    .archive-wrapper {
+        .videos-content-wrapper {
+            background: none !important;
+        }
     }
 }

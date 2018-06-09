@@ -11,10 +11,6 @@
 .bar-speakers {
   &.bar-index-layout {
     padding-right: 0 !important;
-
-    .speakers-wrapper {
-      padding-right: 30px;
-    }
   }
 }
 
@@ -228,10 +224,6 @@
 .index-livestream-wrapper {
   background: #ffffff;
 
-  .videos-content-wrapper {
-    background-image: none;
-  }
-
   .index-livestream-header-wrapper {
     background-image: url('../../../image/landing-livestream-background.jpg');
     background-repeat: no-repeat;
@@ -372,6 +364,7 @@
     margin-top: 30px;
     display: flex;
     align-items: center;
+    background-image: url('../../../image/videos-background.jpg');
 
     .rooms-wrapper {
       float: right;
@@ -528,7 +521,7 @@
   .special-speakers-header {
     .page-header-text {
       background-position-x: 320px !important;
-      background-size: cover !important;
+      background-size: contain !important;
     }
   }
 }
@@ -593,5 +586,14 @@
       background-position-x: 80px !important;
       background-size: cover !important;
     }
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  .index-livestream-wrapper {
+      .videos-content-wrapper {
+          background: none !important;
+      }
   }
 }
