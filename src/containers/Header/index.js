@@ -8,7 +8,6 @@ import logo from '../../image/logo.png';
 import "./header.less";
 import IntlMessages from '../../components/utility/intlMessages';
 import facebookLogo from '../../image/facebook-white.png';
-import Scrollchor from 'react-scrollchor';
 import { NavHashLink } from 'react-router-hash-link';
 
 const { changeLanguage } = actions;
