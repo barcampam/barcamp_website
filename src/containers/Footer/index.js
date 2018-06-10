@@ -55,9 +55,9 @@ export default class extends Component {
                                             <NavLink to="/archive" key="1">
                                                 <IntlMessages id="navigation.about"/>
                                             </NavLink>
-                                            <NavLink to="/livestream" key="2">
+                                            {/* <NavLink to="/livestream" key="2">
                                                 <IntlMessages id="navigation.archive"/>
-                                            </NavLink>
+                                            </NavLink> */}
                                             <NavLink to="/faq" key="3">
                                                 <IntlMessages id="navigation.faq" />
                                             </NavLink>
