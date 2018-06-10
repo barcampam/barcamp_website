@@ -29,7 +29,7 @@ const renderEvent = (events, lang, index) => {
     return (
         <tr key={index}>
             <td className="time">
-                {moment(event["Big Hall"][0]["time_from"]["date"]).format('HH:mm')}
+                {moment(event["Big Hall"][0]["time_from"]["date"]).format('HH:00')}
             </td>
             <td className="bigHall">
                 {event["Big Hall"] ?
