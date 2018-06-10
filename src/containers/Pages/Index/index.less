@@ -23,6 +23,10 @@
   display: flex;
   justify-content: center;
   overflow: hidden;
+
+  .bar-andriod-mobile {
+    display: none;
+  }
   
   &.mobile {
     @media only screen and (max-width: 1221px) {
@@ -102,7 +106,7 @@
       font-weight: 700;
       font-size: 26px;
       margin-bottom: 0;
-      //padding-right: 25px;
+      padding-right: 25px;
     }
   }
 
@@ -147,6 +151,8 @@
   height: 120px;
   background-color: #ffffff;
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: -6px;
 }
 
 .register-button {
@@ -252,6 +258,19 @@
 
     .bar-hashtag {
       display: none;
+    }
+
+    .bar-bootom-images {
+      display: none;
+    }
+
+    .bar-andriod-mobile {
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      top: 60vh;
     }
   }
 
