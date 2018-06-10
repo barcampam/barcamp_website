@@ -8,6 +8,8 @@ import logo from '../../image/logo.png';
 import "./header.less";
 import IntlMessages from '../../components/utility/intlMessages';
 import facebookLogo from '../../image/facebook-white.png';
+import Scrollchor from 'react-scrollchor';
+import { NavHashLink } from 'react-router-hash-link';
 
 const { changeLanguage } = actions;
 const { Header } = Layout;
@@ -42,7 +44,7 @@ class Head extends Component {
                     <nav>
                         <ul className="menu-wrapper">
                             <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages id="navigation.archive" /></NavLink>
-                            <a href="/#livestream" key="2"><IntlMessages id="navigation.livestream" /></a>
+                            <NavHashLink  smooth={true} to="/#livestream" key="2" scroll={el => setTimeout(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }), 1000)}><IntlMessages id="navigation.livestream" /></NavHashLink>
                             <NavLink activeClassName="active" to="/faq" key="3"><IntlMessages id="navigation.faq" /></NavLink>
                             <NavLink activeClassName="active" to="/about" key="4"><IntlMessages id="navigation.about" /></NavLink>
                         </ul>
@@ -107,9 +109,9 @@ class Head extends Component {
                                 <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages
                                     id="navigation.archive"/></NavLink>
                             </a>
-                            <a>
-                            <a onClick={this.handleNavLiveClick.bind(this)} href="/#livestream" key="2"><IntlMessages
-                                id="navigation.livestream"/></a>
+                            <a onClick={this.handleNavClick.bind(this)}>
+                                <Scrollchor to="livestream" key="2"><IntlMessages
+                                    id="navigation.livestream"/></Scrollchor>
                             </a>
                             <a onClick={this.handleNavClick.bind(this)}>
                             <NavLink activeClassName="active" to="/faq" key="3"><IntlMessages
