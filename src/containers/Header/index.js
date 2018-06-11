@@ -8,7 +8,7 @@ import logo from '../../image/logo.png';
 import "./header.less";
 import IntlMessages from '../../components/utility/intlMessages';
 import facebookLogo from '../../image/facebook-white.png';
-import { NavHashLink } from 'react-router-hash-link';
+// import { NavHashLink } from 'react-router-hash-link';
 
 const { changeLanguage } = actions;
 const { Header } = Layout;
@@ -42,8 +42,8 @@ class Head extends Component {
                 <Col span={8}>
                     <nav>
                         <ul className="menu-wrapper">
-                            <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages id="navigation.archive" /></NavLink>
-                            <NavHashLink smooth={true} to="/#livestream" key="2" scroll={el => setTimeout(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }), 1000)}><IntlMessages id="navigation.livestream" /></NavHashLink>
+                            {/* <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages id="navigation.archive" /></NavLink> */}
+                            {/* <NavHashLink smooth={true} to="/#livestream" key="2" scroll={el => setTimeout(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }), 1000)}><IntlMessages id="navigation.livestream" /></NavHashLink> */}
                             <NavLink activeClassName="active" to="/faq" key="3"><IntlMessages id="navigation.faq" /></NavLink>
                             <NavLink activeClassName="active" to="/about" key="4"><IntlMessages id="navigation.about" /></NavLink>
                         </ul>
@@ -105,12 +105,12 @@ class Head extends Component {
                     <nav className="mobile-navigation">
                         <ul className="menu-wrapper">
                             <a onClick={this.handleNavClick.bind(this)}>
-                                <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages
-                                    id="navigation.archive"/></NavLink>
+                                {/* <NavLink activeClassName="active" to="/archive" key="1"><IntlMessages
+                                    id="navigation.archive"/></NavLink> */}
                             </a>
                             <a onClick={this.handleNavClick.bind(this)}>
-                                <NavHashLink smooth={true} to="/#livestream" scroll={el => setTimeout(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }), 1000)} key="2"><IntlMessages
-                                    id="navigation.livestream"/></NavHashLink>
+                                {/* <NavHashLink smooth={true} to="/#livestream" scroll={el => setTimeout(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }), 1000)} key="2"><IntlMessages
+                                    id="navigation.livestream"/></NavHashLink> */}
                             </a>
                             <a onClick={this.handleNavClick.bind(this)}>
                             <NavLink activeClassName="active" to="/faq" key="3"><IntlMessages

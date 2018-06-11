@@ -6,16 +6,24 @@ import { Row, Col } from "antd";
 import Sponsor from '../../components/Sponsor';
 import ucomLogo from '../../image/ucom.png';
 import workfrontLogo from '../../image/workfront.png';
+import rockbiteLogo from '../../image/rockbite.png';
+import avetiqLogo from '../../image/avetiq.png';
+import ginosiLogo from '../../image/ginosi.png';
 import sflLogo from '../../image/sfl.png';
-import betconstructLogo from '../../image/betconstruct.png';
+import vinetiLogo from '../../image/vineti.png';
+import WEBLogo from '../../image/10WEB.png';
 import synergyLogo from '../../image/synergy.png';
-import picsartLogo from '../../image/picsart.png';
+import wfaLogo from '../../image/wfa.png';
+import betconstructLogo from '../../image/betconstruct.png';
+import digitainLogo from '../../image/digitain_logo_new.png';
 import simplyLogo from '../../image/simply.png';
 import mediaLogo from '../../image/mediaInitiative.png';
 import auaLogo from '../../image/aua.png';
-import startuparmeniaLogo from '../../image/startuparmenia.png';
-import ipmarketingLogo from '../../image/ipmarketing.png';
-import mediamaxLogo from '../../image/mediamax.png';
+import istcLogo from '../../image/ISTC.png';
+import SmartGateLogo from '../../image/SmartGateVC.png';
+// import startuparmeniaLogo from '../../image/startuparmenia.png';
+// import ipmarketingLogo from '../../image/ipmarketing.png';
+// import mediamaxLogo from '../../image/mediamax.png';
 
 class Sponsors extends Component {
     render() {
@@ -39,33 +47,57 @@ class Sponsors extends Component {
                       <Sponsor.Sponsor logo={betconstructLogo} name="BetConstruct"/>
                     </Col>
                     <Col xs={24} sm={12} xl={4}>
-                      <Sponsor.Sponsor logo={picsartLogo} name="PicsArt"/>
+                      <Sponsor.Sponsor logo={digitainLogo} name="Digitain"/>
+                    </Col>
+                    <Col xs={24} sm={12} xl={4}>
+                      <Sponsor.Sponsor logo={rockbiteLogo} name="RocketBite"/>
+                    </Col>
+                    <Col xs={24} sm={12} xl={4}>
+                      <Sponsor.Sponsor logo={workfrontLogo} name="Workfront"/>
+                    </Col>
+                    <Col xs={24} sm={12} xl={4}>
+                      <Sponsor.Sponsor logo={avetiqLogo} name="Avetiq"/>
+                    </Col>
+                    <Col xs={24} sm={12} xl={4}>
+                      <Sponsor.Sponsor logo={ginosiLogo} name="Ginosi Apartels"/>
                     </Col>
                     <Col xs={24} sm={12} xl={4}>
                       <Sponsor.Sponsor logo={sflLogo} name="SFL"/>
                     </Col>
                     <Col xs={24} sm={12} xl={4}>
-                      <Sponsor.Sponsor logo={simplyLogo} name="Simply Technologies"/>
+                      <Sponsor.Sponsor logo={vinetiLogo} name="Vineti"/>
+                    </Col>
+                    <Col xs={24} sm={12} xl={4}>
+                      <Sponsor.Sponsor logo={WEBLogo} name="10WEB"/>
                     </Col>
                     <Col xs={24} sm={12} xl={4}>
                       <Sponsor.Sponsor logo={synergyLogo} name="Synergy"/>
                     </Col>
                     <Col xs={24} sm={12} xl={4}>
-                      <Sponsor.Sponsor logo={workfrontLogo} name="workfront"/>
+                      <Sponsor.Sponsor logo={simplyLogo} name="Simply Technologies"/>
+                    </Col>
+                    <Col xs={24} sm={12} xl={4}>
+                      <Sponsor.Sponsor logo={wfaLogo} name="WEBB Fontaine"/>
                     </Col>
                 </Row>
                 <Sponsor.Title>Partners</Sponsor.Title>
                 <Row className='sponsors-body' type="flex" align="middle">
-                  <Col xs={24} sm={12} xl={4}>
+                <Col xs={24} sm={12} xl={4}>
                     <Sponsor.Sponsor logo={auaLogo} name="American University of Armenia"/>
+                  </Col>
+                  <Col xs={24} sm={12} xl={4}>
+                    <Sponsor.Sponsor logo={istcLogo} name="ISTC Foundation"/>
                   </Col>
                   <Col xs={24} sm={12} xl={4}>
                     <Sponsor.Sponsor logo={mediaLogo} name="Media Initiatives Center"/>
                   </Col>
-                </Row>
-                <Sponsor.Title>Information Sponsors</Sponsor.Title>
-                <Row className='sponsors-body' type="flex" align="middle">
                   <Col xs={24} sm={12} xl={4}>
+                    <Sponsor.Sponsor logo={SmartGateLogo} name="Smart Gate VC"/>
+                  </Col>
+                </Row>
+                {/* <Sponsor.Title>Information Sponsors</Sponsor.Title> */}
+                <Row className='sponsors-body' type="flex" align="middle">
+                  {/* <Col xs={24} sm={12} xl={4}>
                     <Sponsor.Sponsor logo={ipmarketingLogo} name="ip marketing"/>
                   </Col>
                   <Col xs={24} sm={12} xl={4}>
@@ -73,7 +105,7 @@ class Sponsors extends Component {
                   </Col>
                   <Col xs={24} sm={12} xl={4}>
                     <Sponsor.Sponsor logo={startuparmeniaLogo} name="StartUp Armenia"/>
-                  </Col>
+                  </Col> */}
                 </Row>
             </div>
         );

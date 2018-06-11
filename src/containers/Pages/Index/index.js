@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Layout, Button, Icon, Row, Col } from 'antd';
+import { Layout, Button, Icon } from 'antd';
 import img from '../../../image/6-layers.png';
 import andriod from '../../../image/bitmap.png';
 import './index.less';
@@ -11,7 +11,7 @@ import {connect} from "react-redux";
 import IntlMessages from '../../../components/utility/intlMessages';
 import actions from '../../../redux/speakers/actions';
 import facebookLogo from '../../../image/facebook-white.png';
-import Livestream from '../../Livestream/index';
+// import Livestream from '../../Livestream/index';
 import mobileImg from '../../../image/mobile-landing.jpg';
 import mobileImgSecondary from '../../../image/mobile-landing-secondary.jpg';
 
@@ -87,7 +87,7 @@ class Index extends Component {
                     <Speakers speakers={this.getAllSpeakers()} />
                 </Layout>
 
-                <div id="livestream" className="index-livestream-wrapper">
+                {/* <div id="livestream" className="index-livestream-wrapper">
                     <Row>
                         <Col xl={10} lg={10} md={24} sm={24} xs={24}>
                             <div className="index-livestream-header-wrapper">
@@ -97,7 +97,7 @@ class Index extends Component {
                     </Row>
 
                     <Livestream />
-                </div>
+                </div> */}
 
                 <Layout className="bar-speakers bar-dev-numbers" />
                 <Layout className="bar-sponsors bar-index-layout">
