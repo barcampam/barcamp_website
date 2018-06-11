@@ -109,7 +109,7 @@ class Head extends Component {
                                     id="navigation.archive"/></NavLink>
                             </a>
                             <a onClick={this.handleNavClick.bind(this)}>
-                                <NavHashLink smooth={true} to="/#livestream" key="2" scroll={el => setTimeout(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }), 1000)} key="2"><IntlMessages
+                                <NavHashLink smooth={true} to="/#livestream" scroll={el => setTimeout(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }), 1000)} key="2"><IntlMessages
                                     id="navigation.livestream"/></NavHashLink>
                             </a>
                             <a onClick={this.handleNavClick.bind(this)}>
