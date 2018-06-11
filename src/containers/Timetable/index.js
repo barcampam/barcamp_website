@@ -119,12 +119,12 @@ class Timetable extends Component {
                         <div className="timetable-days">
                             <a onClick={() => (
                                 this.setState({active: 27})
-                            )} className={this.state.active === 27 ? 'active' : ''}>27</a>
+                            )} className={this.state.active === 27 ? 'active' : ''}>16</a>
                             <a onClick={() => (
                                 this.setState({active: 28})
-                            )} className={this.state.active === 28 ? 'active' : ''}>28</a>
+                            )} className={this.state.active === 28 ? 'active' : ''}>17</a>
                         </div>
-                        <p className="timetable-times">10:00 - 17:00</p>
+                        <p className="timetable-times">10:00 - 18:00</p>
                     </Col>
                     {/*<Col xs={24} sm={11} xl={4} className="timetable-type">*/}
                         {/*<div className="timetable-speak">*/}
