@@ -6,6 +6,23 @@
   margin-bottom: 30px;
   width: 240px;
 
+  .com-speaker-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
+    position: relative;
+
+    .speaker-shadow {
+      position: absolute;
+      top: 175px;
+
+      img {
+        width: 200px;
+      }
+    }
+  }
+
   h5, p {
     margin: 0;
     padding: 0;
@@ -14,7 +31,6 @@
   .com-speaker-avatar {
     //width: 100%;
     height: 200px;
-    box-shadow: 0 10px 6px -6px #777;
   }
 
   h5.com-speaker-name {
@@ -42,6 +58,7 @@
 .overlay-wrapper {
   position: relative;
   width: 200px;
+  z-index: 1;
 
   &:hover {
     .overlay {
