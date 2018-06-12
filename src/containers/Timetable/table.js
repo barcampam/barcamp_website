@@ -8,17 +8,18 @@ const renderEvent = (events, lang, index) => {
     if(!!Object.keys(event).reduce((i, j) => {
         return i === null ? null : event[i][0][lang]["topic"] === event[j][0][lang]["topic"] ? i : null
     })) {
+        const ev = event[Object.keys(event)[0]];
         return (
             <tr key={index}>
                 <td className="time">
-                    {moment(event["Big Hall"][0]["time_from"]["date"]).format('HH:mm')}
+                    {moment(ev[0]["time_from"]["date"]).format('HH:mm')}
                 </td>
                 <td colSpan={7}>
-                    <Tooltip title={event["Big Hall"][0][lang]["topic"]}>
+                    <Tooltip title={ev[0][lang]["topic"]}>
                         <div className="timetable-event">
-                            <h4 className="timetable-event-name">{event["Big Hall"][0][lang]["speaker"]}</h4>
-                            <p className="timetable-event-desc">{event["Big Hall"][0][lang]["topic"]}</p>
-                            <p className="timetable-event-duration">{moment(event["Big Hall"][0]["time_from"]["date"]).format('HH:mm')} - {moment(event["Big Hall"][0]["time_to"]["date"]).format('HH:mm')}</p>
+                            <h4 className="timetable-event-name">{ev[0][lang]["speaker"]}</h4>
+                            <p className="timetable-event-desc">{ev[0][lang]["topic"]}</p>
+                            <p className="timetable-event-duration">{moment(ev[0]["time_from"]["date"]).format('HH:mm')} - {moment(ev[0]["time_to"]["date"]).format('HH:mm')}</p>
                         </div>
                     </Tooltip>
                 </td>
