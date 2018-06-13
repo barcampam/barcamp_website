@@ -6,7 +6,7 @@ import { Row, Col } from "antd";
 import Sponsor from '../../components/Sponsor';
 import ucomLogo from '../../image/ucom.png';
 import workfrontLogo from '../../image/workfront.png';
-import rockbiteLogo from '../../image/rockbite.png';
+import rockbiteLogo from '../../image/RockbiteLogo.png';
 import avetiqLogo from '../../image/avetiq.png';
 import ginosiLogo from '../../image/ginosi.png';
 import sflLogo from '../../image/sfl.png';
@@ -37,7 +37,7 @@ class Sponsors extends Component {
                 </Row>
                 <Sponsor.Title>General</Sponsor.Title>
                 <Row className='sponsors-body' type="flex" align="middle">
-                    <Col xs={24} xl={4}>
+                    <Col xs={24} xl={4} className="general-sponsor">
                       <Sponsor.Sponsor logo={ucomLogo} name="UCOM"/>
                     </Col>
                 </Row>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Layout, Button, Icon } from 'antd';
+import { Layout, Button } from 'antd';
 import img from '../../../image/6-layers.png';
 import andriod from '../../../image/bitmap.png';
 import './index.less';
@@ -11,6 +11,8 @@ import {connect} from "react-redux";
 import IntlMessages from '../../../components/utility/intlMessages';
 import actions from '../../../redux/speakers/actions';
 import facebookLogo from '../../../image/facebook-white.png';
+import twitterLogo from '../../../image/white-twitter.png';
+import instagramLogo from '../../../image/white-instagram.png';
 // import Livestream from '../../Livestream/index';
 import mobileImg from '../../../image/mobile-landing.jpg';
 import mobileImgSecondary from '../../../image/mobile-landing-secondary.jpg';
@@ -51,11 +53,11 @@ class Index extends Component {
                             </a>
 
                             <a href="https://twitter.com/barcampam" target="_blank" rel="noopener noreferrer">
-                                <Icon type="twitter" className="landing-social-icons"/>
+                                <img src={twitterLogo} alt="Twitter"/>
                             </a>
 
                             <a href="https://www.instagram.com/barcamp_yerevan/" target="_blank" rel="noopener noreferrer">
-                                <Icon type="instagram" className="landing-social-icons"/>
+                                <img src={instagramLogo} alt="Instagram"/>
                             </a>
                         </div>
 

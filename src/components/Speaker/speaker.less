@@ -38,3 +38,40 @@
     margin-top: 5px;
   }
 }
+
+.overlay-wrapper {
+  position: relative;
+  width: 200px;
+
+  &:hover {
+    .overlay {
+      opacity: 0.7;
+    }
+  }
+
+  .com-speaker-avatar {
+    display: block;
+  }  
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .4s ease;
+    background-color: #5A1CA9;
+    display: flex;
+    align-items: center;
+    
+  
+    .speaker-social-networks {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;    
+    }
+  }
+}
