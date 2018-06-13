@@ -78,8 +78,6 @@ class Timetable extends Component {
         const timeline = Timetable.buildTimelineByRoom(this.props.schedule);
         const lang = this.props.lang.language.locale;
 
-        console.log(timeline);
-
         if(Object.keys(timeline).length > 0) {
             return Object.keys(timeline[this.state.active]).map((item, index) => (
                 <Col xs={24} sm={24} xl={24}>
