@@ -20,7 +20,7 @@ class SpecialSpeakers extends Component {
                 <Row className='special-speakers-body' type="flex" justify="space-between" align="middle">
                     {this.props.speakers.map((item, index) => (
                         <Col xs={24} sm={12} xl={6} key={index} className="speaker-col">
-                            <Speaker avatar={item.photo} position={item[lang].bio} name={item[lang].name} title={item[lang].topic} />
+                            <Speaker avatar={item.photo} position={item[lang].bio} name={item[lang].name} title={item[lang].topic} socialNetworks={item['socialnetworks']} />
                         </Col>
                     ))}
                 </Row>

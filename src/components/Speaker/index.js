@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Icon } from 'antd';
 import './speaker.less';
 import facebookLogo from '../../image/facebook-white.png';
 import twitterLogo from '../../image/white-twitter.png';
@@ -18,17 +19,33 @@ class Speaker extends Component {
                     <img src={this.props.avatar} className="com-speaker-avatar" alt={this.props.name} />
                     <div className="overlay">
                         <div className="speaker-social-networks">
-                            <a href="" target="_blank" rel="noopener noreferrer">
-                                <img src={facebookLogo} alt="Facebook"/>
-                            </a>
+                        {
+                            this.props.socialNetworks.facbook !== null ? 
+                                <a href={this.props.socialNetworks.facbook} target="_blank" rel="noopener noreferrer">
+                                    <img src={facebookLogo} alt="Facebook"/>
+                                </a> : null
+                        }
+                            
+                        {
+                            this.props.socialNetworks.twitter !== null ?
+                                <a href={this.props.socialNetworks.twitter} target="_blank" rel="noopener noreferrer">
+                                    <img src={twitterLogo} alt="Twitter"/>
+                                </a> : null
+                        }
+                            
+                        {
+                            this.props.socialNetworks.instagram !== null ?
+                                <a href={this.props.socialNetworks.instagram} target="_blank" rel="noopener noreferrer">
+                                    <img src={instagramLogo} alt="Instagram"/>
+                                </a> : null
+                        }
 
-                            <a href="" target="_blank" rel="noopener noreferrer">
-                                <img src={twitterLogo} alt="Twitter"/>
-                            </a>
-
-                            <a href="" target="_blank" rel="noopener noreferrer">
-                                <img src={instagramLogo} alt="Instagram"/>
-                            </a>
+                        {
+                            this.props.socialNetworks.linkedin !== null ?
+                                <a href={this.props.socialNetworks.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                                    <Icon type="linkedin" />
+                                </a> : null
+                        } 
                         </div>
                     </div>
                 </div>
