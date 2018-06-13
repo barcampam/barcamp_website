@@ -7835,9 +7835,11 @@ react-router-dom@^4.1.0:
     react-router "^4.2.0"
     warning "^3.0.0"
 
-react-router-hash-scroll@^0.2.7:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/react-router-hash-scroll/-/react-router-hash-scroll-0.2.7.tgz#3c24892a2be475705e9b911041e7117df8f5fd6b"
+react-router-hash-link@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/react-router-hash-link/-/react-router-hash-link-1.2.0.tgz#ce824cc5f0502ce9b0686bb6dd9c08659b24094c"
+  dependencies:
+    prop-types "^15.6.0"
 
 react-router-redux@^5.0.0-alpha.5:
   version "5.0.0-alpha.9"

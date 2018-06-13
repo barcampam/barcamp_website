@@ -28,7 +28,7 @@ class Speakers extends Component {
                 <Row className='speakers-body' type="flex" justify="space-between" align="middle">
                     {speakers.map((item, index) => (
                         <Col xs={24} sm={12} xl={6} key={index} className="speaker-col">
-                            <Speaker avatar={item.photo} position={item[lang].bio} name={item[lang].name} title={item[lang].topic} socialNetworks={item['socialnetworks']} />
+                            <Speaker avatar={item.photo} position={item[lang].bio} name={item[lang].name ? item[lang].name : item['en'].name } title={item[lang].topic} socialNetworks={item['socialnetworks']} />
                         </Col>
                     ))}
                 </Row>
