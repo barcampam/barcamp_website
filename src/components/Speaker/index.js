@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import { Icon } from 'antd';
 import './speaker.less';
-import facebookLogo from '../../image/facebook-white.png';
-import twitterLogo from '../../image/white-twitter.png';
-import instagramLogo from '../../image/white-instagram.png';
+import facebookLogo from '../../image/facebook.png';
+import twitterLogo from '../../image/twitter.png';
+import instagramLogo from '../../image/instagram.png';
 import shadow from '../../image/shadow.png';
 
 class Speaker extends Component {
@@ -45,7 +45,7 @@ class Speaker extends Component {
                                   }
                               </div>
                           </div>
-                          <div className="overlay">
+                          {/* <div className="overlay">
                               <div className="speaker-social-networks">
                                   <a href="" target="_blank" rel="noopener noreferrer">
                                       <img src={facebookLogo} alt="Facebook"/>
@@ -59,7 +59,7 @@ class Speaker extends Component {
                                       <img src={instagramLogo} alt="Instagram"/>
                                   </a>
                               </div>
-                          </div>
+                          </div> */}
                       </div>
                     <div className="speaker-shadow">
                         <img src={shadow} alt="BarCamp shadow" />
