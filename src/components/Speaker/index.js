@@ -6,11 +6,6 @@ import twitterLogo from '../../image/white-twitter.png';
 import instagramLogo from '../../image/white-instagram.png';
 
 class Speaker extends Component {
-
-    componentWillMount() {
-        console.log(this.props);
-    }
-
     render() {
         return (
             <div className="com-speaker">
