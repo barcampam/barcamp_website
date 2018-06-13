@@ -16,50 +16,43 @@ class Speaker extends Component {
                           <img src={this.props.avatar} className="com-speaker-avatar" alt={this.props.name} />
                           <div className="overlay">
                               <div className="speaker-social-networks">
-                                  {
-                                      this.props.socialNetworks.facbook !== null ?
-                                          <a href={this.props.socialNetworks.facbook} target="_blank" rel="noopener noreferrer">
-                                              <img src={facebookLogo} alt="Facebook"/>
-                                          </a> : null
-                                  }
+                                    {
+                                        this.props.socialNetworks.facbook !== null ?
+                                            <a href={this.props.socialNetworks.facbook} target="_blank" rel="noopener noreferrer">
+                                                <div className="speaker-social-network-cirlcle">
+                                                    <img src={facebookLogo} alt="Facebook"/>
+                                                </div>
+                                            </a> : null
+                                    }
 
-                                  {
-                                      this.props.socialNetworks.twitter !== null ?
-                                          <a href={this.props.socialNetworks.twitter} target="_blank" rel="noopener noreferrer">
-                                              <img src={twitterLogo} alt="Twitter"/>
-                                          </a> : null
-                                  }
+                                    {
+                                            this.props.socialNetworks.twitter !== null ?
+                                                <a href={this.props.socialNetworks.twitter} target="_blank" rel="noopener noreferrer">
+                                                    <div className="speaker-social-network-cirlcle">
+                                                        <img src={twitterLogo} alt="Twitter"/>
+                                                    </div>
+                                                </a> : null
+                                    }
 
-                                  {
-                                      this.props.socialNetworks.instagram !== null ?
-                                          <a href={this.props.socialNetworks.instagram} target="_blank" rel="noopener noreferrer">
-                                              <img src={instagramLogo} alt="Instagram"/>
-                                          </a> : null
-                                  }
+                                    {
+                                        this.props.socialNetworks.instagram !== null ?
+                                            <a href={this.props.socialNetworks.instagram} target="_blank" rel="noopener noreferrer">
+                                                <div className="speaker-social-network-cirlcle">
+                                                    <img src={instagramLogo} alt="Instagram"/>
+                                                </div>
+                                            </a> : null
+                                    }
 
-                                  {
-                                      this.props.socialNetworks.linkedin !== null ?
-                                          <a href={this.props.socialNetworks.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                                              <Icon type="linkedin" />
-                                          </a> : null
-                                  }
+                                    {
+                                        this.props.socialNetworks.linkedin !== null ?
+                                            <a href={this.props.socialNetworks.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                                                <div className="speaker-social-network-cirlcle">
+                                                    <Icon type="linkedin" />
+                                                </div>
+                                            </a> : null
+                                    }
                               </div>
                           </div>
-                          {/* <div className="overlay">
-                              <div className="speaker-social-networks">
-                                  <a href="" target="_blank" rel="noopener noreferrer">
-                                      <img src={facebookLogo} alt="Facebook"/>
-                                  </a>
-
-                                  <a href="" target="_blank" rel="noopener noreferrer">
-                                      <img src={twitterLogo} alt="Twitter"/>
-                                  </a>
-
-                                  <a href="" target="_blank" rel="noopener noreferrer">
-                                      <img src={instagramLogo} alt="Instagram"/>
-                                  </a>
-                              </div>
-                          </div> */}
                       </div>
                     <div className="speaker-shadow">
                         <img src={shadow} alt="BarCamp shadow" />
