@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./about.less";
 import IntlMessages from '../../../components/utility/intlMessages';
-import BarCampStaff from '../../../image/rectangle-14.png';
+import BarCampStaff from '../../../image/about.jpg';
 import { Row, Col } from 'antd';
 
 export default class Archive extends Component {

@@ -52,7 +52,7 @@ export default class extends Component {
                                             display: 'flex',
                                             flexDirection: 'column'
                                         }}>
-                                            <NavLink to="/archive" key="1">
+                                            <NavLink to="/about" key="1">
                                                 <IntlMessages id="navigation.about"/>
                                             </NavLink>
                                             {/* <NavLink to="/livestream" key="2">

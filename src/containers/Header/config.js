@@ -4,14 +4,14 @@ const config = {
   defaultLanguage: language,
   options: [
     {
-      languageId: 'armenian',
-      locale: 'hy',
-      text: 'ARM'
-    },
-    {
       languageId: 'english',
       locale: 'en',
       text: 'ENG',
+    },
+    {
+      languageId: 'armenian',
+      locale: 'hy',
+      text: 'ARM'
     }
   ],
 };
