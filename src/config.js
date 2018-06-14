@@ -8,7 +8,7 @@ const siteConfig = {
   footerText: 'BarCamp EVN\'18'
 };
 
-const language = 'armenian';
+const language = 'english';
 
 export {
   siteConfig,
