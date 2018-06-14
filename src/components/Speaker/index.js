@@ -5,15 +5,20 @@ import facebookLogo from '../../image/facebook.png';
 import twitterLogo from '../../image/twitter.png';
 import instagramLogo from '../../image/instagram.png';
 import shadow from '../../image/shadow.png';
+import defaultSpeaker from '../../image/1.svg';
 
 class Speaker extends Component {
+
+    componentWillMount() {
+        console.log(typeof this.props.avatar);
+    }
     render() {
         return (
             <div className="com-speaker">
               <div className="com-speaker-wrapper">
                   <div>
                       <div className="overlay-wrapper">
-                          <img src={this.props.avatar} className="com-speaker-avatar" alt={this.props.name} />
+                          <img src={this.props.avatar !== "http://api.barcamp.am" ? this.props.avatar : defaultSpeaker} className="com-speaker-avatar" alt={this.props.name} />
                           <div className="overlay">
                               <div className="speaker-social-networks">
                                     {
