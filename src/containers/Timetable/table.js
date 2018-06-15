@@ -37,7 +37,7 @@ const renderEvent = (events, lang, index) => {
                     event["Big Hall"].map((item, index) => (
                         <Tooltip key={index} title={`${item[lang]["speaker"] || ''} | ${item[lang]["topic"] || ''}`}>
                             <div className="timetable-event">
-                                <h4 className="timetable-event-name">{item[lang]["speaker"]}</h4>
+                                <h4 className="timetable-event-name">{item[lang]["speaker"] ? item[lang]["speaker"] : item["en"]["speaker"]}</h4>
                                 <p className="timetable-event-desc">{item[lang]["topic"]}</p>
                                 <p className="timetable-event-duration">{moment(item["time_from"]["date"]).format('HH:mm')} - {moment(item["time_to"]["date"]).format('HH:mm')}</p>
                             </div>
