@@ -137,6 +137,8 @@ const renderEvent = (events, lang, index) => {
 export default (props) => {
     const events = props.data[props.day];
 
+    console.log(events);
+
     if (events) {
         return (<div className="timetable-table-wrapper">
             <table className="timetable-table">

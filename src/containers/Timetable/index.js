@@ -13,7 +13,7 @@ const { getSchedule } = actions;
 class Timetable extends Component {
 
     state = {
-        active: 27
+        active: 16
     };
 
     componentWillMount() {
@@ -116,11 +116,11 @@ class Timetable extends Component {
                         <p><IntlMessages id="timetable.days" /></p>
                         <div className="timetable-days">
                             <a onClick={() => (
-                                this.setState({active: 27})
-                            )} className={this.state.active === 27 ? 'active' : ''}>16</a>
+                                this.setState({active: 16})
+                            )} className={this.state.active === 16 ? 'active' : ''}>16</a>
                             <a onClick={() => (
-                                this.setState({active: 28})
-                            )} className={this.state.active === 28 ? 'active' : ''}>17</a>
+                                this.setState({active: 17})
+                            )} className={this.state.active === 17 ? 'active' : ''}>17</a>
                         </div>
                         <p className="timetable-times">10:00 - 18:00</p>
                     </Col>

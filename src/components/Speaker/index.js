@@ -17,7 +17,7 @@ class Speaker extends Component {
             <div className="com-speaker">
               <div className="com-speaker-wrapper">
                   <div>
-                      <div className="overlay-wrapper">
+                      <div className={`overlay-wrapper ${this.props.avatar === "http://api.barcamp.am" ? 'default-avatar' : null}`}>
                           <img src={this.props.avatar !== "http://api.barcamp.am" ? this.props.avatar : defaultSpeaker} className="com-speaker-avatar" alt={this.props.name} />
                           <div className="overlay">
                               <div className="speaker-social-networks">
