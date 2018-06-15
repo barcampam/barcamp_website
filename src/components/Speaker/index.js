@@ -56,6 +56,15 @@ class Speaker extends Component {
                                                 </div>
                                             </a> : null
                                     }
+
+                                    {/* {
+                                        this.props.socialNetworks.github !== null ?
+                                            <a href={this.props.socialNetworks.github} target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                                                <div className="speaker-social-network-cirlcle">
+                                                    <Icon type="github" />
+                                                </div>
+                                            </a> : null
+                                    } */}
                               </div>
                           </div>
                       </div>
@@ -63,9 +72,11 @@ class Speaker extends Component {
                         <img src={shadow} alt="BarCamp shadow" />
                     </div>
                 </div>
-                <h5 className="com-speaker-name">{this.props.name}</h5>
-                <p className="com-speaker-position">{this.props.position}</p>
-                <p className="com-speaker-title">{this.props.title}</p>
+                <div className="speaker-info-wrapper">
+                    <h5 className="com-speaker-name">{this.props.name}</h5>
+                    <p className="com-speaker-position">{this.props.position}</p>
+                    <p className="com-speaker-title">{this.props.title}</p>
+                </div>
               </div>
             </div>
         );
