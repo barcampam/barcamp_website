@@ -101,7 +101,7 @@ class Head extends Component {
         if(this.props.app.view !== 'DesktopView') {
             return (
                 <div className={`${this.state.isOpen ? 'open-drawer' : null} mobile-menu`}>
-                    
+
                     <nav className="mobile-navigation">
                         <ul className="menu-wrapper">
                             <a onClick={this.handleNavClick.bind(this)}>

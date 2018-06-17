@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Layout, Button } from 'antd';
+import { Layout, Button, Row, Col } from 'antd';
 import img from '../../../image/6-layers.png';
 import andriod from '../../../image/bitmap.png';
 import './index.less';
@@ -13,9 +13,10 @@ import actions from '../../../redux/speakers/actions';
 import facebookLogo from '../../../image/facebook-white.png';
 import twitterLogo from '../../../image/white-twitter.png';
 import instagramLogo from '../../../image/white-instagram.png';
-// import Livestream from '../../Livestream/index';
+import Livestream from '../../Livestream/index';
 import mobileImg from '../../../image/mobile-landing.jpg';
 import mobileImgSecondary from '../../../image/mobile-landing-secondary.jpg';
+import { NavHashLink } from 'react-router-hash-link';
 
 const { getSpeakers } = actions;
 
@@ -43,9 +44,12 @@ class Index extends Component {
                     <div className="bar-text-wrapper">
                         <h3 className="bar-date">Jun 16-17</h3>
                         <h1 className="bar-text">The most wanted <b>tech and<br className="landing-text-breaks"/> media event</b> in Armenia</h1>
-                        <a href="https://www.eventbrite.co.uk/e/barcamp-yerevan-2018-tickets-46342571880" target="_blank" rel="noopener noreferrer">
+                        {/* <a href="https://www.eventbrite.co.uk/e/barcamp-yerevan-2018-tickets-46342571880" target="_blank" rel="noopener noreferrer">
                             <Button className="register-button"><IntlMessages id="landing.register" /></Button>
-                        </a>
+                        </a> */}
+                        <NavHashLink smooth={true} to="/#livestream" key="2" scroll={el => setTimeout(() => el.scrollIntoView({ behavior: 'instant', block: 'start' }), 1000)}>
+                            <Button className="register-button"><IntlMessages id="navigation.livestream" /></Button>
+                        </NavHashLink>
 
                         <div className="social-network-block">
                             <a href="https://www.facebook.com/barcampevn/" target="_blank" rel="noopener noreferrer">
@@ -66,8 +70,8 @@ class Index extends Component {
                         </a>
                     </div>
 
-                   
-                    
+
+
                     <div className="bar-bootom-images">
                         <p className="bar-hashtag">#barcampevn18</p>
                         <a href="https://play.google.com/store/apps/details?id=com.barcampevn" target="_blank" rel="noopener noreferrer">
@@ -89,7 +93,7 @@ class Index extends Component {
                     <Speakers speakers={this.getAllSpeakers()} />
                 </Layout>
 
-                {/* <div id="livestream" className="index-livestream-wrapper">
+                <div id="livestream" className="index-livestream-wrapper">
                     <Row>
                         <Col xl={10} lg={10} md={24} sm={24} xs={24}>
                             <div className="index-livestream-header-wrapper">
@@ -99,7 +103,7 @@ class Index extends Component {
                     </Row>
 
                     <Livestream />
-                </div> */}
+                </div>
 
                 <Layout className="bar-speakers bar-dev-numbers" />
                 <Layout className="bar-sponsors bar-index-layout">
