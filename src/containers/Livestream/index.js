@@ -11,7 +11,7 @@ export default class Livestream extends Component {
                 room: "Big Hall"
             },
             {
-                url: "https://www.youtube.com/embed/z5R794mQ8uc",
+                url: "https://www.youtube.com/embed/videoseries?list=PLkaN8-chLmTSqizWXmTzk-bxmIbnhX1Dg",
                 room: "308E room"
             },
             {
