@@ -13,7 +13,7 @@ const { getSchedule } = actions;
 class Timetable extends Component {
 
     state = {
-        active: 16
+        active: 17
     };
 
     componentWillMount() {
