@@ -94,7 +94,7 @@ export default class extends Component {
                             <Col xl={12} lg={12} md={24} sm={24} xs={24} className="get-in-touch-wrapper">
                                 <p className="get-in-touch"><IntlMessages id="footer.getInTouch" /></p>
                                 <p><IntlMessages id="footer.address" /></p>
-                                <p>barista@barcamp.com</p>
+                                <p>barista@barcamp.am</p>
                             </Col>
                         </Row>
                     </Col>
